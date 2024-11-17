@@ -1,5 +1,6 @@
 import FindSalon from "@/sections/home/find-salon";
 import Header from "@/sections/home/header";
+import PopularCatagories from "@/sections/home/popular-catagories";
 
 export default function Home() {
 
@@ -7,6 +8,7 @@ export default function Home() {
     <div className="w-full h-full">
       <Header/>
       <FindSalon/>
+      <PopularCatagories/>
     </div>
    );
 }
