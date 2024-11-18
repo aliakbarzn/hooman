@@ -24,11 +24,8 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     const pathSegments = pathname.split('/');
     pathSegments[1] = newLang;
     const newPath = pathSegments.join('/');
-    
     router.push(newPath);
     setLanguage(newLang);
-    document.documentElement.dir = newLang === 'fa' ? 'rtl' : 'ltr';
-    document.documentElement.lang = newLang;
   };
 
   return (

@@ -25,7 +25,7 @@ const CustomDropDown = () => {
 	const [selectedOption, setSelectedOption] = useState({
 		isOpen: false,
 		value: 'sweden',
-		country: <SwedenIcon />,
+		country:<BritainIcon />,
 		lang: 'en'
 	});
 
