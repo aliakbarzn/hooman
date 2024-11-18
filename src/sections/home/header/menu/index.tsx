@@ -1,14 +1,12 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React from "react";
 import logo from "@/assets/logo.svg";
 import Link from "next/link";
 import { AlertIcon, UserIcon } from "@/assets/icons";
-import { useLocalizedPath } from "@/hooks/useLocalizedPath";
+import { LocalizedLink } from "@/components/commen/LocalizedLink";
 
 export default function Menu() {
-  const { getLocalizedPath } = useLocalizedPath();
-
   return (
     <div className="w-full flex justify-between justify-center items-center h-28 px-8 shadow">
       <div>
@@ -24,14 +22,17 @@ export default function Menu() {
         </div>
         <div className="flex items-center gap-8 cursor-pointer">
           <div>
-            <Link href={getLocalizedPath('/signin')}>
-              <button className="px-4 rounded-lg mr-3 py-2 bg-green">Sign in</button>
-            </Link>
-            <button className="px-4 rounded-lg py-2 bg-pink">Register</button>
+            <LocalizedLink href="/signin">
+              <button className="px-4 rounded-lg mr-3 py-2 bg-green">
+                Sign in
+              </button>
+            </LocalizedLink>
+            <LocalizedLink href="/register">
+              <button className="px-4 rounded-lg py-2 bg-pink">Register</button>
+            </LocalizedLink>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
