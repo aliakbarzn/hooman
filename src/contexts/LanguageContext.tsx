@@ -15,10 +15,10 @@ interface LanguageProviderProps {
   initialLang: string;
 }
 
-export function LanguageProvider({ children, initialLang }: LanguageProviderProps) {
+export function LanguageProvider({ children }: LanguageProviderProps) {
   const router = useRouter();
   const pathname = usePathname();
-  const [language, setLanguage] = useState(initialLang);
+  const [language, setLanguage] = useState('en');
 
   const changeLanguage = (newLang: string) => {
     const pathSegments = pathname.split('/');
