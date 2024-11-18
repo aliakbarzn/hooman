@@ -1,5 +1,3 @@
-'use client';
-
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/assets/translations';
 import type { TranslationType } from '@/@types/translations';
