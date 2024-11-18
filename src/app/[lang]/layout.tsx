@@ -3,6 +3,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/sections/footer/Footer";
 
 const geistSans = localFont({
   src: "../../assets/fonts/GeistVF.woff",
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <LanguageProvider initialLang={params.lang}>
           {children}
+          <Footer />
         </LanguageProvider>
       </body>
     </html>
