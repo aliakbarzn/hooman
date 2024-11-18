@@ -1,23 +1,34 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from 'react';
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+import { useRouter, usePathname } from 'next/navigation';
+
 interface LanguageContextType {
-    language: string;
-    changeLanguage: (newLang: string) => void;
-}
-  
-interface LanguageProviderProps {
-    children: ReactNode;
+  language: string;
+  changeLanguage: (newLang: string) => void;
 }
 
-export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState('fa');
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+interface LanguageProviderProps {
+  children: ReactNode;
+  initialLang: string;
+}
+
+export function LanguageProvider({ children, initialLang }: LanguageProviderProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const [language, setLanguage] = useState(initialLang);
 
   const changeLanguage = (newLang: string) => {
+    const pathSegments = pathname.split('/');
+    pathSegments[1] = newLang;
+    const newPath = pathSegments.join('/');
+    
+    router.push(newPath);
     setLanguage(newLang);
-    document.documentElement.lang = newLang;
     document.documentElement.dir = newLang === 'fa' ? 'rtl' : 'ltr';
+    document.documentElement.lang = newLang;
   };
 
   return (
@@ -27,10 +38,10 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   );
 }
 
-export const useLanguage = (): LanguageContextType => {
+export const useLanguage = () => {
   const context = useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+  if (!context) {
+    throw new Error('useLanguage must be used within LanguageProvider');
   }
   return context;
 };

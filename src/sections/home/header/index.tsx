@@ -2,8 +2,8 @@ import React from "react";
 import Menu from "./menu";
 import Image from "next/image";
 import woman from "@/assets/images/header/woman.svg";
-import card1 from "@/assets/images/header/card-1.svg";
-import card2 from "@/assets/images/header/card-2.svg";
+import card1 from "@/assets/images/header/card1.svg";
+import card2 from "@/assets/images/header/card2.svg";
 
 
 export default function Header() {

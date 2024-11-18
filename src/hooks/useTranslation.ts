@@ -1,26 +1,19 @@
 'use client';
 
 import { useLanguage } from '@/contexts/LanguageContext';
-import { translations} from '@/assets/translations';
+import { translations } from '@/assets/translations';
+import type { TranslationType } from '@/@types/translations';
 
 interface UseTranslationType {
-  t: (key: string) => string;
+  t: (key: keyof TranslationType) => string;
   language: string;
 }
 
 export const useTranslation = (): UseTranslationType => {
   const { language } = useLanguage();
   
-  const t = (key: string): string => {
-    const keys = key.split('.');
-    let value = translations[language];
-    
-    for (const k of keys) {
-      if (value?.[k] === undefined) return key;
-      value = value[k];
-    }
-    
-    return value;
+  const t = (key: keyof TranslationType): string => {
+    return translations[language]?.[key] ?? key;
   };
 
   return { t, language };
