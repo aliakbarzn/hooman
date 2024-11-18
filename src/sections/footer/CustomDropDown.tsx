@@ -15,7 +15,7 @@ interface Option {
 
 const options = [
 	{ value: 'sweden', country: <SwedenIcon />, lang: 'se' },
-	{ value: 'germany', country: <GermanyIcon />, lang: 'fa' },
+	{ value: 'germany', country: <GermanyIcon />, lang: 'de' },
 	{ value: 'britain', country: <BritainIcon />, lang: 'en' },
 	{ value: 'thailand', country: <ThailandIcon />, lang: 'th' },
 ];
