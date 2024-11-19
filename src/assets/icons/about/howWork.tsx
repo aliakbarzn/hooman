@@ -1,8 +1,8 @@
 import Image from "next/image";
-import CarFree from "@/assets/images/about/car free.svg";
-import CashBack from "@/assets/images/about/cashback 1.svg";
-import Medal from "@/assets/images/about/medal.svg";
-import Call from "@/assets/images/about/call.svg";
+import CarFree from "@/assets/icons/about/car-free.svg";
+import CashBack from "@/assets/icons/about/cashback.svg";
+import Medal from "@/assets/icons/about/medal.svg";
+import Call from "@/assets/icons/about/call.svg";
 const HowWork = () => {
   return (
     <div className="bg-[#FEFFF6] px-20 py-[60px] flex flex-col items-center mt-16 w-full">

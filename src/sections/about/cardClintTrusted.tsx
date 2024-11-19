@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface CardClintTrustedProps {
-  images: string[];
+  images: StaticImageData[];
   starCount: number;
 }
 

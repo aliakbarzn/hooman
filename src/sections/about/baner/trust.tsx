@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BanerTrust from "@/assets/images/about/baner trust.svg";
+import BanerTrust from "@/assets/images/about/baner-trust.png";
 
 const Trust = () => {
   return (

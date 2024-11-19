@@ -1,14 +1,14 @@
 import React from "react";
 import CardClintTrusted from "@/sections/about/cardClintTrusted";
-import man1 from "@/assets/images/about/Ellipse 34.svg";
-import man2 from "@/assets/images/about/Ellipse 34.svg";
-import man3 from "@/assets/images/about/Ellipse 35.svg";
-import man4 from "@/assets/images/about/Ellipse 36.svg";
-import man5 from "@/assets/images/about/Ellipse 37.svg";
+import man1 from "@/assets/images/about/man1.png";
+import man2 from "@/assets/images/about/man2.png";
+import man3 from "@/assets/images/about/man3.png";
+import man4 from "@/assets/images/about/man4.png";
+import man5 from "@/assets/images/about/man5.png";
 import CardChartWeeklyGrowth from "@/sections/about/cardChartWeeklyGrowth";
 import StartBooking from "@/sections/about/startBooking";
 import TitleAbout from "@/sections/about/titleAbout";
-import HowWork from "@/sections/about/baner/howWork";
+import HowWork from "@/assets/icons/about/howWork";
 import Trust from "@/sections/about/baner/trust";
 
 export default function About() {
@@ -25,7 +25,7 @@ export default function About() {
       <TitleAbout />
       <StartBooking />
       <HowWork />
-      <Trust/>
+      <Trust />
     </div>
   );
 }

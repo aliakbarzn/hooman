@@ -1,11 +1,11 @@
 import Image from "next/image";
-import LinkedIn from "@/assets/images/about/LinkedIn logo.svg";
-import instagram from "@/assets/images/about/instagram logo.svg";
-import behance from "@/assets/images/about/behance logo.svg";
-import Dribbble from "@/assets/images/about/Dribbble logo.svg";
-import Baner1 from "@/assets/images/about/Frame 1597883389.svg";
-import Baner2 from "@/assets/images/about/Frame 1597883390.svg";
-import Baner3 from "@/assets/images/about/Rectangle 100.svg";
+import LinkedIn from "@/assets/icons/about/linkedIn-logo.svg";
+import instagram from "@/assets/icons/about/instagram-logo.svg";
+import behance from "@/assets/icons/about/behance-logo.svg";
+import Dribbble from "@/assets/icons/about/dribbble-logo.svg";
+import Baner1 from "@/assets/images/about/baner1.png";
+import Baner2 from "@/assets/images/about/baner2.png";
+import Baner3 from "@/assets/images/about/baner3.png";
 const StartBooking = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-10">

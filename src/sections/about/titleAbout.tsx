@@ -1,6 +1,6 @@
 import Image from "next/image";
-import LeftArrow from "@/assets/images/about/Left arrow.svg";
-import rightArrow from "@/assets/images/about/right arrow.svg";
+import LeftArrow from "@/assets/images/about/left-arrow.svg";
+import rightArrow from "@/assets/images/about/right-arrow.svg";
 const TitleAbout = () => {
   return (
     <div className="flex flex-col self-center max-w-[80%] text-center">

@@ -1,6 +1,5 @@
-import React, { useMemo, useCallback } from "react";
 import Image from "next/image";
-import chartImage from "@/assets/images/about/Vector 585.svg";
+import chartImage from "@/assets/images/about/chart.svg";
 
 const CardChartWeeklyGrowth = () => {
   return (
