@@ -1,10 +1,10 @@
-// app/[lang]/layout.tsx
-import { LanguageProvider } from "@/contexts/LanguageContext";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/sections/footer/Footer";
 import Menu from "@/sections/home/header/menu";
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 
 const geistSans = localFont({
   src: "../../assets/fonts/GeistVF.woff",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 interface RootLayoutProps {
   children: React.ReactNode;
   params: {
-    lang: string;
+    locale: string;
   };
 }
 
@@ -34,19 +34,20 @@ export async function generateStaticParams() {
   return [{ lang: 'fa' }, { lang: 'en' }];
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params,
+  params: { locale },
 }: RootLayoutProps) {
+  const messages = await getMessages()
   return (
-    <html lang={params.lang}>
+    <NextIntlClientProvider messages={messages}>
+    <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <LanguageProvider initialLang={params.lang}>
           <Menu/>
           {children}
           <Footer />
-        </LanguageProvider>
       </body>
     </html>
+    </NextIntlClientProvider>
   );
 }

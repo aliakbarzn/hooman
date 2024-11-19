@@ -1,94 +1,69 @@
-"use client"
+'use client';
+
 import React, { useState } from 'react';
-import { ChevronDownIcon, ThailandIcon } from '@/assets/icons';
-import { GermanyIcon } from '@/assets/icons';
-import { SwedenIcon } from '@/assets/icons';
-import { BritainIcon } from '@/assets/icons';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useRouter } from 'next/navigation';
+import { ChevronDownIcon } from '@/assets/icons'; 
+import { SwedenIcon, GermanyIcon, BritainIcon, ThailandIcon } from '@/assets/icons'; 
 
 interface Option {
-	value: string,
-	isOpen?: boolean,
-	country: React.FC | any,
-	lang: string
+  value: string;
+  country: React.ReactNode;
+  lang: string;
 }
 
-const options = [
-	{ value: 'sweden', country: <SwedenIcon />, lang: 'se' },
-	{ value: 'germany', country: <GermanyIcon />, lang: 'de' },
-	{ value: 'britain', country: <BritainIcon />, lang: 'en' },
-	{ value: 'thailand', country: <ThailandIcon />, lang: 'th' },
+const options: Option[] = [
+  { value: 'Sweden', country: <SwedenIcon />, lang: 'se' },
+  { value: 'Germany', country: <GermanyIcon />, lang: 'de' },
+  { value: 'Britain', country: <BritainIcon />, lang: 'en' },
+  { value: 'Thailand', country: <ThailandIcon />, lang: 'th' },
 ];
 
-const CustomDropDown = () => {
-	// state
-	const [selectedOption, setSelectedOption] = useState({
-		isOpen: false,
-		value: 'sweden',
-		country:<BritainIcon />,
-		lang: 'en'
-	});
+const CustomDropDown: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState<Option>(options[0]);
+  const router = useRouter();
 
-	const { changeLanguage, language } = useLanguage()
+  const handleOptionClick = (option: Option) => {
+    setSelectedOption(option);
+    setIsOpen(false);
+    router.replace(`/${option.lang}`);
+  };
 
-	// handler
-	const handleOptionClick = (option: Option) => {
-		setSelectedOption({
-			isOpen: false,
-			value: option.value,
-			country: option.country,
-			lang: option.lang
-		});
-		changeLanguage(option.lang)
-		console.log(option.lang)
-	};
+  return (
+    <div className="relative min-w-[200px]">
+      <div
+        className="flex items-center justify-between h-[42px] rounded-lg border py-3 px-4 cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <div className="flex items-center gap-x-2">
+          {selectedOption.country}
+          <span>{selectedOption.value}</span>
+        </div>
+        <ChevronDownIcon />
+      </div>
 
-
-	return (
-		<div className="relative min-w-60">
-			<div
-				className="flex items-center justify-between h-[42px] rounded-lg border py-3 pr-3 pl-4 cursor-pointer"
-				onClick={() =>
-					setSelectedOption((prev) => ({
-						...prev,
-						isOpen: !prev.isOpen,
-					}))
-				}
-			>
-				<div className='w-full flex items-center justify-between'>
-					<div className='flex items-center gap-x-2'>
-						{selectedOption.country}
-						<span>{selectedOption.value}</span>
-					</div>
-					<ChevronDownIcon />
-				</div>
-			</div>
-			{selectedOption.isOpen && (
-				<React.Fragment>
-					<div
-						className='fixed top-0 left-0 w-screen h-screen z-20 opacity-0'
-						onClick={() => setSelectedOption(prev => ({
-							...prev,
-							isOpen: false
-						}))}>
-						{/* this is an empty div to help close the language menu */}
-					</div>
-					<div className="absolute z-30 bg-white border rounded-lg shadow-lg w-full mt-1">
-						{options.map((option) => (
-							<div
-								key={option.value}
-								className="pl-4  flex items-center gap-3 p-2 hover:bg-gray-100 cursor-pointer"
-								onClick={() => handleOptionClick(option)}
-							>
-								{option.country}
-								<span>{option.value}</span>
-							</div>
-						))}
-					</div>
-				</React.Fragment>
-			)}
-		</div>
-	);
+      {isOpen && (
+        <>
+          <div
+            className="fixed inset-0 w-screen h-screen z-10"
+            onClick={() => setIsOpen(false)}
+          ></div>
+          <div className="absolute z-20 bg-white border rounded-lg shadow-lg w-full mt-1">
+            {options.map((option) => (
+              <div
+                key={option.value}
+                className="pl-4 flex items-center gap-3 p-2 hover:bg-gray-100 cursor-pointer"
+                onClick={() => handleOptionClick(option)}
+              >
+                {option.country}
+                <span>{option.value}</span>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
 };
 
 export default CustomDropDown;
