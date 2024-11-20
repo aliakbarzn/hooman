@@ -9,22 +9,14 @@ import Image from 'next/image'
 
 
 const ContactIndex = () => {
-
 	//states
-	const [isLoggedIn, setIsLoggedIn] = useState(false) // sample state to handle user log
-
-	// hooks
-
-
-	// useEffect
-
+	const [isLoggedIn, setIsLoggedIn] = useState(false)
 
 	// handlers
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault()
 		// what should the click do ? :
 	}
-
 
 	return (
 		// background-container
