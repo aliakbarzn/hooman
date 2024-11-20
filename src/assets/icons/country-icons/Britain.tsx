@@ -5,7 +5,7 @@ export default function BritainIcon() {
             xmlns="http://www.w3.org/2000/svg"
             width="25"
             height="25"
-            ariaHidden="true"
+            aria-hidden="true"
             className="iconify iconify--emojione"
             viewBox="0 0 64 64"
         >
