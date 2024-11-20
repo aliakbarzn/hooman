@@ -30,7 +30,7 @@ const CustomDropDown: React.FC = () => {
   };
 
   return (
-    <div className="relative min-w-[200px]">
+    <div className="relative min-w-[260px] bg-white">
       <div
         className="flex items-center justify-between h-[42px] rounded-lg border py-3 px-4 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
