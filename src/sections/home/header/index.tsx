@@ -8,12 +8,12 @@ import card2 from "@/assets/images/header/card2.png";
 
 export default function Header() {
   return (
-    <div className="relative w-full h-full">
-    <div className="mt-10 flex flex-col justify-center items-center relative"> 
-      <div className="absolute top-0 left-[550px] righ-0">
+    <div className=" w-full h-full">
+    <div className=" relative mt-10 flex flex-col justify-center items-center relative"> 
+      <div className="absolute top-0 left-[550px] xl:left-[715px]">
         <Image alt="card1" src={circle} />
       </div>
-      <div className="z-50">
+      <div className="z-10">
         <Image alt="thaimassagegruppen" src={woman}/>
       </div>
       <div className="absolute top-20 left-[300px] righ-0">
@@ -21,7 +21,7 @@ export default function Header() {
       </div>
       <div className="absolute top-42 right-64">
         <Image alt="card2" src={card2} />
-      </div>
+      </div>  
     </div>
   </div>
   );
