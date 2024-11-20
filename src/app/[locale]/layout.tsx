@@ -1,22 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "@/assets/css/globals.css";
 import Footer from "@/sections/footer/Footer";
 import Menu from "@/sections/home/header/menu";
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
-
-const geistSans = localFont({
-  src: "../../assets/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "../../assets/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -42,7 +29,7 @@ export default async function RootLayout({
   return (
     <NextIntlClientProvider messages={messages}>
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body>
           <Menu/>
           {children}
           <Footer />
