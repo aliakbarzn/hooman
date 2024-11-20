@@ -7,7 +7,7 @@ import { TickIcon } from '@/assets/icons'
 import SignIn from './signin'
 import Register from './register'
 
-const Auth = () => {
+const AuthIndex = () => {
 	const [isRegister, setIsRegister] = useState(true);
 	
 	return (
@@ -66,4 +66,4 @@ const Auth = () => {
 	)
 }
 
-export default Auth
+export default AuthIndex
