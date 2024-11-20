@@ -21,7 +21,7 @@ const AuthIndex = () => {
 				{/* left section */}
 				<div className='hidden sm:gap-y-20 sm:flex sm:flex-col'>
 					{isRegister ? <Image src={indexImage} alt='index-image' /> : <Image width={488} height={411} src={indexImage} alt='index-image' />}
-					<div className="px-11 py-8 w-[615px] h-[425px] flex flex-col gap-y-8 bg-[#F6F9FF] rounded-md">
+					<div className={`px-11 py-8 w-[615px] flex flex-col gap-y-8 bg-[#F6F9FF] rounded-md ${isRegister ? 'h-[425px]' : null}`}>
 						<div className='flex gap-x-8 items-start'>
 							<TickIcon />
 							<p className='mt-[-5px] text-2xl font-normal leading-[37.5px]'>Prova helt gratis i 14 dagar.</p>

@@ -62,7 +62,7 @@ export default function Register() {
                 >Register</button>
             </form>
             {/* register / login with google / facebook */}
-            <div className='flex flex-col gap-y-8 items-center'>
+            <div className='mt-7 flex flex-col gap-y-8 items-center'>
                 <p className='text-base font-normal text-[#ABABAB]'>OR</p>
                 <div className='flex gap-x-4'>
                     {/* google */}
