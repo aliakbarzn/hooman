@@ -12,8 +12,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        green:'var(--green)',
-        pink:'var(--pink)'
+
+        green: "var(--green)",
+        pink: "var(--pink)",
       },
     },
   },
