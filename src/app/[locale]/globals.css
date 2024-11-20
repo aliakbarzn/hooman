@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f9fffa;
+  --foreground: #171717;
+  --green: #c6fad2;
+  --pink: #f58882;
+  --color: black;
+
+  --text-default: #1e1e1e;
+  --text-secondary: #757575;
+  --text-neutral: #f3f3f3;
+  --text-pink: #d367bc;
+  --text-green: #31623d;
+  --text-orange: #f58882;
+
+  --background-primary: #ffffff;
+  --background-secondary: #f5f5f5;
+  --background-lightGreen: #f1fff4;
+  --background-darkGreen: #47c666;
+  --background-green: #70e38c;
+  --background-orange: #f58882;
+  --background-lightOrange: #fff9f8;
+  --background-dark: #2c2c2c;
+  --background-gray: #eaeaea;
+
+  --border-default: #d9d9d9;
+  --border-secondary: #f5f5f5;
+  --border-green: #70e38c;
+  --border-orange: #f58882;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --color:white;
+  }
+} */
+/* .dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --color:#ffffff;
+} */
+
+body {
+  color: var(--color);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
