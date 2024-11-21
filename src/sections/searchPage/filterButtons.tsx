@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import FilterButton from "./filterButtonCommponent";
+interface FilterButtonsProps {
+  setIsModalOpen: (isOpen: boolean) => void;
+}
 
-const FilterButtons = () => {
+
+const FilterButtons = ({ setIsModalOpen }:FilterButtonsProps) => {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
 
   const filters = [
@@ -11,9 +15,15 @@ const FilterButtons = () => {
     "rating +0.4",
     "sona",
     "shower",
+    "two massagers"
   ];
 
   const toggleFilter = (filter: string) => {
+
+    if (filter == "filter") {
+      setIsModalOpen(true);
+    }
+
     setSelectedFilters((prev) =>
       prev.includes(filter)
         ? prev.filter((item) => item !== filter)
@@ -22,13 +32,13 @@ const FilterButtons = () => {
   };
 
   return (
-    <div className="flex mt-3 gap-3">
-      {filters.map((filter) => (
+    <div className="flex  gap-3 my-16">
+      {filters.map((item) => (
         <FilterButton
-          key={filter}
-          label={filter}
-          isSelected={selectedFilters.includes(filter)}
-          onClick={() => toggleFilter(filter)}
+          key={item}
+          label={item}
+          isSelected={selectedFilters.includes(item)}
+          onClick={() => toggleFilter(item)}
         />
       ))}
     </div>

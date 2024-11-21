@@ -6,7 +6,7 @@ interface FilterButtonProps {
   onClick: () => void;
 }
 
-const FilterButton = ({ label, isSelected, onClick }: FilterButtonProps) => {
+const filterButtonCommponent = ({ label, isSelected, onClick }: FilterButtonProps) => {
   return (
     <button
       onClick={onClick}
@@ -22,4 +22,4 @@ const FilterButton = ({ label, isSelected, onClick }: FilterButtonProps) => {
   );
 };
 
-export default FilterButton;
+export default filterButtonCommponent;
