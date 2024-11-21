@@ -50,9 +50,9 @@ export default function SignIn() {
                 <p className='text-base font-normal text-[#ABABAB]'>OR</p>
                 <div className='flex gap-x-4'>
                     {/* google */}
-                    <div className='flex items-center gap-x-6 bg-[#F7FFEF] w-[237px] sm:w-[362px] h-14 justify-center rounded-[36px] cursor-pointer'>
+                    <div className='flex items-center gap-x-1 sm:gap-x-6 bg-[#F7FFEF] w-[237px] sm:w-[362px] h-14 justify-center rounded-[36px] cursor-pointer'>
                         <GoogleIcon />
-                        <p className='text-[#848483]'>Login with Google</p>
+                        <p className='text-base text-[#848483]'>Login with Google</p>
                     </div>
                     {/* facebook */}
                     <div className='flex items-center bg-[#F6F6F6] w-14 h-14 justify-center rounded-[36px] cursor-pointer'>
