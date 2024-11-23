@@ -11,17 +11,20 @@ import { Link } from '@/navigation'
 const Auth = ({isSignin}:{isSignin:boolean}) => {
 	const [isRegister, setIsRegister] = useState(isSignin);
 	console.log(isRegister)
+
 	return (
-		<div className='bg-white sm:px-0 sm:py-0 px-9 py-4'>
+		<div className='bg-white mx-auto sm:px-0 sm:py-0 px-4 py-4'>
 			{/* icon section */}
-			<div className='sm:py-12 sm:px-9 sm:flex sm:justify-end'>
+			<Link href='/'>
+			<div className='max-w-screen-lg sm:py-12 sm:px-9 sm:flex sm:justify-start'>
 				<Image src={logo} alt='logo' width={114} height={36} className='cursor-pointer' />
 			</div>
+			</Link>
 			{/* content container */}
-			<div className='sm:gap-x-36 sm:px-20 sm:py-16 sm:flex mt-[78px] sm:mt-0'>
+			<div className='w-full sm:gap-x-36 sm:px-20 sm:py-16 sm:flex sm:justify-center mt-[78px] sm:mt-0'>
 				{/* left section */}
 				<div className='hidden sm:gap-y-20 sm:flex sm:flex-col'>
-					{isRegister ? <Image src={indexImage} alt='index-image' /> : <Image width={488} height={411} src={indexImage} alt='index-image' />}
+					{isRegister ? <Image layout='responsive' className='object-contain' src={indexImage} alt='index-image' /> : <Image layout='responsive' className='object-contain' src={indexImage} alt='index-image' />}
 					<div className={`px-11 py-8 w-[615px] flex flex-col gap-y-8 bg-[#F6F9FF] rounded-md ${isRegister ? 'h-[425px]' : null}`}>
 						<div className='flex gap-x-8 items-start'>
 							<TickIcon />
@@ -41,7 +44,6 @@ const Auth = ({isSignin}:{isSignin:boolean}) => {
 						</div>}
 					</div>
 				</div>
-				<div className='flex flex-col '></div>
 				{/* right section */}
 				<div className='gap-y-10 flex flex-col items-center'>
 					<div className='flex flex-col gap-y-6 items-center'>
