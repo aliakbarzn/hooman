@@ -1,6 +1,6 @@
 "use client";
 import ImageCard from "@/assets/images/search-page/i-card.png";
-import CardSearch from "@/sections/searchPage/cardSearch";
+import CardSearch from "@/components/cards/cardSearch";
 import Ball from "@/assets/icons/search-page/ic-ball";
 import Camera from "@/assets/icons/search-page/ic-camera";
 import Car from "@/assets/icons/search-page/ic-car";
@@ -8,8 +8,8 @@ import Vector from "@/assets/icons/search-page/Vector";
 import Frame from "@/assets/icons/search-page/frame";
 import Gift from "@/assets/icons/search-page/ic-gift";
 import { useState } from "react";
-import FilterButtons from "./filterButtons";
-import ModalComponent from "./modalComponent";
+import FilterButtons from "@/sections/searchPage/filterButtons";
+import ModalComponent from "@/sections/searchPage/modalComponent";
 
 const ListCart = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -198,7 +198,7 @@ const ListCart = () => {
         ))}
       </div>
 
-      {/* ناوبری صفحات */}
+     
       <div className="flex justify-center mt-8">
         <button
           className="px-4 py-2 mx-2 bg-gray-300 rounded"
