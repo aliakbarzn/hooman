@@ -6,10 +6,11 @@ import indexImage from '@/assets/images/register-page/register-image.png'
 import { TickIcon } from '@/assets/icons'
 import SignIn from './signin'
 import Register from './register'
+import { Link } from '@/navigation'
 
-const AuthIndex = () => {
-	const [isRegister, setIsRegister] = useState(true);
-	
+const Auth = ({isSignin}:{isSignin:boolean}) => {
+	const [isRegister, setIsRegister] = useState(isSignin);
+	console.log(isRegister)
 	return (
 		<div className='bg-white sm:px-0 sm:py-0 px-9 py-4'>
 			{/* icon section */}
@@ -47,16 +48,19 @@ const AuthIndex = () => {
 						<p className='text-base font-normal'>Welcome to thaimassagegruppen..!</p>
 						{/* Toggle --------------- */}
 						<div
-							className={`relative flex items-center justify-between w-[329px] h-[50px] rounded-[33px] px-2 py-2 cursor-pointer transition-colors duration-300 ${isRegister ? "bg-[#FFF4F2]" : "bg-[#F7FFEF]"}`}
-							onClick={() => setIsRegister(!isRegister)}
+							className={`relative flex items-center justify-between w-[329px] h-[50px] rounded-[33px] px-2 py-2 cursor-pointer transition-colors duration-300 "bg-[#FFF4F2]"`}
 						>
 							<div
-								className={`absolute z-10 flex items-center justify-center w-[156px] h-9 rounded-full text-white font-semibold transition-transform duration-300 ${isRegister ? "bg-[#F58882] translate-x-0" : "bg-[#47C666] translate-x-full"
+								className={`absolute z-0 flex items-center justify-center w-[156px] h-9 rounded-full text-white font-semibold transition-transform duration-300 ${isRegister ? "bg-[#F58882] translate-x-0" : "bg-[#47C666] translate-x-full"
 									}`}
 							>
 							</div>
-							<p className={`ml-12 z-20 transition-colors duration-300 ${isRegister ? 'text-white' : 'text-[#47C666]'}`}>Register</p>
-							<p className={`mr-14 z-20 transition-colors duration-300 ${isRegister ? 'text-[#F58882]' : 'text-white'}`}>Login</p>
+							<Link className='z-10' href='/register'>
+							<p className={`ml-12 z-1 transition-colors duration-300 ${isRegister ? 'text-white' : 'text-[#47C666]'}`}>Register</p>
+							</Link>
+							<Link className='z-10' href='/signin'>
+							<p className={`mr-14 transition-colors duration-300 ${isRegister ? 'text-[#F58882]' : 'text-white'}`}>Login</p>
+							</Link>
 						</div>
 					</div>
 					{isRegister ? <Register /> : <SignIn />}
@@ -66,4 +70,4 @@ const AuthIndex = () => {
 	)
 }
 
-export default AuthIndex
+export default Auth
