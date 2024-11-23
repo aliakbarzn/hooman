@@ -3,7 +3,7 @@ import frame from "@/assets/icons/search-page/frame";
 import gift from "@/assets/icons/search-page/ic-gift";
 import car from "@/assets/icons/search-page/ic-car";
 import vector from "@/assets/icons/search-page/Vector";
-
+import IcClose from "@/assets/icons/search-page/ic-close";
 import React, { useState, createContext, useContext } from "react";
 import { useForm, Control, FieldValues, UseFormRegister, UseFormWatch, FieldErrors, Controller } from "react-hook-form";
 
@@ -64,7 +64,8 @@ const ModalComponent: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ is
       }}
     >
       <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-        <form onSubmit={handleSubmit(onSubmit)} className="bg-white w-[800px] h-[85%] rounded-xl shadow-lg flex flex-col">
+        <form onSubmit={handleSubmit(onSubmit)} className="bg-white w-[80%] max-w-[1072px]  h-[85%] rounded-xl shadow-lg flex flex-col">
+        <Header onClose={onClose}/>
           <div className="flex flex-grow">
             <Sidebar />
             <Content />
@@ -75,7 +76,23 @@ const ModalComponent: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ is
     </FormContext.Provider>
   );
 };
+const Header: React.FC<{ onClose: () => void }> = ({ onClose }) =>{
+  return(
+    <div className="p-4 h-12 bg-white flex justify-between items-center">
+      <span className="text-2xl">Filters</span>
+      <button
+        type="button"
+       className="w-14 h-14"
+        onClick={() => {
+          onClose();
+        }}
+      >
+<IcClose/>
+      </button>
 
+    </div>
+  )
+}
 const Sidebar: React.FC = () => {
   const { activeStep, setActiveStep } = useSafeFormContext();
 
@@ -121,7 +138,6 @@ const SortBy: React.FC = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-xl font-bold mb-4">Sort by</h2>
       <div className="space-y-4">
         {options.map((option, index) => (
           <label
@@ -207,7 +223,6 @@ const OpeningHours: React.FC = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-xl font-bold mb-4">Opening hours</h2>
       <div className="space-y-4">
         {days.map((day, index) => (
           <label
