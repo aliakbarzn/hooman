@@ -24,7 +24,9 @@ export default function Menu() {
         <div className="flex items-center gap-8 mr-8">
           <div className="cursor-pointer">NEWS</div>
           <div className="cursor-pointer">buy ads</div>
+          <Link href='/contact'>
           <div className="cursor-pointer">Contact</div>
+          </Link>
         </div>
         <div>
 
