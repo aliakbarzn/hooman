@@ -1,8 +1,8 @@
-import camera from "@/assets/icons/search-page/ic-camera";
-import frame from "@/assets/icons/search-page/frame";
-import gift from "@/assets/icons/search-page/ic-gift";
-import car from "@/assets/icons/search-page/ic-car";
-import vector from "@/assets/icons/search-page/Vector";
+import CashPayment from "@/assets/icons/search-page/ic-cash-payment";
+import sona from "@/assets/icons/search-page/ic-sona";
+import giftCard from "@/assets/icons/search-page/ic-giftCard";
+import Parking from "@/assets/icons/search-page/ic-parking";
+import Shower from "@/assets/icons/search-page/ic-shower";
 import IcClose from "@/assets/icons/search-page/ic-close";
 import React, { useState, createContext, useContext } from "react";
 import { useForm, Control, FieldValues, UseFormRegister, UseFormWatch, FieldErrors, Controller } from "react-hook-form";
@@ -25,7 +25,7 @@ const FormContext = createContext<FormContextType | null>(null);
 const steps = ["Sort by", "Features", "Opening hours", "Rating"];
 
 
-const ModalComponent: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
+const ModalComponent: React.FC<{applyFilters: (filters: any) => void; isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
   const [activeStep, setActiveStep] = useState(0);
   const { control, handleSubmit, watch, setValue, register, formState: { errors } } = useForm();
 
@@ -78,7 +78,7 @@ const ModalComponent: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ is
 };
 const Header: React.FC<{ onClose: () => void }> = ({ onClose }) =>{
   return(
-    <div className="p-4 h-12 bg-white flex justify-between items-center">
+    <div className="p-4 h-16 bg-white flex justify-between items-center border-b border-[#757575]">
       <span className="text-2xl">Filters</span>
       <button
         type="button"
@@ -91,6 +91,7 @@ const Header: React.FC<{ onClose: () => void }> = ({ onClose }) =>{
       </button>
 
     </div>
+   
   )
 }
 const Sidebar: React.FC = () => {
@@ -170,11 +171,11 @@ const Features: React.FC = () => {
   const selectedFeatures = watch("features") || [];
 
   const featureOptions = [
-    { icon: camera, label: "Camera" },
-    { icon: car, label: "Car" },
-    { icon: vector, label: "Vector" },
-    { icon: frame, label: "Frame" },
-    { icon: gift, label: "Gift" },
+    { icon: CashPayment, label: "cash payment" },
+    { icon: Parking, label: "parking" },
+    { icon: Shower, label: "Shower" },
+    { icon: sona, label: "sona" },
+    { icon: giftCard, label: "gift card" },
 
   ];
 
