@@ -4,17 +4,15 @@ import Menu from '@/sections/home/header/menu'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-export default function ClientProvider({children}:{children:React.ReactNode}) {
-    const route = usePathname()
-    const lang = route.split('/')
-    if(route==`/${lang[1]}/auth`){
-        return(<>{children}</>)
-    }
-    return(
+export default function ClientProvider({ children }: { children: React.ReactNode }) {
+    const path = usePathname().split('/')
+    const isAuthPage = ['signin', 'register'].includes(path[2])
+    
+    return isAuthPage ? children : (
         <>
-        <Menu/>
-          {children}
-        <Footer />
+            <Menu />
+            {children}
+            <Footer />
         </>
     )
 }

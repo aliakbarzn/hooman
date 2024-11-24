@@ -13,7 +13,7 @@ const Baner = () => {
           <h4 className="text-white text-4xl font-bold ml-2">off</h4>
         </div>
         <span className="text-[#FEE9E7] text-3xl">on booking with my site</span>
-        <button className="p-3 text-[#F5F5F5] bg-[#F58882] text-2xl mt-7 rounded-lg">
+        <button className="p-3 text-[#F5F5F5] bg-primary text-2xl mt-7 rounded-lg">
           check out all the massage salon
         </button>
       </div>
