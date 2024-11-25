@@ -13,6 +13,7 @@ import FilterModal from "./Filters/FilterModal/FilterModal";
 import { CardData, Filters } from "../../@types/searchPage/type";
 import { filterData } from "./filterData";
 import { useTranslations } from "next-intl";
+import Pagination from "./Pagination";
 
 
 const ListCart: React.FC = () => {
@@ -238,7 +239,7 @@ const ListCart: React.FC = () => {
         hours: { open: "12:00", close: "21:00" },
       },
     },
-  ];
+  ];gi
   
   const applyFilters = (newFilters: Filters) => {
     const filledFilters = Object.fromEntries(
@@ -281,6 +282,7 @@ const ListCart: React.FC = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         applyFilters={applyFilters}
+
       />
 
       <div className="flex flex-row justify-between mt-8 flex-wrap">
@@ -288,8 +290,12 @@ const ListCart: React.FC = () => {
           <CardSearch key={index} {...card} />
         ))}
       </div>
-
-      <div className="flex justify-center mt-8">
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={goToPage}
+      />
+      {/* <div className="flex justify-center mt-8">
         <button
           className="px-4 py-2 mx-2 bg-gray-300 rounded"
           onClick={() => goToPage(currentPage - 1)}
@@ -305,7 +311,7 @@ const ListCart: React.FC = () => {
         >
           Next
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };
