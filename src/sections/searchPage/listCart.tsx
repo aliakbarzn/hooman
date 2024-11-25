@@ -8,35 +8,20 @@ import Shower from "@/assets/icons/search-page/ic-shower";
 import Sona from "@/assets/icons/search-page/ic-sona";
 import GiftCard from "@/assets/icons/search-page/ic-giftCard";
 import { useState, useMemo, useCallback } from "react";
-import FilterButtons from "@/sections/searchPage/filterButtons";
-import { StaticImageData } from "next/image";
-import ModalComponent from "./modalComponent";
+import FilterButtonList from "@/sections/searchPage/Filters/FilterButtonList";
+import FilterModal from "./Filters/FilterModal/FilterModal";
+import { CardData, Filters } from "../../@types/searchPage/type";
+import { filterData } from "./filterData";
+import { useTranslations } from "next-intl";
 
-interface CardData {
-  image: StaticImageData;
-  title: string;
-  rating: number;
-  reviewCount: number;
-  description: string;
-  isOpen: boolean;
-  cost:number;
-  discount?: string;
-  isIconActive: { icon: JSX.Element; isActive: boolean; label: string }[];
-  openingHours: {days:string[];hours:{open:string;close:string} }
-}
-interface Filters {
-  [x: string]: any;
-  openNow?: boolean;
-  rating4Plus?: boolean;
-  Shower?: boolean;
-  Parking?: boolean;
-  offer?: boolean;
-}
+
 const ListCart: React.FC = () => {
-  const [filters, setFilters] = useState<Filters>({});
+  const [filters, setFilters] = useState<Filters>({
+    Sona: false,
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-
+  const t = useTranslations("SearchPage.ListCart");
   const cardData: CardData[] = [
     {
       image: ImageCard,
@@ -47,6 +32,7 @@ const ListCart: React.FC = () => {
       isOpen: true,
       discount: "20% off",
       isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
         { icon: <GiftCard />, isActive: true, label: "Gift Card" },
         { icon: <Shower />, isActive: true, label: "Shower" },
         { icon: <Sona />, isActive: false, label: "Sona" },
@@ -67,6 +53,7 @@ const ListCart: React.FC = () => {
       description: "Experience tranquility with our premium spa services.",
       isOpen: false,
       isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
         { icon: <GiftCard />, isActive: false, label: "Gift Card" },
         { icon: <Shower />, isActive: true, label: "Shower" },
         { icon: <Sona />, isActive: true, label: "Sona" },
@@ -88,6 +75,7 @@ const ListCart: React.FC = () => {
       isOpen: true,
       discount: "50% off",
       isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
         { icon: <GiftCard />, isActive: true, label: "Gift Card" },
         { icon: <Shower />, isActive: false, label: "Shower" },
         { icon: <Sona />, isActive: true, label: "Sona" },
@@ -108,6 +96,7 @@ const ListCart: React.FC = () => {
       description: "Affordable and relaxing urban massage services.",
       isOpen: false,
       isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
         { icon: <GiftCard />, isActive: false, label: "Gift Card" },
         { icon: <Shower />, isActive: false, label: "Shower" },
         { icon: <Sona />, isActive: true, label: "Sona" },
@@ -128,6 +117,7 @@ const ListCart: React.FC = () => {
       description: "Reconnect with nature through our holistic therapies.",
       isOpen: true,
       isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
         { icon: <GiftCard />, isActive: true, label: "Gift Card" },
         { icon: <Shower />, isActive: true, label: "Shower" },
         { icon: <Sona />, isActive: true, label: "Sona" },
@@ -149,6 +139,7 @@ const ListCart: React.FC = () => {
       isOpen: false,
       discount: "10% off",
       isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
         { icon: <GiftCard />, isActive: false, label: "Gift Card" },
         { icon: <Shower />, isActive: true, label: "Shower" },
         { icon: <Sona />, isActive: false, label: "Sona" },
@@ -170,6 +161,7 @@ const ListCart: React.FC = () => {
       isOpen: true,
       discount: "15% off",
       isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
         { icon: <GiftCard />, isActive: false, label: "Gift Card" },
         { icon: <Shower />, isActive: true, label: "Shower" },
         { icon: <Sona />, isActive: true, label: "Sona" },
@@ -190,6 +182,7 @@ const ListCart: React.FC = () => {
       description: "Escape the chaos with our serene spa treatments.",
       isOpen: false,
       isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
         { icon: <GiftCard />, isActive: true, label: "Gift Card" },
         { icon: <Shower />, isActive: false, label: "Shower" },
         { icon: <Sona />, isActive: false, label: "Sona" },
@@ -211,6 +204,7 @@ const ListCart: React.FC = () => {
       isOpen: true,
       discount: "25% off",
       isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
         { icon: <GiftCard />, isActive: false, label: "Gift Card" },
         { icon: <Shower />, isActive: true, label: "Shower" },
         { icon: <Sona />, isActive: true, label: "Sona" },
@@ -231,6 +225,7 @@ const ListCart: React.FC = () => {
       description: "Achieve complete relaxation with our special packages.",
       isOpen: false,
       isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
         { icon: <GiftCard />, isActive: true, label: "Gift Card" },
         { icon: <Shower />, isActive: false, label: "Shower" },
         { icon: <Sona />, isActive: true, label: "Sona" },
@@ -245,67 +240,44 @@ const ListCart: React.FC = () => {
     },
   ];
   
-  const applyFilters = (newFilters: Record<string, any>) => {
-    setFilters((prev) => ({ ...prev, ...newFilters }));
-  };
-
-  const filteredData = useMemo(() => {
-    let result = cardData.filter((card) => {
-      if (filters.openNow && !card.isOpen) return false;
-      if (filters.rating4Plus && card.rating < 4) return false;
-      if (filters.Shower && !card.isIconActive.some((icon) => icon.label === "Shower" && icon.isActive)) return false;
-      if (filters.Sona && !card.isIconActive.some((icon) => icon.label === "Sona" && icon.isActive)) return false;
-      if (filters.offer && !card.discount) return false;
-      return true;
-    });
-
-    // مرتب‌سازی
-    if (filters.sortBy) {
-      switch (filters.sortBy) {
-        case "Rating: High to Low":
-          result = result.sort((a, b) => b.rating - a.rating);
-          break;
-        case "Cost: Low to High":
-          result = result.sort((a, b) => a.cost - b.cost);
-          break;
-        case "Cost: High to Low":
-          result = result.sort((a, b) => b.cost - a.cost);
-          break;
-        default:
-          break;
-      }
+  const applyFilters = (newFilters: Filters) => {
+    const filledFilters = Object.fromEntries(
+      Object.entries(newFilters.filterModal || {}).filter(([_, value]) => value !== undefined && value !== "")
+    );
+  
+    if (Object.keys(filledFilters).length === 0) {
+      alert("Please select at least one filter before applying.");
+      return;
     }
-
-    return result;
-  }, [cardData, filters]);
+  
+    setFilters((prev) => ({
+      ...prev,
+      filterModal: { ...prev.filterModal, ...filledFilters },
+    }));
+  };
+  
+  const filteredData = useMemo(() => filterData(cardData, filters), [cardData, filters]);
 
 
   const itemsPerPage = 6;
 
-  
   const currentItems = useMemo(() => {
-    return filteredData.slice(
-      currentPage * itemsPerPage,
-      (currentPage + 1) * itemsPerPage
-    );
+    return filteredData.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
   }, [filteredData, currentPage]);
 
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
- 
   const goToPage = useCallback((page: number) => {
     setCurrentPage(page);
   }, []);
 
   return (
     <section className="flex flex-col mb-8 mx-6">
-      <FilterButtons setFilters={setFilters} setIsModalOpen={setIsModalOpen} />
+      <FilterButtonList setFilters={setFilters} setIsModalOpen={setIsModalOpen} />
 
-      <span className="text-[#1E1E1E] font-bold text-xl mt-16">
-        Massage Parlors in Tyresö
-      </span>
+      <span className="text-[#1E1E1E] font-bold text-xl mt-16">{t("titleCard")}</span>
 
-      <ModalComponent
+      <FilterModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         applyFilters={applyFilters}

@@ -2,12 +2,14 @@ import CardBanerOff from "@/components/cards/cardBanerOff";
 import ImageOff from "@/assets/images/search-page/ImageOff.png";
 import ImageBannerOff from "@/assets/images/search-page/ImageBannerOff.png";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const BanerOff = () => {
+  const t = useTranslations("SearchPage.BanerOff");
   return (
     <div className="bg-[#FFF9F8] flex flex-col w-full md:px-2 sm:px-1 lg:px-10 px-16 pt-12 pb-20 h-full">
-      <span className="text-[#1E1E1E] text-xl font-bold ml-6 ">
-        webshop products
+      <span className="text-[#1E1E1E] text-xl font-semibold ml-6 ">
+       {t("titleProducts")}
       </span>
       <div className="w-full h-[271px] flex justify-between mt-11 items-center sm:max-h-48 md:max-h-56 lg:max-h-72">
         <div className="flex w-2/5 h-full relative overflow-hidden object-fill">
@@ -19,11 +21,11 @@ const BanerOff = () => {
 
           <div className="absolute top-0 left-0 h-full flex flex-col justify-center ml-14 mt-7">
             <button className="bg-[#2C2C2C] text-white p-2 w-32 h-10 rounded-xl">
-              Shop Now
+            {t("button")}
             </button>
             <div className="flex mt-4">
-              <span className="text-[#1E1E1E] text-6xl font-bold">78%</span>
-              <span className="text-[#F58882] text-2xl">off</span>
+              <span className="text-blackC text-6xl font-semibold">78%</span>
+              <span className="text-primary text-2xl font-semibold">{t("discountLabel")}</span>
             </div>
           </div>
         </div>
