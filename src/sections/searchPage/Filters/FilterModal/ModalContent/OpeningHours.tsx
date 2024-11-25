@@ -32,7 +32,7 @@ const OpeningHours: React.FC<OpeningHoursProps> = ({ localFilters, setLocalFilte
             }`}
           >
             {localFilters?.openingHours === day && (
-              <span className="w-3 h-3 bg-orange-500 rounded-full" />
+              <span className="w-3 h-3 bg-primary rounded-full" />
             )}
           </span>
           <span className="ml-2 text-xl font-light">{day}</span>

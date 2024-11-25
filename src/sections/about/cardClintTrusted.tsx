@@ -35,7 +35,7 @@ const CardClintTrusted = ({ images, starCount }: CardClintTrustedProps) => {
         </div>
 
         <div className="flex items-center gap-1">
-          <span className="text-orange-500 text-xl">★</span>
+          <span className="text-pretty text-xl">★</span>
           <span>{starCount.toLocaleString()}+ </span>
         </div>
       </div>

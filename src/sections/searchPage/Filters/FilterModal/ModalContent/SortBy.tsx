@@ -31,7 +31,7 @@ const SortBy: React.FC<SortByProps> = ({ localFilters, setLocalFilters }) => {
             }`}
           >
             {localFilters?.sort === option && (
-              <span className="w-3 h-3 bg-orange-500 rounded-full" />
+              <span className="w-3 h-3 bg-primary rounded-full" />
             )}
           </span>
         

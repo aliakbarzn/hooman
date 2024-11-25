@@ -53,7 +53,7 @@ const Features: React.FC<FeaturesProps> = ({ localFilters, setLocalFilters }) =>
           
             <span
               className={`mt-2 text-sm font-medium ${
-                localFilters?.fitcher?.includes(label) ? "text-orange-500" : "text-gray-700"
+                localFilters?.fitcher?.includes(label) ? "text-primary" : "text-gray-700"
               }`}
             >
               {label.toLowerCase()}
