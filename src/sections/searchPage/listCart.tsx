@@ -239,7 +239,7 @@ const ListCart: React.FC = () => {
         hours: { open: "12:00", close: "21:00" },
       },
     },
-  ];gi
+  ];
   
   const applyFilters = (newFilters: Filters) => {
     const filledFilters = Object.fromEntries(
