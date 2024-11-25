@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import logo from "@/assets/logo.svg";
 import { AlertIcon, UserIcon } from "@/assets/icons";
 import { Link } from "@/navigation";
+import Bar from "@/assets/icons/bar";
 type IsLogin = {
   isLogin: boolean;
 };
@@ -16,11 +17,19 @@ export default function Menu() {
           <Image alt="logo" src={logo} width={150} height={160} />
         </Link>
       </div>
-      <div className="flex ">
+      <span className=" sm:hidden w-12">
+        <Bar/>
+      </span>
+      <div className="flex hidden sm:flex sm:block ">
         <div className="flex items-center gap-8 mr-8">
           <div className="cursor-pointer">NEWS</div>
           <div className="cursor-pointer">buy ads</div>
+          <Link href='/contact'>
           <div className="cursor-pointer">Contact</div>
+          </Link>
+        </div>
+        <div>
+
         </div>
         <div className="flex items-center gap-8 cursor-pointer">
           {isLogin && (
@@ -34,12 +43,12 @@ export default function Menu() {
             </>
           )}
           <div>
-            <Link href="/auth">
+            <Link href="/signin">
               <button className="px-4 rounded-lg mr-3 py-2 bg-green">
                 Sign in
               </button>
             </Link>
-            <Link href="/">
+            <Link href="/register">
               <button className="px-4 rounded-lg py-2 bg-pink">Register</button>
             </Link>
           </div>

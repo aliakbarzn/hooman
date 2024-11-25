@@ -1,0 +1,52 @@
+import CardBanerOff from "@/components/cards/cardBanerOff";
+import ImageOff from "@/assets/images/search-page/ImageOff.png";
+import ImageBannerOff from "@/assets/images/search-page/ImageBannerOff.png";
+import Image from "next/image";
+
+const BanerOff = () => {
+  return (
+    <div className="bg-[#FFF9F8] flex flex-col w-full md:px-2 sm:px-1 lg:px-10 px-16 pt-12 pb-20 h-full">
+      <span className="text-[#1E1E1E] text-xl font-bold ml-6 ">
+        webshop products
+      </span>
+      <div className="w-full h-[271px] flex justify-between mt-11 items-center sm:max-h-48 md:max-h-56 lg:max-h-72">
+        <div className="flex w-2/5 h-full relative overflow-hidden object-fill">
+          <Image
+            className="absolute h-full object-cover"
+            src={ImageBannerOff}
+            alt="ImageBannerOff"
+          />
+
+          <div className="absolute top-0 left-0 h-full flex flex-col justify-center ml-14 mt-7">
+            <button className="bg-[#2C2C2C] text-white p-2 w-32 h-10 rounded-xl">
+              Shop Now
+            </button>
+            <div className="flex mt-4">
+              <span className="text-[#1E1E1E] text-6xl font-bold">78%</span>
+              <span className="text-[#F58882] text-2xl">off</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex h-full flex-wrap items-center justify-around w-3/5">
+          <CardBanerOff
+            productPhoto={ImageOff}
+            originalPrice={"2600"}
+            discountedPrice={4200}
+            discountPercentage={78}
+            productTitle={"Cantilever chair"}
+          />
+          <CardBanerOff
+            productPhoto={ImageOff}
+            originalPrice={"2600"}
+            discountedPrice={4200}
+            discountPercentage={78}
+            productTitle={"Cantilever chair"}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BanerOff;

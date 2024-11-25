@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "@/assets/css/globals.css";
-import Footer from "@/sections/footer/Footer";
-import Menu from "@/sections/home/header/menu";
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
+import ClientProvider from "@/components/client-provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,9 +29,7 @@ export default async function RootLayout({
     <NextIntlClientProvider messages={messages}>
     <html lang={locale}>
       <body>
-          <Menu/>
-          {children}
-          <Footer />
+          <ClientProvider>{children}</ClientProvider>
       </body>
     </html>
     </NextIntlClientProvider>
