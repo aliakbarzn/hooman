@@ -1,205 +1,301 @@
 "use client";
 import ImageCard from "@/assets/images/search-page/i-card.png";
 import CardSearch from "@/components/cards/cardSearch";
-import Ball from "@/assets/icons/search-page/ic-ball";
-import Camera from "@/assets/icons/search-page/ic-camera";
-import Car from "@/assets/icons/search-page/ic-car";
-import Vector from "@/assets/icons/search-page/Vector";
-import Frame from "@/assets/icons/search-page/frame";
-import Gift from "@/assets/icons/search-page/ic-gift";
-import { useState } from "react";
-import FilterButtons from "@/sections/searchPage/filterButtons";
-import ModalComponent from "@/sections/searchPage/modalComponent";
+import Swish from "@/assets/icons/search-page/ic-swish";
+import CashPayment from "@/assets/icons/search-page/ic-cash-payment";
+import Parking from "@/assets/icons/search-page/ic-parking";
+import Shower from "@/assets/icons/search-page/ic-shower";
+import Sona from "@/assets/icons/search-page/ic-sona";
+import GiftCard from "@/assets/icons/search-page/ic-giftCard";
+import { useState, useMemo, useCallback } from "react";
+import FilterButtonList from "@/sections/searchPage/Filters/FilterButtonList";
+import FilterModal from "./Filters/FilterModal/FilterModal";
+import { CardData, Filters } from "../../@types/searchPage/type";
+import { filterData } from "./filterData";
+import { useTranslations } from "next-intl";
+import Pagination from "./Pagination";
 
-const ListCart = () => {
+
+const ListCart: React.FC = () => {
+  const [filters, setFilters] = useState<Filters>({
+    Sona: false,
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-
-
-  const cardData = [
+  const t = useTranslations("SearchPage.ListCart");
+  const cardData: CardData[] = [
     {
       image: ImageCard,
-      title: "Luleå Thaimassage",
-      rating: 3.9,
-      reviewCount: 234,
-      description:
-        "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      title: "Elite Thai Massage",
+      rating: 4.5,
+      reviewCount: 120,
+      description: "Relax and rejuvenate with our professional Thai massage.",
       isOpen: true,
-      discount: "125$ off",
+      discount: "20% off",
       isIconActive: [
-        { icon: <Gift />, isActive: false },
-        { icon: <Vector />, isActive: true },
-        { icon: <Frame />, isActive: true },
-        { icon: <Ball />, isActive: false },
-        { icon: <Car />, isActive: true },
-        { icon: <Camera />, isActive: false },
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
+        { icon: <GiftCard />, isActive: true, label: "Gift Card" },
+        { icon: <Shower />, isActive: true, label: "Shower" },
+        { icon: <Sona />, isActive: false, label: "Sona" },
+        { icon: <Swish />, isActive: true, label: "Swish" },
+        { icon: <Parking />, isActive: false, label: "Parking" },
       ],
+      cost: 60,
+      openingHours: {
+        days: ["Monday", "Tuesday", "Wednesday", "Friday"],
+        hours: { open: "09:00", close: "17:00" },
+      },
     },
     {
       image: ImageCard,
-      title: "Luleå Thaimassage",
-      rating: 3.9,
-      reviewCount: 234,
-      description:
-        "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      title: "Stockholm Spa Center",
+      rating: 3.8,
+      reviewCount: 80,
+      description: "Experience tranquility with our premium spa services.",
       isOpen: false,
       isIconActive: [
-        { icon: <Gift />, isActive: false },
-        { icon: <Vector />, isActive: true },
-        { icon: <Frame />, isActive: true },
-        { icon: <Ball />, isActive: false },
-        { icon: <Car />, isActive: true },
-        { icon: <Camera />, isActive: false },
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
+        { icon: <GiftCard />, isActive: false, label: "Gift Card" },
+        { icon: <Shower />, isActive: true, label: "Shower" },
+        { icon: <Sona />, isActive: true, label: "Sona" },
+        { icon: <Swish />, isActive: true, label: "Swish" },
+        { icon: <Parking />, isActive: true, label: "Parking" },
       ],
+      cost: 80,
+      openingHours: {
+        days: ["Saturday", "Sunday"],
+        hours: { open: "10:00", close: "20:00" },
+      },
     },
     {
       image: ImageCard,
-      title: "Luleå Thaimassage",
-      rating: 3.9,
-      reviewCount: 234,
-      description:
-        "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
-      isOpen: false,
-      isIconActive: [
-        { icon: <Gift />, isActive: false },
-        { icon: <Vector />, isActive: true },
-        { icon: <Frame />, isActive: true },
-        { icon: <Ball />, isActive: false },
-        { icon: <Car />, isActive: true },
-        { icon: <Camera />, isActive: false },
-      ],
-    },
-    {
-      image: ImageCard,
-      title: "Luleå Thaimassage",
-      rating: 3.9,
-      reviewCount: 234,
-      description:
-        "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      title: "Luxury Swedish Massage",
+      rating: 5.0,
+      reviewCount: 200,
+      description: "Indulge in a luxurious Swedish massage session.",
       isOpen: true,
+      discount: "50% off",
       isIconActive: [
-        { icon: <Gift />, isActive: false },
-        { icon: <Vector />, isActive: true },
-        { icon: <Frame />, isActive: true },
-        { icon: <Ball />, isActive: false },
-        { icon: <Car />, isActive: true },
-        { icon: <Camera />, isActive: false },
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
+        { icon: <GiftCard />, isActive: true, label: "Gift Card" },
+        { icon: <Shower />, isActive: false, label: "Shower" },
+        { icon: <Sona />, isActive: true, label: "Sona" },
+        { icon: <Swish />, isActive: false, label: "Swish" },
+        { icon: <Parking />, isActive: true, label: "Parking" },
       ],
+      cost: 100,
+      openingHours: {
+        days: ["Monday", "Thursday", "Friday"],
+        hours: { open: "08:00", close: "18:00" },
+      },
     },
     {
       image: ImageCard,
-      title: "Luleå Thaimassage",
-      rating: 3.9,
-      reviewCount: 234,
-      description:
-        "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      title: "Urban Massage Studio",
+      rating: 3.2,
+      reviewCount: 45,
+      description: "Affordable and relaxing urban massage services.",
       isOpen: false,
       isIconActive: [
-        { icon: <Gift />, isActive: false },
-        { icon: <Vector />, isActive: true },
-        { icon: <Frame />, isActive: true },
-        { icon: <Ball />, isActive: false },
-        { icon: <Car />, isActive: true },
-        { icon: <Camera />, isActive: false },
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
+        { icon: <GiftCard />, isActive: false, label: "Gift Card" },
+        { icon: <Shower />, isActive: false, label: "Shower" },
+        { icon: <Sona />, isActive: true, label: "Sona" },
+        { icon: <Swish />, isActive: false, label: "Swish" },
+        { icon: <Parking />, isActive: false, label: "Parking" },
       ],
+      cost: 40,
+      openingHours: {
+        days: ["Wednesday", "Friday", "Saturday"],
+        hours: { open: "12:00", close: "21:00" },
+      },
     },
     {
       image: ImageCard,
-      title: "Luleå Thaimassage",
-      rating: 3.9,
-      reviewCount: 234,
-      description:
-        "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
-      isOpen: false,
-      isIconActive: [
-        { icon: <Gift />, isActive: false },
-        { icon: <Vector />, isActive: true },
-        { icon: <Frame />, isActive: true },
-        { icon: <Ball />, isActive: false },
-        { icon: <Car />, isActive: true },
-        { icon: <Camera />, isActive: false },
-      ],
-    },
-    {
-      image: ImageCard,
-      title: "Luleå Thaimassage",
-      rating: 3.9,
-      reviewCount: 234,
-      description:
-        "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      title: "Nature's Touch Therapy",
+      rating: 5.0,
+      reviewCount: 300,
+      description: "Reconnect with nature through our holistic therapies.",
       isOpen: true,
       isIconActive: [
-        { icon: <Gift />, isActive: false },
-        { icon: <Vector />, isActive: true },
-        { icon: <Frame />, isActive: true },
-        { icon: <Ball />, isActive: false },
-        { icon: <Car />, isActive: true },
-        { icon: <Camera />, isActive: false },
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
+        { icon: <GiftCard />, isActive: true, label: "Gift Card" },
+        { icon: <Shower />, isActive: true, label: "Shower" },
+        { icon: <Sona />, isActive: true, label: "Sona" },
+        { icon: <Swish />, isActive: true, label: "Swish" },
+        { icon: <Parking />, isActive: true, label: "Parking" },
       ],
+      cost: 120,
+      openingHours: {
+        days: ["Tuesday", "Thursday", "Saturday"],
+        hours: { open: "09:00", close: "19:00" },
+      },
     },
     {
       image: ImageCard,
-      title: "Luleå Thaimassage",
-      rating: 3.9,
-      reviewCount: 234,
-      description:
-        "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      title: "Serenity Spa",
+      rating: 3.5,
+      reviewCount: 100,
+      description: "Discover inner peace with our customized spa packages.",
       isOpen: false,
+      discount: "10% off",
       isIconActive: [
-        { icon: <Gift />, isActive: false },
-        { icon: <Vector />, isActive: true },
-        { icon: <Frame />, isActive: true },
-        { icon: <Ball />, isActive: false },
-        { icon: <Car />, isActive: true },
-        { icon: <Camera />, isActive: false },
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
+        { icon: <GiftCard />, isActive: false, label: "Gift Card" },
+        { icon: <Shower />, isActive: true, label: "Shower" },
+        { icon: <Sona />, isActive: false, label: "Sona" },
+        { icon: <Swish />, isActive: true, label: "Swish" },
+        { icon: <Parking />, isActive: true, label: "Parking" },
       ],
+      cost: 70,
+      openingHours: {
+        days: ["Monday", "Wednesday", "Friday"],
+        hours: { open: "11:00", close: "20:00" },
+      },
     },
     {
       image: ImageCard,
-      title: "Luleå Thaimassage",
-      rating: 3.9,
-      reviewCount: 234,
-      description:
-        "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      title: "Zen Massage Lounge",
+      rating: 4.0,
+      reviewCount: 150,
+      description: "Unwind with our specialized Zen massage techniques.",
+      isOpen: true,
+      discount: "15% off",
+      isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
+        { icon: <GiftCard />, isActive: false, label: "Gift Card" },
+        { icon: <Shower />, isActive: true, label: "Shower" },
+        { icon: <Sona />, isActive: true, label: "Sona" },
+        { icon: <Swish />, isActive: false, label: "Swish" },
+        { icon: <Parking />, isActive: true, label: "Parking" },
+      ],
+      cost: 90,
+      openingHours: {
+        days: ["Tuesday", "Thursday", "Sunday"],
+        hours: { open: "10:00", close: "22:00" },
+      },
+    },
+    {
+      image: ImageCard,
+      title: "Haven Spa Retreat",
+      rating: 2.5,
+      reviewCount: 30,
+      description: "Escape the chaos with our serene spa treatments.",
       isOpen: false,
       isIconActive: [
-        { icon: <Gift />, isActive: false },
-        { icon: <Vector />, isActive: true },
-        { icon: <Frame />, isActive: true },
-        { icon: <Ball />, isActive: false },
-        { icon: <Car />, isActive: true },
-        { icon: <Camera />, isActive: false },
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
+        { icon: <GiftCard />, isActive: true, label: "Gift Card" },
+        { icon: <Shower />, isActive: false, label: "Shower" },
+        { icon: <Sona />, isActive: false, label: "Sona" },
+        { icon: <Swish />, isActive: false, label: "Swish" },
+        { icon: <Parking />, isActive: true, label: "Parking" },
       ],
+      cost: 30,
+      openingHours: {
+        days: ["Saturday", "Sunday"],
+        hours: { open: "14:00", close: "18:00" },
+      },
+    },
+    {
+      image: ImageCard,
+      title: "Blissful Spa",
+      rating: 3.9,
+      reviewCount: 70,
+      description: "Enjoy a blissful massage session tailored just for you.",
+      isOpen: true,
+      discount: "25% off",
+      isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
+        { icon: <GiftCard />, isActive: false, label: "Gift Card" },
+        { icon: <Shower />, isActive: true, label: "Shower" },
+        { icon: <Sona />, isActive: true, label: "Sona" },
+        { icon: <Swish />, isActive: true, label: "Swish" },
+        { icon: <Parking />, isActive: true, label: "Parking" },
+      ],
+      cost: 50,
+      openingHours: {
+        days: ["Monday", "Wednesday", "Friday"],
+        hours: { open: "10:00", close: "19:00" },
+      },
+    },
+    {
+      image: ImageCard,
+      title: "Tranquility Spa",
+      rating: 4.2,
+      reviewCount: 90,
+      description: "Achieve complete relaxation with our special packages.",
+      isOpen: false,
+      isIconActive: [
+        { icon: <CashPayment />, isActive: true, label: "Cash Payment" },
+        { icon: <GiftCard />, isActive: true, label: "Gift Card" },
+        { icon: <Shower />, isActive: false, label: "Shower" },
+        { icon: <Sona />, isActive: true, label: "Sona" },
+        { icon: <Swish />, isActive: true, label: "Swish" },
+        { icon: <Parking />, isActive: true, label: "Parking" },
+      ],
+      cost: 60,
+      openingHours: {
+        days: ["Thursday", "Friday"],
+        hours: { open: "12:00", close: "21:00" },
+      },
     },
   ];
-  const itemsPerPage = 6;
-  const totalPages = Math.ceil(cardData.length / itemsPerPage);
-  const currentItems = cardData.slice(
-    currentPage * itemsPerPage,
-    (currentPage + 1) * itemsPerPage
-  );
-
-  const goToPage = (page: number) => {
-    setCurrentPage(page);
+  
+  const applyFilters = (newFilters: Filters) => {
+    const filledFilters = Object.fromEntries(
+      Object.entries(newFilters.filterModal || {}).filter(([_, value]) => value !== undefined && value !== "")
+    );
+  
+    if (Object.keys(filledFilters).length === 0) {
+      alert("Please select at least one filter before applying.");
+      return;
+    }
+  
+    setFilters((prev) => ({
+      ...prev,
+      filterModal: { ...prev.filterModal, ...filledFilters },
+    }));
   };
+  
+  const filteredData = useMemo(() => filterData(cardData, filters), [cardData, filters]);
+
+
+  const itemsPerPage = 6;
+
+  const currentItems = useMemo(() => {
+    return filteredData.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
+  }, [filteredData, currentPage]);
+
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+  const goToPage = useCallback((page: number) => {
+    setCurrentPage(page);
+  }, []);
 
   return (
     <section className="flex flex-col mb-8 mx-6">
+      <FilterButtonList setFilters={setFilters} setIsModalOpen={setIsModalOpen} />
 
-      <FilterButtons setIsModalOpen={setIsModalOpen}/>
+      <span className="text-[#1E1E1E] font-bold text-xl mt-16">{t("titleCard")}</span>
 
-      <span className="text-[#1E1E1E] font-bold text-xl mt-16">massage parlors in Tyresö</span>
+      <FilterModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        applyFilters={applyFilters}
 
-      <ModalComponent isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      />
 
-      <div className="flex flex-row justify-between   mt-8 flex-wrap">
+      <div className="flex flex-row justify-between mt-8 flex-wrap">
         {currentItems.map((card, index) => (
           <CardSearch key={index} {...card} />
         ))}
       </div>
-
-     
-      <div className="flex justify-center mt-8">
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={goToPage}
+      />
+      {/* <div className="flex justify-center mt-8">
         <button
           className="px-4 py-2 mx-2 bg-gray-300 rounded"
           onClick={() => goToPage(currentPage - 1)}
@@ -215,7 +311,7 @@ const ListCart = () => {
         >
           Next
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };

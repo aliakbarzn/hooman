@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function LatestReview() {
   return (
-    <div>
-      <h1 className="py-8">Latest Review</h1>
+    <div className='w-full py-16'>
+      <h1 className="mb-11">Latest Review</h1>
       <ReviewCard/>
     </div>
   )

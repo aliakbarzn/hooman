@@ -1,7 +1,7 @@
-import Header from "@/sections/searchPage/header";
-import Baner from "@/sections/searchPage/baner";
-import ListCart from "@/sections/searchPage/listCart";
-import BanerOff from "@/sections/searchPage/BanerOff";
+import Header from "@/sections/searchPage/Header";
+import Baner from "@/sections/searchPage/Baner";
+import ListCart from "@/sections/searchPage/ListCart";
+import BanerOff from "@/components/baners/BanerOff";
 
 const SearchPage = () => {
   return (

@@ -44,12 +44,12 @@ export default function Menu() {
           )}
           <div>
             <Link href="/signin">
-              <button className="px-4 rounded-lg mr-3 py-2 bg-green">
+              <button className="px-4 rounded-lg mr-3 py-2 bg-greenC-light">
                 Sign in
               </button>
             </Link>
             <Link href="/register">
-              <button className="px-4 rounded-lg py-2 bg-pink">Register</button>
+              <button className="px-4 rounded-lg py-2 bg-primary">Register</button>
             </Link>
           </div>
         </div>
