@@ -1,4 +1,4 @@
-import Dashboard from '@/sections/aboutThai/thai-dashboard'
+import Dashboard from '@/sections/aboutThai/service-dashboard'
 import React from 'react'
 
 export default function LeftSidebar() {

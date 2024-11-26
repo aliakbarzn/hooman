@@ -1,68 +1,100 @@
 {
-    "IndexPage": {
-      "title": "next-intl example",
-      "description": "Welcome to the Next.js Internationalization (i18n) example! This demo showcases the power of the App Router and how to manage multilingual content seamlessly using next-intl."
+  "IndexPage": {
+    "title": "next-intl example",
+    "description": "Welcome to the Next.js Internationalization (i18n) example! This demo showcases the power of the App Router and how to manage multilingual content seamlessly using next-intl."
+  },
+  "NotFoundPage": {
+    "title": "Page Not Found",
+    "description": "Oops! It seems like you've stumbled upon a page that doesn't exist. Don't worry, our internationalization magic is still hard at work on other parts of the app. Feel free to navigate back to explore more!"
+  },
+  "Navigation": {
+    "home": "Home"
+  },
+  "Footer": {
+    "copyright": "© 2024 Your App. All rights reserved."
+  },
+  "ForgetPage": {
+    "Forget1": {
+      "message1": "If you don’t have an account register",
+      "message2": "You can ",
+      "messageColored": "Register here !",
+      "emailTitle": "Email Address",
+      "emailPlaceholder": "contact@dscodetech.com",
+      "usernameTitle": "User name",
+      "usernamePlaceholder": "contact",
+      "passwordTitle": "Password",
+      "remember": "Remember me",
+      "forgot": "Forgot Password ?",
+      "button": "Login",
+      "or": "OR",
+      "loginGoogle": "Login with Google"
     },
-    "NotFoundPage": {
-      "title": "Page Not Found",
-      "description": "Oops! It seems like you've stumbled upon a page that doesn't exist. Don't worry, our internationalization magic is still hard at work on other parts of the app. Feel free to navigate back to explore more!"
+    "Forget2": {
+      "forgot": "Forgot password",
+      "message": "Please enter your email to reset the password",
+      "emailAddress": "Email Address",
+      "enterEmail": "contact@dscodetech.com",
+      "button": "reset password"
     },
-    "Navigation": {
-      "home": "Home"
+    "Forget3": {
+      "check": "Forgot password",
+      "message1": "We sent a reset link to contact@dscode...com",
+      "message2": "enter 5 digit code that mentioned in the email",
+      "button": "Verify Code",
+      "subtext": "Haven’t got the email yet",
+      "subtextColored": "? Resend email"
     },
-    "Footer": {
-      "copyright": "© 2024 Your App. All rights reserved."
+    "Forget4": {
+      "title": "Password reset",
+      "message": "Your password has been successfully reset. click confirm to set a new password",
+      "button": "Confirm"
     },
-    "ForgetPage": {
-      "Forget1": {
-        "message1": "If you don’t have an account register",
-        "message2": "You can ",
-        "messageColored": "Register here !",
-        "emailTitle": "Email Address",
-        "emailPlaceholder": "contact@dscodetech.com",
-        "usernameTitle": "User name",
-        "usernamePlaceholder": "contact",
-        "passwordTitle": "Password",
-        "remember": "Remember me",
-        "forgot": "Forgot Password ?",
-        "button": "Login",
-        "or": "OR",
-        "loginGoogle": "Login with Google"
-      },
-      "Forget2": {
-        "forgot": "Forgot password",
-        "message": "Please enter your email to reset the password",
-        "emailAddress": "Email Address",
-        "enterEmail": "contact@dscodetech.com",
-        "button": "reset password"
-      },
-      "Forget3": {
-        "check": "Forgot password",
-        "message1": "We sent a reset link to contact@dscode...com",
-        "message2": "enter 5 digit code that mentioned in the email",
-        "button": "Verify Code",
-        "subtext": "Haven’t got the email yet",
-        "subtextColored": "? Resend email"
-      },
-      "Forget4": {
-        "title": "Password reset",
-        "message": "Your password has been successfully reset. click confirm to set a new password",
-        "button": "Confirm"
-      },
-      "Forget5": {
-        "title": "Set a new password",
-        "message": "Create a new password. Ensure it differs from previous ones for security",
-        "password": "Password",
-        "confirmPassword": "Confirm Password",
-        "confirmPasswordText": "Re-enter password",
-        "button": "Update Password"
-      },
-      "Forget6": {
-        "title": "Successful",
-        "message1": "Congratulations! Your password has",
-        "message2": " been changed. Click continue to login",
-        "button1": "cancel",
-        "button2": "Update Password"
+    "Forget5": {
+      "title": "Set a new password",
+      "message": "Create a new password. Ensure it differs from previous ones for security",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordText": "Re-enter password",
+      "button": "Update Password"
+    },
+    "Forget6": {
+      "title": "Successful",
+      "message1": "Congratulations! Your password has",
+      "message2": " been changed. Click continue to login",
+      "button1": "cancel",
+      "button2": "Update Password"
+    }
+  },
+  "Services": {
+    "servicesDashboard": {
+      "title": "Our services",
+      "subTitle": "Category",
+      "items": {
+        "item1": {
+          "item": "Traditional Thai Massage",
+          "subItem1": "Herb (Thai Massage)",
+          "subItem2": "Thai Massage",
+          "subItem3": "Child Thai Massage"
+        },
+        "item2": {
+          "item": "Oil-Based Massages",
+          "subItem1": "2 Masseuse Thai Oil Massage",
+          "subItem2": "Thai Oil Massage"
+        },
+        "item3": {
+          "item": "Specialized  Techniques",
+          "subItem1": " Mix Thai Massage",
+          "subItem2": "Sports Massage"
+        },
+        "item4": {
+          "item": "Spa Services",
+          "subItem1": "Body Scrub",
+          "subItem2": "Facial Massage",
+          "subItem3": "Foot Massage",
+          "subItem4": "Back Massage",
+          "subItem5": " Spa Thai Massage"
+        }
       }
     }
   }
+}

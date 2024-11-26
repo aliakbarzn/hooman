@@ -1,4 +1,4 @@
-import Dashboard from '@/sections/aboutThai/thai-dashboard'
+import ServicesDashboard from '@/sections/aboutThai/service-dashboard'
 import CardsContainer from '@/sections/aboutThai/cards-container'
 import ContentContainer from '@/sections/aboutThai/content-container'
 import React from 'react'
@@ -10,7 +10,7 @@ type RootLayoutPropTypes = {
 export default function RootLayout({ children }): RootLayoutPropTypes {
   return (
     <div className='flex'>
-      <Dashboard />
+      <ServicesDashboard />
       {children}
     </div>
   )
