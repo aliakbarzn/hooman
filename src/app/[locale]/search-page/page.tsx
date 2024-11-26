@@ -1,16 +1,8 @@
-import Header from "@/sections/searchPage/Header";
-import Baner from "@/sections/searchPage/Baner";
-import ListCart from "@/sections/searchPage/ListCart";
-import BanerOff from "@/components/baners/BanerOff";
+import SearchPageView from "@/sections/searchPage/SearchPageView";
 
 const SearchPage = () => {
   return (
-    <div className="flex flex-col">
-      <Header />
-      <Baner />
-      <ListCart />
-      <BanerOff />
-    </div>
+    <SearchPageView/>
   );
 };
 

@@ -1,9 +1,9 @@
 import React from "react";
 import { Filters } from "@/@types/searchPage/type";
-import SortBy from "./ModalContent/SortBy";
-import Features from "./ModalContent/Features";
-import OpeningHours from "./ModalContent/OpeningHours";
-import Rating from "./ModalContent/Rating";
+import SortBy from "../../step/SortBy";
+import Features from "../../step/Features";
+import OpeningHours from "../../step/OpeningHours";
+import Rating from "../../step/Rating";
 
 interface ContentProps {
   activeStep: number;

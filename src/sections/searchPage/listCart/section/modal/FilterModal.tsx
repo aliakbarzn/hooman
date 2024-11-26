@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Filters } from "@/@types/searchPage/type";
 import IcClose from "@/assets/icons/search-page/ic-close";
-import SidebarModal from "./SidebarModal";
-import ContentModal from "./ContentModal";
-import FooterModal from "./FooterModal";
+import BodyModal from "./body/bodyModal";
+import FooterModal from "./footer/FooterModal";
 import { useTranslations } from "next-intl";
 
 interface ModalComponentProps {
@@ -23,12 +22,6 @@ const filterModal: React.FC<ModalComponentProps> = ({ applyFilters, isOpen, onCl
 
   const t = useTranslations("SearchPage.ListCart.FilterModal");
 
-  const steps = [
-    t("steps.sortBy"),
-    t("steps.features"),
-    t("steps.openingHours"),
-    t("steps.rating"),
-  ];
 
   const handleClear = () => {
     setLocalFilters({ fitcher: [], rating: undefined, openingHours: undefined, sort: undefined });
@@ -65,20 +58,12 @@ const filterModal: React.FC<ModalComponentProps> = ({ applyFilters, isOpen, onCl
         </div>
 
         {/* Body */}
-        <div className="flex flex-grow h-full">
-          <div className="w-1/5 h-full">
-          <SidebarModal steps={steps} activeStep={activeStep} setActiveStep={setActiveStep} />
-          </div>
-          <div className="w-4/5">
-          <ContentModal 
-            activeStep={activeStep}
-            localFilters={localFilters}
-            setLocalFilters={setLocalFilters}
-          /></div>
-
-     
-        
-        </div>
+        <BodyModal
+          activeStep={activeStep}
+          setActiveStep={setActiveStep}
+          localFilters={localFilters}
+          setLocalFilters={setLocalFilters}
+        />
 
         {/* Footer */}
         <FooterModal handleClear={handleClear} handleApply={handleApply} />

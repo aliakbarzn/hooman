@@ -3,7 +3,7 @@ import baner from "@/assets/images/search-page/baner.png";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const Baner = () => {
+const Banner = () => {
   const t = useTranslations();
 
   return (
@@ -32,4 +32,4 @@ const Baner = () => {
   );
 };
 
-export default Baner;
+export default Banner;
