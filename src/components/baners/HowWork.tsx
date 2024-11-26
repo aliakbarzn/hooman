@@ -1,11 +1,11 @@
 import Image from "next/image";
-import CarFree from "@/assets/images/about/chart.svg";
+import CarFree from "@/assets/icons/about/car-free.svg";
 import CashBack from "@/assets/icons/about/cashback.svg";
 import Medal from "@/assets/icons/about/medal.svg";
 import Call from "@/assets/icons/about/call.svg";
 const HowWork = () => {
   return (
-    <div className="bg-[#FEFFF6] px-20 py-[60px] flex flex-col items-center mt-16 w-full">
+    <div className="bg-[#FEFFF6] px-20 py-[60px] flex flex-col items-center w-screen">
       <h4 className="text-[#1E1E1E] text-3xl">
         How does <span className="text-[#D367BC]">thaimassage</span> massage
         work?
