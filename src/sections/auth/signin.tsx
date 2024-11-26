@@ -1,4 +1,5 @@
 import { ChevronDownIcon, FacebookIcon, GoogleIcon } from '@/assets/icons'
+import { Link } from '@/navigation'
 import React from 'react'
 
 export default function SignIn() {
@@ -37,7 +38,7 @@ export default function SignIn() {
                             <input type="checkbox" id='remember-password' />
                             <label htmlFor='remember-password' className='text-xs font-light hover:underline cursor-text'>Rememebr me</label>
                         </div>
-                        <span className='text-xs font-light cursor-text hover:underline'>Forgot Password ?</span>
+                        <Link href='/forget' className='text-xs font-light cursor-pointer hover:underline hover:text-[#F58882]'>Forgot Password ?</Link>
                     </div>
                 </div>
                 {/* submit button */}

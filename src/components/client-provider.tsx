@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function ClientProvider({ children }: { children: React.ReactNode }) {
     const path = usePathname().split('/')
-    const isAuthPage = ['signin', 'register'].includes(path[2])
+    const isAuthPage = ['signin', 'register','forget'].includes(path[2])
     
     return isAuthPage ? children : (
         <>
