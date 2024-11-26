@@ -10,7 +10,7 @@ export default function CodeInput({ length = 5, onComplete, onImcomplete }: { le
 
 	// handlers ------------------------------------------------------------------------------------------------------------------------------
 	const handleChange = (index: number, value: string) => {
-		if (!value.match(/^[a-zA-Z0-9]$/)) return // Allow only alphanumeric characters
+		if (!value.match(/^[0-9]$/)) return // Allow only alphanumeric characters
 		const newValues = [...values]
 		newValues[index] = value
 		setValues(newValues)
