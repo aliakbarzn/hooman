@@ -24,7 +24,7 @@ const cardsData = [
 export default function page() {
   return (
     <div className='bg-white flex flex-col w-full'>
-      <CardsContainer cardsData={cardsData} />
+      {/* <CardsContainer cardsData={cardsData} /> */}
       <ContentContainer data={contentData} />
     </div>
   )

@@ -3,7 +3,7 @@ import ThaiCard from './thai-card';
 
 export default function CardsContainer({ cardsData }: { cardsData: any }) {
   return (
-    <div className="flex py-20 px-36 gap-28 justify-start w-full flex-wrap">
+    <div className="flex py-20 px-36 gap-28 justify-center w-full flex-wrap">
       {cardsData.map((cd: any, index: number) => {
         // Determine the column index (0-based)
         const columnIndex: number = index % 3;
