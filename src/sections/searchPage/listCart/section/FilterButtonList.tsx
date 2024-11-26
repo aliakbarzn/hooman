@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import FilterButton from "./FilterButton";
-import { Filters } from "../../../@types/searchPage/type";
+import CheckIcon from "@/assets/icons/search-page/checkIcon";
+import { Filters } from "@/@types/searchPage/type";
 import { useTranslations } from "next-intl";
 
 interface FilterButtonListProps {
@@ -44,12 +44,18 @@ const FilterButtonList: React.FC<FilterButtonListProps> = ({
   return (
     <div className="flex gap-3 my-6">
       {filterOptions.map(({ label, key }) => (
-        <FilterButton
+        <button
           key={key}
-          label={label}
-          isSelected={selectedFilters.includes(key)}
           onClick={() => toggleFilter(key)}
-        />
+          className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg transition-all ${
+            selectedFilters.includes(key)
+              ? "bg-[#2C2C2C] text-white"
+              : "bg-gray-200 text-gray-600"
+          }`}
+        >
+          {selectedFilters.includes(key) && <CheckIcon />}
+          <span>{label}</span>
+        </button>
       ))}
     </div>
   );

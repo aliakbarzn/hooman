@@ -8,12 +8,12 @@ import Shower from "@/assets/icons/search-page/ic-shower";
 import Sona from "@/assets/icons/search-page/ic-sona";
 import GiftCard from "@/assets/icons/search-page/ic-giftCard";
 import { useState, useMemo, useCallback } from "react";
-import FilterButtonList from "@/sections/searchPage/Filters/FilterButtonList";
-import FilterModal from "./Filters/FilterModal/FilterModal";
-import { CardData, Filters } from "../../@types/searchPage/type";
-import { filterData } from "./filterData";
+import FilterButtonList from "@/sections/searchPage/listCart/section/FilterButtonList";
+import FilterModal from "./section/modal/FilterModal";
+import { CardData, Filters } from "@/@types/searchPage/type";
+import { FilterConditions } from "./filterConditions/FilterConditions";
 import { useTranslations } from "next-intl";
-import Pagination from "./Pagination";
+import Pagination from "@/components/pagination/Pagination";
 
 
 const ListCart: React.FC = () => {
@@ -257,17 +257,13 @@ const ListCart: React.FC = () => {
     }));
   };
   
-  const filteredData = useMemo(() => filterData(cardData, filters), [cardData, filters]);
-
+  const filteredData = useMemo(() => FilterConditions(cardData, filters), [cardData, filters]);
 
   const itemsPerPage = 6;
-
   const currentItems = useMemo(() => {
     return filteredData.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
   }, [filteredData, currentPage]);
-
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-
   const goToPage = useCallback((page: number) => {
     setCurrentPage(page);
   }, []);
@@ -295,23 +291,7 @@ const ListCart: React.FC = () => {
         totalPages={totalPages}
         onPageChange={goToPage}
       />
-      {/* <div className="flex justify-center mt-8">
-        <button
-          className="px-4 py-2 mx-2 bg-gray-300 rounded"
-          onClick={() => goToPage(currentPage - 1)}
-          disabled={currentPage === 0}
-        >
-          Prev
-        </button>
-        <span className="px-4 py-2">{`${currentPage + 1} of ${totalPages}`}</span>
-        <button
-          className="px-4 py-2 mx-2 bg-gray-300 rounded"
-          onClick={() => goToPage(currentPage + 1)}
-          disabled={currentPage === totalPages - 1}
-        >
-          Next
-        </button>
-      </div> */}
+
     </section>
   );
 };
