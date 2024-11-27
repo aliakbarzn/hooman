@@ -47,7 +47,7 @@
       "message1": "Congratulations! Your password has",
       "message2": " been changed. Click continue to login",
       "button1": "cancel",
-      "button2": "Update Password"
+      "button2": "continue"
     }
   },
   "Services": {

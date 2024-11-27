@@ -3,6 +3,7 @@
 import CloseIcon from '@/assets/icons/CloseIcon'
 import React, { useState } from 'react'
 import { useTranslations } from 'use-intl'
+import { Link } from '@/navigation'
 
 
 export default function page() {
@@ -54,7 +55,7 @@ export default function page() {
 						{t('ForgetPage.Forget6.message2')}</p>
 					<div className="flex gap-3 justify-end">
 						<button className="rounded-lg py-2 px-3 bg-[#E3E3E3] text-base font-normal">{t('ForgetPage.Forget6.button1')}</button>
-						<button className="rounded-lg py-2 px-3 bg-[#47C666] text-white text-base font-normal">{t('ForgetPage.Forget6.button2')}</button>
+						<Link href='/signin'><button className="rounded-lg py-2 px-3 bg-[#47C666] text-white text-base font-normal">{t('ForgetPage.Forget6.button2')}</button></Link>
 					</div>
 				</div>
 			</div>
