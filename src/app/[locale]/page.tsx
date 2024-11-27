@@ -13,30 +13,21 @@ import PopularCatagories from "@/sections/home/popular-catagories";
 import StockholmSalons from "@/sections/home/StockholmSalons";
 
 export default function Home() {
-
-  return ( 
-    <div className="w-full h-full flex flex-col justify-center items-center pt-8 px-16 overflow-x-hidden">
-      <Header/>
-      <FindSalon/>
-      <PopularCatagories/>
-      <NewMassage/>
-      <PapularSalons/>
-
-<GothenburgSalons/>
-
-      <LatestReview/>
-     
-      <Professional/>
-   
-    
-      <Famoussalons/>
-
-      <BanerOff/>
-    
-      
-      <StockholmSalons/>
-      <LastBlog/> 
-      <HowWork/>
+  return (
+    <div className="w-full h-full flex flex-col justify-center items-center pt-8 px-32">
+      <Header />
+      <FindSalon />
+      <PopularCatagories />
+      <NewMassage />
+      <PapularSalons />
+      <GothenburgSalons />
+      <LatestReview />
+      <Professional />
+      <Famoussalons />
+      <BanerOff />
+      <StockholmSalons />
+      <LastBlog />
+      <HowWork />
     </div>
-   );
+  );
 }
