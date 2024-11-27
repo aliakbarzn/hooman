@@ -14,21 +14,6 @@
     "copyright": "© 2024 Your App. All rights reserved."
   },
   "ForgetPage": {
-    "Forget1": {
-      "message1": "If you don’t have an account register",
-      "message2": "You can ",
-      "messageColored": "Register here !",
-      "emailTitle": "Email Address",
-      "emailPlaceholder": "contact@dscodetech.com",
-      "usernameTitle": "User name",
-      "usernamePlaceholder": "contact",
-      "passwordTitle": "Password",
-      "remember": "Remember me",
-      "forgot": "Forgot Password ?",
-      "button": "Login",
-      "or": "OR",
-      "loginGoogle": "Login with Google"
-    },
     "Forget2": {
       "forgot": "Forgot password",
       "message": "Please enter your email to reset the password",
@@ -94,6 +79,91 @@
           "subItem4": "Back Massage",
           "subItem5": " Spa Thai Massage"
         }
+      }
+    }
+  },
+  "SearchPage": {
+    "Baner": {
+      "content": {
+        "text1": "get up to",
+        "text2": "50%",
+        "text3": "off",
+        "text4": "on booking with my site"
+      },
+      "button": "check out all the massage salon"
+    },
+    "ListCart": {
+      "filterOptions": {
+        "filter": "Filter",
+        "openNow": "Open Now",
+        "offer": "Offer",
+        "rating4Plus": "Rating 4+",
+        "Sona": "Sona",
+        "Shower": "Shower",
+        "Parking": "Parking"
+      },
+      "FilterModal": {
+        "title": "Filters",
+        "steps": {
+          "sortBy": "Sort by",
+          "features": "Features",
+          "openingHours": "Opening Hours",
+          "rating": "Rating"
+        }
+      },
+      "titleCard": "massage parlors in Tyresö"
+    },
+    "BanerOff": {
+      "titleProducts": "webshop products",
+      "button": "Shop Now",
+      "discountLabel": "off"
+    }
+  },
+  "Dashboard": {
+    "items": {
+      "messages": {
+        "id": "messages",
+        "title": "Messages"
+      },
+      "dashboard": {
+        "id": "dashboard",
+        "title": "Dashboard"
+      },
+      "buy-ads": {
+        "id": "buy-ads",
+        "title": "Buy ads"
+      },
+      "my-ads": {
+        "id": "my-ads",
+        "title": "My ads"
+      },
+      "make-an-ad": {
+        "id": "make-an-ad",
+        "title": "Make an ad"
+      },
+      "user-comments": {
+        "id": "user-comments",
+        "title": "User comments"
+      },
+      "history-bookings": {
+        "id": "history-bookings",
+        "title": "History bookings"
+      },
+      "payment-history": {
+        "id": "payment-history",
+        "title": "Payment history"
+      },
+      "connect-booking": {
+        "id": "connect-booking",
+        "title": "Connect to booking program"
+      },
+      "booking-plan": {
+        "id": "booking-plan",
+        "title": "Booking planning"
+      },
+      "settings": {
+        "id": "settings",
+        "title": "User account setting"
       }
     }
   }

@@ -3,8 +3,8 @@ import React from "react";
 
 export default function NewMassage() {
   return (
-    <div>
-        <h1 className=" py-8">New massage parlors</h1>
+    <div className="w-full py-16">
+        <h1 className="mb-11">New massage parlors</h1>
       <SimpleCard />
     </div>
   );

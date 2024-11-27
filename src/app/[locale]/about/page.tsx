@@ -8,7 +8,7 @@ import man5 from "@/assets/images/about/man5.png";
 import CardChartWeeklyGrowth from "@/sections/about/cardChartWeeklyGrowth";
 import StartBooking from "@/sections/about/startBooking";
 import TitleAbout from "@/sections/about/titleAbout";
-import HowWork from "@/sections/about/baner/howWork";
+import HowWork from "@/components/baners/HowWork";
 import Trust from "@/sections/about/baner/trust";
 
 export default function About() {

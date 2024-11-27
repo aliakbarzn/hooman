@@ -66,7 +66,7 @@ const CardSearch = ({
           <span
             key={index}
             className={`w-6 h-6 flex items-center justify-center rounded-full ${
-              iconData.isActive ? "text-[#757575]" : "text-[#F58882]"
+              iconData.isActive ? "text-[#F58882]" : "text-[#757575]"
             }`}
           >
             {iconData.icon}
