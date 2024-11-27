@@ -16,9 +16,9 @@ export default function icMassage() {
       <path
         d="M6.33398 6.6665H15.6673M6.33398 10.6665H13.0007"
         stroke="#757575"
-        stroke-width="1.33333"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.33333"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
