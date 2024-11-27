@@ -133,5 +133,32 @@
         }
       }
     }
+  },
+  "Dashboard": {
+    "Messages": "Messages",
+    "Dashboard": "Dashboard",
+    "Buy ads": "Buy ads",
+    "My ads": "My ads",
+    "Make an ad": "Make an ad",
+    "User comments": "User comments",
+    "History bookings": "History bookings",
+    "Payment history": "Payment history",
+    "Connect to booking program": "Connect to booking program",
+    "Booking planning": "Booking planning",
+    "User account setting": {
+      "title": "User account setting",
+      "subItem1": "Set up payment notifications ",
+      "subItem2": "Edit information",
+      "subItem3": "Set up login notifications"
+    },
+    "security": {
+      "title": "security",
+      "subItem1": "Set up payment notifications ",
+      "subItem2": "Edit information",
+      "subItem3": "Set up login notifications"
+    },
+    "Notifications": "Notifications",
+    "Support": "Support",
+    "Exit": "Exit"
   }
 }
