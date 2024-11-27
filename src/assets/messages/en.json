@@ -13,7 +13,6 @@
   "Footer": {
     "copyright": "© 2024 Your App. All rights reserved."
   },
-<<<<<<<<< Temporary merge branch 1
   "SearchPage": {
     "Baner": {
       "content": {
@@ -50,8 +49,23 @@
       "button": "Shop Now",
       "discountLabel": "off"
     }
-=========
+  },
   "ForgetPage": {
+    "Forget1": {
+      "message1": "If you don’t have an account register",
+      "message2": "You can ",
+      "messageColored": "Register here !",
+      "emailTitle": "Email Address",
+      "emailPlaceholder": "contact@dscodetech.com",
+      "usernameTitle": "User name",
+      "usernamePlaceholder": "contact",
+      "passwordTitle": "Password",
+      "remember": "Remember me",
+      "forgot": "Forgot Password ?",
+      "button": "Login",
+      "or": "OR",
+      "loginGoogle": "Login with Google"
+    },
     "Forget2": {
       "forgot": "Forgot password",
       "message": "Please enter your email to reset the password",
@@ -85,7 +99,7 @@
       "message1": "Congratulations! Your password has",
       "message2": " been changed. Click continue to login",
       "button1": "cancel",
-      "button2": "continue"
+      "button2": "Update Password"
     }
   },
   "Services": {
@@ -119,6 +133,5 @@
         }
       }
     }
->>>>>>>>> Temporary merge branch 2
   }
 }
