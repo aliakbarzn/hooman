@@ -31,3 +31,7 @@ export { default as ShieldIcon } from './dashboard/ShieldIcon'
 export { default as BellIcon } from './dashboard/BellIcon'
 export { default as HeadphoneIcon } from './dashboard/HeadphoneIcon'
 export { default as ExitIcon } from './dashboard/ExitIcon'
+// dashboard > messages
+export { default as PlusIcon } from './dashboard/messages/PlusIcon'
+export { default as QuarterCircleIcon } from './dashboard/messages/QuarterCircleIcon'
+export { default as QuoteIcon } from './dashboard/messages/QuoteIcon'

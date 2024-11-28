@@ -14,7 +14,7 @@ export default function Dashboard() {
   const dashboardItems = [
     {
       id: 'messages',
-      href: '/',
+      href: '/messages',
       icon: <EnvelopeIcon />,
       title: t('Dashboard.Messages'),
       hasChevron: false,
@@ -172,7 +172,7 @@ export default function Dashboard() {
         {item.hasBorder && <div className='h-[1px] w-[265px] bg-grayC ml-3 mb-3'></div>}
           <div key={item.id} className="mb-2">
             {/* Main Menu Item */}
-            <Link href={`/dashboard`}
+            <Link href={`/dashboard${item.href}`}
               className={`flex items-center justify-between h-12 p-4 rounded-lg cursor-pointer transition-all ${selectedItem === item.id ? 'border-l-2 border-primary bg-[#FFF9F8]' : 'text-[#1E1E1E]'}`}
               onClick={() => handleItemClick(item.id)}>
               <div className="flex items-center gap-x-3">

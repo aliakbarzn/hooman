@@ -9,7 +9,9 @@ export default function RootLayout({children}: RootLayoutPropTypes) {
   return (
     <div className='flex'>
       <Dashboard />
+      <div className='w-full'>
       {children}
+      </div>
     </div>
   )
 }
