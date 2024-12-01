@@ -6,6 +6,8 @@ import MessageCard from '@/sections/dashboard/messages/MessageCard';
 import Pagination from '@/sections/dashboard/messages/Pagination';
 import CloseIcon from '@/assets/icons/CloseIcon';
 import { QuoteIcon } from '@/assets/icons';
+import Message from '@/sections/dashboard/messages/Message';
+import ChatBox from '@/sections/dashboard/messages/ChatBox';
 
 interface MessageTypes {
   id: number;
@@ -318,9 +320,11 @@ const messages: MessageTypes[] = [
 // const messages: MessageTypes[] = []
 
 export default function Page() {
-  
-  // Modal is open state
+
+  // states
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isMessageOpen, setIsMessageOpen] = useState(false)
+  const [isChatBoxOpen, setIsChatBoxOpen] = useState(false)
   const [selectedField, setSelectedField] = useState('date')
   const [selectedRadio, setSelectedRadio] = useState('newest')
 
@@ -445,7 +449,7 @@ export default function Page() {
       <div className="flex flex-col gap-y-8 my-10">
         {messages.length !== 0 ?
           <>{currentMessages.map((message) => (
-            <MessageCard key={message.id} selected={message.selected} name={message.name} time={message.time} date={message.date} content={message.content} />
+            <div key={message.id} onClick={() => setIsChatBoxOpen(true)}><MessageCard key={message.id} selected={message.selected} name={message.name} time={message.time} date={message.date} content={message.content} /></div>
           ))}</>
           :
           <>
@@ -458,6 +462,13 @@ export default function Page() {
               <button className='rounded-lg bg-primary px-8 py-2 text-[#f5f5f5]'>start new massage</button>
             </div>
           </>}
+        {isMessageOpen && <div className='fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50' onClick={() => setIsMessageOpen(false)}>
+          <Message onClose={() => setIsMessageOpen(false)} onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => e.stopPropagation()} />
+        </div>}
+
+        {isChatBoxOpen && <div className='fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50' onClick={() => setIsChatBoxOpen(false)}>
+          <ChatBox onClose={() => setIsChatBoxOpen(false)} onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => e.stopPropagation()} />
+        </div>}
 
       </div>
       {/* Pagination */}
