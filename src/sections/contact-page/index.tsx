@@ -6,6 +6,7 @@ import backgroundRight from '@/assets/images/contact-page/BG-9.png'
 import manAndLaptop from '@/assets/images/contact-page/Telecommuting-pana-1.png'
 import { CloseIcon } from '@/assets/icons'
 import Image from 'next/image'
+import { Link } from '@/navigation'
 
 
 const ContactIndex = () => {
@@ -85,7 +86,7 @@ const ContactIndex = () => {
 			{/*  The pop-up container */}
 			<div id="popup"
 				className="fixed top-0 left-0 w-screen h-screen items-center justify-center bg-[rgba(0,0,0,0.3)] hidden peer-checked:flex">
-				<div className="bg-white p-8 rounded-lg shadow-lg w-[466px] h-[191px] flex flex-col gap-4 border border-gray-300">
+				<div className="bg-white p-8 rounded-lg shadow-lg w-[466px] flex flex-col gap-4 border border-gray-300">
 					<div className="flex justify-between">
 						<h3 className="text-2xl font-semibold text-gray-900">Please log in first</h3>
 						{/* <!-- Close icon that toggles the checkbox --> */}
@@ -93,8 +94,8 @@ const ContactIndex = () => {
 					</div>
 					<p>Become a member of the website to send a message</p>
 					<div className="flex gap-3">
-						<button className="w-20 rounded-lg p-2 bg-[#C6FAD2]">Sign in</button>
-						<button className="w-20 rounded-lg p-2 bg-[#F58882]">Register</button>
+						<Link href='/signin' className="w-20 rounded-lg p-2 bg-[#C6FAD2] text-center">Sign in</Link>
+						<Link href='/register' className="w-20 rounded-lg p-2 bg-primary text-center">Register</Link>
 					</div>
 				</div>
 			</div>
