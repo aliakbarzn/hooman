@@ -12,11 +12,16 @@ import { Link } from '@/navigation'
 const ContactIndex = () => {
 	//states
 	const [isLoggedIn, setIsLoggedIn] = useState(false)
+	const [inputCharacters, setInputCharacters] = useState(0)
 
 	// handlers
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault()
 		// what should the click do ? :
+	}
+
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setInputCharacters(e.target.value.length)
 	}
 
 	return (
@@ -33,14 +38,14 @@ const ContactIndex = () => {
 			{/* form section */}
 			<div className='absolute left-[115px] top-[189.5px] flex flex-col'>
 				<h1 className='text-7xl font-bold text-[#2C2C2C] tracking-[-3%] leading-[86.4px]'>We hear you</h1>
-				<p className='mt-1 text-xl font-normal text-[#2C2C2C] leading-6'>Share your comments and suggestions with us</p>
+				<p className='mt-1 text-xl text-[#2C2C2C] leading-6'>Share your comments and suggestions with us</p>
 				{/* form */}
 				<form className=' mt-8 flex flex-col gap-y-6 border border-[#D9D9D9] rounded-lg bg-white w-[442px] px-6 py-[38.5px]'>
 					{/* type of use */}
 					{!isLoggedIn && // check if user is logged in or not to show the options
 						<div className='flex flex-col gap-y-2'>
-							<span className='text-base font-normal text-[#1E1E1E]'>Type of use</span>
-							<select className='text-base font-normal text-[#1E1E1E] w-[394px] h-10 rounded-lg border border-[#D9D9D9] px-4 py-2'>
+							<span className='text-[#1E1E1E]'>Type of use</span>
+							<select className='text-[#1E1E1E] w-[394px] h-10 rounded-lg border border-[#D9D9D9] px-4 py-2'>
 								<option value="visitor">visitor</option>
 								<option value="user">user</option>
 								<option value="patient">patient</option>
@@ -49,30 +54,22 @@ const ContactIndex = () => {
 					}
 					{/* email */}
 					<div className='flex flex-col gap-y-2'>
-						<span className='text-base font-normal text-[#1E1E1E]'>Email</span>
-						<input className='text-base font-normal w-[394px] h-10 rounded-lg border border-[#D9D9D9] px-4 py-3' type="text" placeholder='Value' />
+						<span className='text-[#1E1E1E]'>Email</span>
+						<input className='w-[394px] h-10 rounded-lg border border-[#D9D9D9] px-4 py-3' type="text" placeholder='Value' />
 					</div>
 					{/* message */}
 					<div className='flex flex-col gap-y-2'>
-						<span className='text-base font-normal text-[#1E1E1E]'>Message</span>
-						<input className='text-base font-normal w-[394px] h-20 rounded-lg border border-[#D9D9D9] px-4 py-3' type="text" placeholder='Value' />
-						<span className='text-[#757575] text-base font-normal'>0 to 1000 word</span>
+						<span className='text-[#1E1E1E]'>Message</span>
+						<input className='h-20 rounded-lg border border-grayC px-4 py-3' type="text" placeholder='Value' onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange(e)} />
+						<span className='text-blackC-light font-normal'>{inputCharacters} to 1000 word</span>
 					</div>
 					{/* button */}
-					{isLoggedIn
-						?
-						<button
-							className='w-[394px] h-10 bg-[#47C666] text-[#F5F5F5] rounded-lg hover:bg-green-400 transition-all'
-							onClick={handleClick}
-						>
-							Submit</button>
-						:
-						<label
-							htmlFor='popupToggle'
-							className='w-[394px] h-10 bg-[#47C666] text-[#F5F5F5] rounded-lg hover:bg-green-400 transition-all text-center pt-2 cursor-pointer'
-						>
-							Submit
-						</label>
+					{
+						isLoggedIn
+							?
+							<button className='w-[394px] h-10 bg-[#47C666] text-[#F5F5F5] rounded-lg hover:bg-green-400 transition-all' onClick={handleClick}>Submit</button>
+							:
+							<label htmlFor='popupToggle' className='h-10 bg-[#47C666] text-[#F5F5F5] rounded-lg hover:bg-green-400 text-center pt-2 cursor-pointer'>Submit</label>
 					}
 				</form>
 			</div>
