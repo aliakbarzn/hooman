@@ -41,7 +41,7 @@ export default function Dashboard() {
     },
     {
       id: 'my-ads',
-      href: '/',
+      href: '/my-ads',
       icon: <AdIcon />,
       title: t('Dashboard.My ads'),
       hasChevron: false,

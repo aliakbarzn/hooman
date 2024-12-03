@@ -1,0 +1,292 @@
+import React from 'react'
+
+export default function FinalCostBg() {
+  return (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="737"
+    height="597"
+    fill="none"
+    viewBox="0 0 737 597"
+  >
+    <g filter="url(#filter0_b_733_3626)">
+      <circle cx="32.5" cy="155.5" r="32.5" fill="#D3FDDD"></circle>
+    </g>
+    <g filter="url(#filter1_b_733_3626)">
+      <circle cx="391" cy="28" r="28" fill="#D3FDDD"></circle>
+    </g>
+    <g filter="url(#filter2_b_733_3626)">
+      <circle cx="45" cy="503" r="45" fill="#D3FDDD"></circle>
+    </g>
+    <g filter="url(#filter3_b_733_3626)">
+      <circle
+        cx="109"
+        cy="533"
+        r="64"
+        fill="#70E38C"
+        fillOpacity="0.21"
+      ></circle>
+    </g>
+    <g filter="url(#filter4_b_733_3626)">
+      <circle
+        cx="670.5"
+        cy="189.5"
+        r="66.5"
+        fill="#70E38C"
+        fillOpacity="0.21"
+      ></circle>
+    </g>
+    <g filter="url(#filter5_b_733_3626)">
+      <circle
+        cx="348"
+        cy="85"
+        r="71"
+        fill="#D3FDDD"
+        fillOpacity="0.28"
+      ></circle>
+    </g>
+    <g filter="url(#filter6_b_733_3626)">
+      <circle cx="610.5" cy="502.5" r="32.5" fill="#D3FDDD"></circle>
+    </g>
+    <g filter="url(#filter7_b_733_3626)">
+      <circle cx="648" cy="494" r="12" fill="#D3FDDD"></circle>
+    </g>
+    <g filter="url(#filter8_b_733_3626)">
+      <circle
+        cx="652"
+        cy="256"
+        r="40"
+        fill="#B9FFCA"
+        fillOpacity="0.4"
+      ></circle>
+    </g>
+    <defs>
+      <filter
+        id="filter0_b_733_3626"
+        width="72.602"
+        height="72.602"
+        x="-3.801"
+        y="119.199"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feGaussianBlur
+          in="BackgroundImageFix"
+          stdDeviation="1.901"
+        ></feGaussianBlur>
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_733_3626"
+        ></feComposite>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_backgroundBlur_733_3626"
+          result="shape"
+        ></feBlend>
+      </filter>
+      <filter
+        id="filter1_b_733_3626"
+        width="63.602"
+        height="63.602"
+        x="359.199"
+        y="-3.801"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feGaussianBlur
+          in="BackgroundImageFix"
+          stdDeviation="1.901"
+        ></feGaussianBlur>
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_733_3626"
+        ></feComposite>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_backgroundBlur_733_3626"
+          result="shape"
+        ></feBlend>
+      </filter>
+      <filter
+        id="filter2_b_733_3626"
+        width="97.602"
+        height="97.602"
+        x="-3.801"
+        y="454.199"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feGaussianBlur
+          in="BackgroundImageFix"
+          stdDeviation="1.901"
+        ></feGaussianBlur>
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_733_3626"
+        ></feComposite>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_backgroundBlur_733_3626"
+          result="shape"
+        ></feBlend>
+      </filter>
+      <filter
+        id="filter3_b_733_3626"
+        width="135.602"
+        height="135.602"
+        x="41.199"
+        y="465.199"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feGaussianBlur
+          in="BackgroundImageFix"
+          stdDeviation="1.901"
+        ></feGaussianBlur>
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_733_3626"
+        ></feComposite>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_backgroundBlur_733_3626"
+          result="shape"
+        ></feBlend>
+      </filter>
+      <filter
+        id="filter4_b_733_3626"
+        width="140.602"
+        height="140.602"
+        x="600.199"
+        y="119.199"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feGaussianBlur
+          in="BackgroundImageFix"
+          stdDeviation="1.901"
+        ></feGaussianBlur>
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_733_3626"
+        ></feComposite>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_backgroundBlur_733_3626"
+          result="shape"
+        ></feBlend>
+      </filter>
+      <filter
+        id="filter5_b_733_3626"
+        width="149.602"
+        height="149.602"
+        x="273.199"
+        y="10.199"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feGaussianBlur
+          in="BackgroundImageFix"
+          stdDeviation="1.901"
+        ></feGaussianBlur>
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_733_3626"
+        ></feComposite>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_backgroundBlur_733_3626"
+          result="shape"
+        ></feBlend>
+      </filter>
+      <filter
+        id="filter6_b_733_3626"
+        width="72.602"
+        height="72.602"
+        x="574.199"
+        y="466.199"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feGaussianBlur
+          in="BackgroundImageFix"
+          stdDeviation="1.901"
+        ></feGaussianBlur>
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_733_3626"
+        ></feComposite>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_backgroundBlur_733_3626"
+          result="shape"
+        ></feBlend>
+      </filter>
+      <filter
+        id="filter7_b_733_3626"
+        width="31.602"
+        height="31.602"
+        x="632.199"
+        y="478.199"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feGaussianBlur
+          in="BackgroundImageFix"
+          stdDeviation="1.901"
+        ></feGaussianBlur>
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_733_3626"
+        ></feComposite>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_backgroundBlur_733_3626"
+          result="shape"
+        ></feBlend>
+      </filter>
+      <filter
+        id="filter8_b_733_3626"
+        width="87.602"
+        height="87.602"
+        x="608.199"
+        y="212.199"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feGaussianBlur
+          in="BackgroundImageFix"
+          stdDeviation="1.901"
+        ></feGaussianBlur>
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_733_3626"
+        ></feComposite>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_backgroundBlur_733_3626"
+          result="shape"
+        ></feBlend>
+      </filter>
+    </defs>
+  </svg>
+  )
+}
