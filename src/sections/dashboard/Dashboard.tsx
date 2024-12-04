@@ -117,7 +117,7 @@ export default function Dashboard() {
     },
     {
       id: 'security',
-      href: '/',
+      href: '/security',
       icon: <ShieldIcon />,
       title: t('Dashboard.security.title'),
       hasChevron: true,
@@ -130,7 +130,7 @@ export default function Dashboard() {
     },
     {
       id: 'notifications',
-      href: '/',
+      href: '/notifications',
       icon: <BellIcon />,
       title: t('Dashboard.Notifications'),
       hasChevron: false,

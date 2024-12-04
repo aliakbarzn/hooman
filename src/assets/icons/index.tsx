@@ -31,7 +31,7 @@ export { default as ShieldIcon } from './dashboard/ShieldIcon'
 export { default as BellIcon } from './dashboard/BellIcon'
 export { default as HeadphoneIcon } from './dashboard/HeadphoneIcon'
 export { default as ExitIcon } from './dashboard/ExitIcon'
-// dashboard > messages
+// dashboard >>> messages
 export { default as PlusIcon } from './dashboard/messages/PlusIcon'
 export { default as QuarterCircleIcon } from './dashboard/messages/QuarterCircleIcon'
 export { default as QuoteIcon } from './dashboard/messages/QuoteIcon'
@@ -53,3 +53,5 @@ export { default as IconTarget } from './new-ads/icon-target'
 export { default as IconPhone } from './new-ads/icon-phone'
 export { default as FinalCostBg } from './new-ads/final-cost-bg'
 export { default as CalculateBg } from './new-ads/calculate-bg'
+// dashboard >>> notifications
+export { default as IconPencil } from './dashboard/notifications/icon-pencil'
