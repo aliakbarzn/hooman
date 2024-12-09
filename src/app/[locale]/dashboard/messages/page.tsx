@@ -345,7 +345,7 @@ export default function Page() {
   };
 
   return (
-    <div className="flex flex-col px-28 py-12">
+    <div className="max-w-[1200px] flex flex-col px-28 py-12 mx-auto">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-center gap-x-10">

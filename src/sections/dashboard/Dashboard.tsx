@@ -59,7 +59,7 @@ export default function Dashboard() {
     },
     {
       id: 'user-comments',
-      href: '/',
+      href: '/comments',
       icon: <CommentsIcon />,
       title: t('Dashboard.User comments'),
       hasChevron: false,
@@ -104,7 +104,7 @@ export default function Dashboard() {
     },
     {
       id: 'settings',
-      href: '/',
+      href: '/settings',
       icon: <SettingsIcon />,
       title: t('Dashboard.User account setting.title'),
       hasChevron: true,

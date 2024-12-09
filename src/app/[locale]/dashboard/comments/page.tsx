@@ -4,7 +4,7 @@ import ChevronDown from '@/assets/icons/ChevronDown'
 import React, { useState } from 'react'
 import profPic from '@/assets/images/dashboard/notifications/user-profile.png'
 import Image, { StaticImageData } from 'next/image';
-import { IconReply, IconThumb } from '@/assets/icons';
+import { CloseIcon, IconReply, IconThumb } from '@/assets/icons';
 import Pagination from '@/sections/dashboard/messages/Pagination';
 
 interface Comment {
@@ -15,6 +15,8 @@ interface Comment {
   text: string;
   likes: number;
   dislikes: number;
+  isLiked: boolean;
+  isDisliked: boolean;
 }
 
 export default function page() {
@@ -26,8 +28,10 @@ export default function page() {
       senderPic: profPic,
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
-      likes: 0,
-      dislikes: 0
+      likes: 5,
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 2,
@@ -36,7 +40,9 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 3,
@@ -45,7 +51,9 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 4,
@@ -54,7 +62,9 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 5,
@@ -63,7 +73,9 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 6,
@@ -72,7 +84,9 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 7,
@@ -81,7 +95,9 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 8,
@@ -90,7 +106,9 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 9,
@@ -99,7 +117,9 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 10,
@@ -108,7 +128,9 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 11,
@@ -117,7 +139,9 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
     {
       id: 12,
@@ -126,9 +150,15 @@ export default function page() {
       date: '24/09/2024 23:19',
       text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type.',
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+      isLiked: false,
+      isDisliked: false,
     },
   ])
+
+  const [isFilterOpen, setIsFilterOpen] = useState(false)
+  const [selectedField, setSelectedField] = useState('Sort by')
+  const [selectedRadio, setSelectedRadio] = useState('dislike')
 
   // Pagination states
   const [currentPage, setCurrentPage] = useState(0);
@@ -144,7 +174,27 @@ export default function page() {
     setCurrentPage(page);
   };
 
-  const [isFilterOpen, setIsFilterOpen] = useState(false)
+
+  const handleDislike = (id: number) => {
+    setComments(prevComments =>
+      prevComments.map(comment => {
+        if (comment.id === id) {
+          return { ...comment, dislikes: comment.isDisliked ? comment.dislikes - 1 : comment.dislikes + 1, isDisliked: !comment.isDisliked }
+        } return comment
+      })
+    )
+  }
+
+  const handleLike = (id: number) => {
+    setComments(prevComments =>
+      prevComments.map(comment => {
+        if (comment.id === id) {
+          return { ...comment, likes: comment.isLiked ? comment.likes - 1 : comment.likes + 1, isLiked: !comment.isLiked }
+        } return comment
+      })
+    )
+  }
+
 
   return (
     <div className='max-w-[1200px] p-20 flex flex-col gap-12 mx-auto'>
@@ -155,6 +205,80 @@ export default function page() {
           <span>filter</span>
           <ChevronDown />
         </button>
+        {isFilterOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50" onClick={() => setIsFilterOpen(false)}>
+            <div className="bg-background rounded-md shadow-lg w-[1072px]" onClick={(e) => e.stopPropagation()}>
+              {/* header */}
+              <div className='border-b border-blackC-light flex items-center justify-between p-8'>
+                <h1>Filters</h1>
+                <span className='cursor-pointer' onClick={() => setIsFilterOpen(false)}><CloseIcon /></span>
+              </div>
+              {/* body */}
+              <div className='flex'>
+                {/* body left */}
+                <div className='w-[353px] h-[497px] flex flex-col bg-[#f5f5f5]'>
+                  {/* field */}
+                  <div onClick={() => setSelectedField('Sort by')} className={`flex flex-col p-6  border-primary ${selectedField === 'Sort by' ? 'bg-white border-l-4' : null}`}>
+                    <h3>Sort by</h3>
+                    <span>{selectedRadio}</span>
+                  </div>
+                </div>
+                {/* body right */}
+                <div className="flex flex-col gap-y-10 p-20">
+                  {selectedField === 'Sort by'
+                    ?
+                    <>
+                      <div className="flex items-center gap-x-3 cursor-pointer" onClick={() => setSelectedRadio('date')}>
+                        <div
+                          onClick={() => setSelectedRadio('date')}
+                          className={`rounded-full h-10 w-10 border ${selectedRadio === "date" ? "border-primary border-2" : "border-blackC-light"} flex items-center justify-center cursor-pointer`}
+                        >
+                          <div className={`rounded-full w-6 h-6 bg-primary ${selectedRadio === "date" ? "opacity-100" : "opacity-0"}`}></div>
+                        </div>
+                        <span className='text-xl'>date</span>
+                      </div>
+                      <div className="flex items-center gap-x-3 cursor-pointer" onClick={() => setSelectedRadio('reply')}>
+                        <div
+                          onClick={() => setSelectedRadio('reply')}
+                          className={`rounded-full h-10 w-10 border ${selectedRadio === "reply" ? "border-primary border-2" : "border-blackC-light"} flex items-center justify-center cursor-pointer`}
+                        >
+                          <div className={`rounded-full w-6 h-6 bg-primary ${selectedRadio === "reply" ? "opacity-100" : "opacity-0"}`}></div>
+                        </div>
+                        <span className='text-xl'>reply</span>
+                      </div>
+                      <div className="flex items-center gap-x-3 cursor-pointer" onClick={() => setSelectedRadio('like')}>
+                        <div
+                          onClick={() => setSelectedRadio('like')}
+                          className={`rounded-full h-10 w-10 border ${selectedRadio === "like" ? "border-primary border-2" : "border-blackC-light"} flex items-center justify-center cursor-pointer`}
+                        >
+                          <div className={`rounded-full w-6 h-6 bg-primary ${selectedRadio === "like" ? "opacity-100" : "opacity-0"}`}></div>
+                        </div>
+                        <span className='text-xl'>like</span>
+                      </div>
+                      <div className="flex items-center gap-x-3 cursor-pointer" onClick={() => setSelectedRadio('dislike')}>
+                        <div
+                          onClick={() => setSelectedRadio('dislike')}
+                          className={`rounded-full h-10 w-10 border ${selectedRadio === "dislike" ? "border-primary border-2" : "border-blackC-light"} flex items-center justify-center cursor-pointer`}
+                        >
+                          <div className={`rounded-full w-6 h-6 bg-primary ${selectedRadio === "dislike" ? "opacity-100" : "opacity-0"}`}></div>
+                        </div>
+                        <span className='text-xl'>dislike</span>
+                      </div>
+                    </>
+                    :
+                    <>
+                    </>
+                  }
+                </div>
+              </div>
+              {/* footer */}
+              <div className='border-t border-blackC p-8 flex items-center justify-end gap-x-4'>
+                <button className='rounded-lg px-14 py-2'>clear all</button>
+                <button className='rounded-lg bg-primary text-whiteC px-14 py-2 '>apply</button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
       {/* body -------------------------------------------------------------------------------------- */}
       <div className="flex flex-col gap-10">
@@ -175,8 +299,8 @@ export default function page() {
               <div className='cursor-pointer'><IconReply /></div>
               <div className="flex items-center gap-2">
                 <span className='text-blackC-light'>({comment.dislikes})</span>
-                <button className="rotate-180 text-white"><IconThumb /></button>
-                <button className='text-white'><IconThumb /></button>
+                <button onClick={() => handleDislike(comment.id)} className={`rotate-180 ${comment.isDisliked ? 'text-blackC' : 'text-white'}`}><IconThumb /></button>
+                <button onClick={() => handleLike(comment.id)} className={`${comment.isLiked ? 'text-blackC' : 'text-white'}`}><IconThumb /></button>
                 <span className='text-blackC-light'>({comment.likes})</span>
               </div>
             </div>
