@@ -177,6 +177,12 @@
         "text1": "You have not made a financial",
         "text2": "transaction yet",
         "button": "start transaction"
+      },
+      "booking-card": {
+        "date": "date",
+        "days-left": "days left",
+        "price": "price",
+        "type-of-service": "Type of service"
       }
     }
   }

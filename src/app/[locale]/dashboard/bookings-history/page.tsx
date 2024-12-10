@@ -7,6 +7,7 @@ import React, { useState } from 'react'
 import BookingCard from './booking-card';
 import { StaticImageData } from 'next/image';
 import { useTranslations } from 'next-intl';
+import profPic from '@/assets/images/dashboard/notifications/user-profile.png'
 
 interface Booking {
   price: number;
@@ -18,75 +19,75 @@ interface Booking {
 
 export default function page() {
 
-  // const bookings: Booking[] = [
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Thai massage',
-  //     date: ' 24/09/2024     23:19',
-  //     daysLeft: 5,
-  //   },
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Oil massage',
-  //     date: ' 24/09/2024     23:19',
-  //     daysLeft: 3,
-  //   },
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Thai massage',
-  //     date: ' 24/09/2024     23:19',
-  //     daysLeft: 7,
-  //   },
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Thai massage',
-  //     date: ' 24/09/2024     23:19',
-  //     daysLeft: 3,
-  //   },
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Oil massage',
-  //     date: ' 24/09/2024     23:19',
-  //     daysLeft: 3,
-  //   },
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Thai massage',
-  //   },
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Oil massage',
-  //   },
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Oil massage',
-  //   },
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Thai massage',
-  //   },
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Thai massage',
-  //   },
-  //   {
-  //     price: 1874304,
-  //     userPic: profPic,
-  //     typeOfService: 'Thai massage',
-  //   },
-  // ]
+  const bookings: Booking[] = [
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Thai massage',
+      date: ' 24/09/2024     23:19',
+      daysLeft: 5,
+    },
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Oil massage',
+      date: ' 24/09/2024     23:19',
+      daysLeft: 3,
+    },
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Thai massage',
+      date: ' 24/09/2024     23:19',
+      daysLeft: 7,
+    },
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Thai massage',
+      date: ' 24/09/2024     23:19',
+      daysLeft: 3,
+    },
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Oil massage',
+      date: ' 24/09/2024     23:19',
+      daysLeft: 3,
+    },
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Thai massage',
+    },
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Oil massage',
+    },
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Oil massage',
+    },
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Thai massage',
+    },
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Thai massage',
+    },
+    {
+      price: 1874304,
+      userPic: profPic,
+      typeOfService: 'Thai massage',
+    },
+  ]
 
-  const bookings: Booking[] = []
+  // const bookings: Booking[] = []
 
   const [isPrintModalOpen, setIsPrintModalOpen] = useState(false)
 
@@ -165,7 +166,7 @@ export default function page() {
                 <div className='-mb-5 mt-20'><PicPayment /></div>
                 <div className='flex flex-col gap-y-3 items-center'>
                   <h3 className='text-2xl font-semibold'>{t("empty booking.title")}</h3>
-                  <p className='text-blackC-light text-center'>{t("empty booking.text1")}<br/>{t("empty booking.text2")}</p>
+                  <p className='text-blackC-light text-center'>{t("empty booking.text1")}<br />{t("empty booking.text2")}</p>
                 </div>
                 <button className='rounded-lg bg-primary px-8 py-2 text-[#f5f5f5]'>{t("empty booking.button")}</button>
               </div>
