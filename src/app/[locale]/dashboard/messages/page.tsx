@@ -447,11 +447,13 @@ export default function Page() {
 
       {/* Messages */}
       <div className="flex flex-col gap-y-8 my-10">
-        {messages.length !== 0 ?
-          <>{currentMessages.map((message) => (
-            <div key={message.id} onClick={() => setIsChatBoxOpen(true)}><MessageCard key={message.id} selected={message.selected} name={message.name} time={message.time} date={message.date} content={message.content} /></div>
-          ))}</>
-          :
+        {messages.length !== 0 ? // checks if messages is empty or not to show the proper content
+          <> 
+            {currentMessages.map((message) => (
+              <div key={message.id} onClick={() => setIsChatBoxOpen(true)}><MessageCard key={message.id} selected={message.selected} name={message.name} time={message.time} date={message.date} content={message.content} /></div>
+            ))}
+          </>
+          : // show the empty messages page
           <>
             <div className='w-full h-full flex flex-col items-center justify-center gap-y-12'>
               <div className='-mb-5 mt-20'><QuoteIcon /></div>
@@ -461,7 +463,8 @@ export default function Page() {
               </div>
               <button className='rounded-lg bg-primary px-8 py-2 text-[#f5f5f5]'>start new massage</button>
             </div>
-          </>}
+          </>
+        }
         {isMessageOpen && <div className='fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50' onClick={() => setIsMessageOpen(false)}>
           <Message onClose={() => setIsMessageOpen(false)} onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => e.stopPropagation()} />
         </div>}

@@ -1,7 +1,7 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AdIcon, BellIcon, BookingIcon, CalenderIcon, CircledArrowIcon, CircledDollarIcon, CommentsIcon, EnvelopeIcon, ExitIcon, HeadphoneIcon, HomeIcon, InventoryIcon, QuoteDollarIcon, SettingsIcon, ShieldIcon, WrenchIcon } from '@/assets/icons'
-import { Link } from '@/navigation'
+import { Link, usePathname } from '@/navigation'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
@@ -68,7 +68,7 @@ export default function Dashboard() {
     },
     {
       id: 'history-bookings',
-      href: '/',
+      href: '/bookings-history',
       icon: <InventoryIcon />,
       title: t('Dashboard.History bookings'),
       hasChevron: false,
@@ -169,7 +169,7 @@ export default function Dashboard() {
     <div className="w-[315px] p-2 bg-white border-y border-r border-[#D9D9D9]">
       {dashboardItems.map((item) => (
         <>
-        {item.hasBorder && <div className='h-[1px] w-[265px] bg-grayC ml-3 mb-3'></div>}
+        {item.hasBorder && <div className='h-[1px] w-[282px] bg-grayC ml-3 mb-3'></div>}
           <div key={item.id} className="mb-2">
             {/* Main Menu Item */}
             <Link href={`/dashboard${item.href}`}

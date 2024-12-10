@@ -145,6 +145,9 @@
     "Payment history": "Payment history",
     "Connect to booking program": "Connect to booking program",
     "Booking planning": "Booking planning",
+    "Notifications": "Notifications",
+    "Support": "Support",
+    "Exit": "Exit",
     "User account setting": {
       "title": "User account setting",
       "subItem1": "Set up payment notifications ",
@@ -157,8 +160,24 @@
       "subItem2": "Edit information",
       "subItem3": "Set up login notifications"
     },
-    "Notifications": "Notifications",
-    "Support": "Support",
-    "Exit": "Exit"
+    "bookings history": {
+      "header": {
+        "booking paid": "Booking paid",
+        "unpaid booking": "Unpaid booking",
+        "filter": "filter",
+        "print modal": {
+          "title": "print Booking  history",
+          "text": "Do you want to print the history of bookings?",
+          "button yes": "yes",
+          "button no": "No"
+        }
+      },
+      "empty booking": {
+        "title": "You have no payment",
+        "text1": "You have not made a financial",
+        "text2": "transaction yet",
+        "button": "start transaction"
+      }
+    }
   }
 }

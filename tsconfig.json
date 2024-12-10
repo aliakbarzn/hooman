@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/sections/searchPage/listCart/section/FilterButtonList.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/sections/searchPage/listCart/section/FilterButtonList.tsx", "src/app/[locale]/dashboard/comments/reply2"],
   "exclude": ["node_modules"]
 }

@@ -4,8 +4,9 @@ import ChevronDown from '@/assets/icons/ChevronDown'
 import React, { useState } from 'react'
 import profPic from '@/assets/images/dashboard/notifications/user-profile.png'
 import Image, { StaticImageData } from 'next/image';
-import { CloseIcon, IconReply, IconThumb } from '@/assets/icons';
+import { CloseIcon, IconReply, IconThumb, QuoteIcon } from '@/assets/icons';
 import Pagination from '@/sections/dashboard/messages/Pagination';
+import { Link } from '@/navigation';
 
 interface Comment {
   id: number;
@@ -156,6 +157,8 @@ export default function page() {
     },
   ])
 
+  // const [comments, setComments] = useState<Comment[]>([])
+
   const [isFilterOpen, setIsFilterOpen] = useState(false)
   const [selectedField, setSelectedField] = useState('Sort by')
   const [selectedRadio, setSelectedRadio] = useState('dislike')
@@ -281,32 +284,48 @@ export default function page() {
         )}
       </div>
       {/* body -------------------------------------------------------------------------------------- */}
-      <div className="flex flex-col gap-10">
-        {currentComments.map(comment => (
-          <div key={comment.id} className='border border-grayC rounded-2xl rounded-br-none p-3'>
-            {/* comment header */}
-            <div className="flex gap-3 items-center px-3 py-4 border-b border-grayC">
-              <Image src={comment.senderPic} alt='sender-image' width={70} height={70} className='rounded-full' />
-              <div className="flex flex-col">
-                <h3 className="font-semibold">{comment.sender}</h3>
-                <h6 className="text-blackC-light text-sm">date: {comment.date}</h6>
+      {comments.length !== 0
+        ?
+        <>
+          <div className="flex flex-col gap-10">
+            {currentComments.map(comment => (
+              <div key={comment.id} className='border border-grayC rounded-2xl rounded-br-none p-3'>
+                {/* comment header */}
+                <div className="flex gap-3 items-center px-3 py-4 border-b border-grayC">
+                  <Image src={comment.senderPic} alt='sender-image' width={70} height={70} className='rounded-full' />
+                  <div className="flex flex-col">
+                    <h3 className="font-semibold">{comment.sender}</h3>
+                    <h6 className="text-blackC-light text-sm">date: {comment.date}</h6>
+                  </div>
+                </div>
+                {/* comment text */}
+                <p className="text-blackC-light text-sm py-5 px-3 border-b border-grayC">{comment.text}</p>
+                {/* comment footer */}
+                <div className="flex items-center justify-between pt-5 pb-3 px-3">
+                  <Link href='comments/reply' className='cursor-pointer'><IconReply /></Link>
+                  <div className="flex items-center gap-2">
+                    <span className='text-blackC-light'>({comment.dislikes})</span>
+                    <button onClick={() => handleDislike(comment.id)} className={`rotate-180 ${comment.isDisliked ? 'text-blackC' : 'text-white'}`}><IconThumb /></button>
+                    <button onClick={() => handleLike(comment.id)} className={`${comment.isLiked ? 'text-blackC' : 'text-white'}`}><IconThumb /></button>
+                    <span className='text-blackC-light'>({comment.likes})</span>
+                  </div>
+                </div>
               </div>
-            </div>
-            {/* comment text */}
-            <p className="text-blackC-light text-sm py-5 px-3 border-b border-grayC">{comment.text}</p>
-            {/* comment footer */}
-            <div className="flex items-center justify-between pt-5 pb-3 px-3">
-              <div className='cursor-pointer'><IconReply /></div>
-              <div className="flex items-center gap-2">
-                <span className='text-blackC-light'>({comment.dislikes})</span>
-                <button onClick={() => handleDislike(comment.id)} className={`rotate-180 ${comment.isDisliked ? 'text-blackC' : 'text-white'}`}><IconThumb /></button>
-                <button onClick={() => handleLike(comment.id)} className={`${comment.isLiked ? 'text-blackC' : 'text-white'}`}><IconThumb /></button>
-                <span className='text-blackC-light'>({comment.likes})</span>
-              </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </>
+        :
+        <>
+          <div className='w-full h-full flex flex-col items-center justify-center gap-y-12'>
+            <div className='-mb-5 mt-20'><QuoteIcon /></div>
+            <div className='flex flex-col gap-y-3 items-center'>
+              <h3 className='text-2xl font-semibold'>No Messages</h3>
+              <p className='text-blackC-light'>you have no active chat</p>
+            </div>
+            <button className='rounded-lg bg-primary px-8 py-2 text-[#f5f5f5]'>start new massage</button>
+          </div>
+        </>}
+
       {/* pagination -------------------------------------------------------------------------------------- */}
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
     </div>

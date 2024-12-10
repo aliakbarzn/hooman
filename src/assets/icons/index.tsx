@@ -60,3 +60,6 @@ export { default as IconPencil } from './dashboard/notifications/icon-pencil'
 // dashboard >>> comments
 export { default as IconReply } from './dashboard/comments/icon-reply'
 export { default as IconThumb } from './dashboard/comments/icon-thumb'
+// dashboard >>> bookings history
+export { default as IconPrinter } from './dashboard/bookings-history/icon-printer'
+export { default as PicPayment } from './dashboard/bookings-history/pic-payment'
