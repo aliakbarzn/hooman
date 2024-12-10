@@ -139,7 +139,7 @@ export default function Dashboard() {
     },
     {
       id: 'support',
-      href: '/',
+      href: '/support',
       icon: <HeadphoneIcon />,
       title: t('Support'),
       hasChevron: false,

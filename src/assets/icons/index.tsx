@@ -63,3 +63,6 @@ export { default as IconThumb } from './dashboard/comments/icon-thumb'
 // dashboard >>> bookings history
 export { default as IconPrinter } from './dashboard/bookings-history/icon-printer'
 export { default as PicPayment } from './dashboard/bookings-history/pic-payment'
+// Dashboard >>> support
+export { default as BgSupport } from './dashboard/support/bg-support'
+export { default as IconSupport } from './dashboard/support/icon-support'

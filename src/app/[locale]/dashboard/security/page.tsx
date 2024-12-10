@@ -14,13 +14,13 @@ export default function page() {
   const t = useTranslations("Dashboard.security")
 
   const [settings1, setSettings1] = useState<Settings[]>([
-    { id: 1, title: 'Two-step login with Google', isActive: false },
-    { id: 2, title: 'Two-step login with email ', isActive: false },
-    { id: 3, title: 'Two-step login with SMS', isActive: false },
+    { id: 1, title: t("security1"), isActive: false },
+    { id: 2, title: t("security2"), isActive: false },
+    { id: 3, title: t("security3"), isActive: false },
   ])
   const [settings2, setSettings2] = useState<Settings[]>([
-    { id: 1, title: 'Change password', isActive: false },
-    { id: 2, title: 'User account settings', isActive: false },
+    { id: 4, title: t("security4"), isActive: false },
+    { id: 5, title: t("security5"), isActive: false },
   ])
 
   // handlers

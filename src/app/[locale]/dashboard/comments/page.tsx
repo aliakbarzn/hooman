@@ -7,6 +7,8 @@ import Image, { StaticImageData } from 'next/image';
 import { CloseIcon, IconReply, IconThumb, QuoteIcon } from '@/assets/icons';
 import Pagination from '@/sections/dashboard/messages/Pagination';
 import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
+import CommentCard from '@/sections/dashboard/comments/comment-card';
 
 interface Comment {
   id: number;
@@ -21,6 +23,8 @@ interface Comment {
 }
 
 export default function page() {
+
+  const t = useTranslations("Dashboard.comments")
 
   const [comments, setComments] = useState<Comment[]>([
     {
@@ -203,9 +207,9 @@ export default function page() {
     <div className='max-w-[1200px] p-20 flex flex-col gap-12 mx-auto'>
       {/* header -------------------------------------------------------------------------------------- */}
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold">user comments</h2>
+        <h2 className="text-xl font-semibold">{t("title")}</h2>
         <button onClick={() => setIsFilterOpen(true)} className="text-sm flex items-center gap-x-3 border border-[#79747E] rounded-lg py-[5px] px-3">
-          <span>filter</span>
+          <span>{t("filter")}</span>
           <ChevronDown />
         </button>
         {isFilterOpen && (
@@ -289,27 +293,20 @@ export default function page() {
         <>
           <div className="flex flex-col gap-10">
             {currentComments.map(comment => (
-              <div key={comment.id} className='border border-grayC rounded-2xl rounded-br-none p-3'>
-                {/* comment header */}
-                <div className="flex gap-3 items-center px-3 py-4 border-b border-grayC">
-                  <Image src={comment.senderPic} alt='sender-image' width={70} height={70} className='rounded-full' />
-                  <div className="flex flex-col">
-                    <h3 className="font-semibold">{comment.sender}</h3>
-                    <h6 className="text-blackC-light text-sm">date: {comment.date}</h6>
-                  </div>
-                </div>
-                {/* comment text */}
-                <p className="text-blackC-light text-sm py-5 px-3 border-b border-grayC">{comment.text}</p>
-                {/* comment footer */}
-                <div className="flex items-center justify-between pt-5 pb-3 px-3">
-                  <Link href='comments/reply' className='cursor-pointer'><IconReply /></Link>
-                  <div className="flex items-center gap-2">
-                    <span className='text-blackC-light'>({comment.dislikes})</span>
-                    <button onClick={() => handleDislike(comment.id)} className={`rotate-180 ${comment.isDisliked ? 'text-blackC' : 'text-white'}`}><IconThumb /></button>
-                    <button onClick={() => handleLike(comment.id)} className={`${comment.isLiked ? 'text-blackC' : 'text-white'}`}><IconThumb /></button>
-                    <span className='text-blackC-light'>({comment.likes})</span>
-                  </div>
-                </div>
+              <div key={comment.id}>
+                <CommentCard
+                  id={comment.id}
+                  sender={comment.sender}
+                  senderPic={comment.senderPic}
+                  date={comment.date}
+                  text={comment.text}
+                  likes={comment.likes}
+                  dislikes={comment.dislikes}
+                  isLiked={comment.isLiked}
+                  isDisliked={comment.isDisliked}
+                  handleDislike={handleDislike}
+                  handleLike={handleLike}
+                />
               </div>
             ))}
           </div>
