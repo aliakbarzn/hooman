@@ -135,30 +135,32 @@
     }
   },
   "Dashboard": {
-    "Messages": "Messages",
-    "Dashboard": "Dashboard",
-    "Buy ads": "Buy ads",
-    "My ads": "My ads",
-    "Make an ad": "Make an ad",
-    "User comments": "User comments",
-    "History bookings": "History bookings",
-    "Payment history": "Payment history",
-    "Connect to booking program": "Connect to booking program",
-    "Booking planning": "Booking planning",
-    "Notifications": "Notifications",
-    "Support": "Support",
-    "Exit": "Exit",
-    "User account setting": {
-      "title": "User account setting",
-      "subItem1": "Set up payment notifications ",
-      "subItem2": "Edit information",
-      "subItem3": "Set up login notifications"
-    },
-    "security": {
-      "title": "security",
-      "subItem1": "Set up payment notifications ",
-      "subItem2": "Edit information",
-      "subItem3": "Set up login notifications"
+    "dashboard-items": {
+      "Messages": "Messages",
+      "Dashboard": "Dashboard",
+      "Buy ads": "Buy ads",
+      "My ads": "My ads",
+      "Make an ad": "Make an ad",
+      "User comments": "User comments",
+      "History bookings": "History bookings",
+      "Payment history": "Payment history",
+      "Connect to booking program": "Connect to booking program",
+      "Booking planning": "Booking planning",
+      "Notifications": "Notifications",
+      "Support": "Support",
+      "Exit": "Exit",
+      "User account setting": {
+        "title": "User account setting",
+        "subItem1": "Set up payment notifications ",
+        "subItem2": "Edit information",
+        "subItem3": "Set up login notifications"
+      },
+      "security": {
+        "title": "security",
+        "subItem1": "Set up payment notifications ",
+        "subItem2": "Edit information",
+        "subItem3": "Set up login notifications"
+      }
     },
     "bookings history": {
       "header": {
@@ -184,6 +186,15 @@
         "price": "price",
         "type-of-service": "Type of service"
       }
+    },
+    "settings": {
+      "setting1": "Receive SMS after login",
+      "setting2": "Receive email after login",
+      "setting3": "Receive email after booking",
+      "setting4": "Receive SMS after booking",
+      "setting5": "Receive notification after booking",
+      "setting6": "Receive notification of new messages",
+      "setting7": "Receive notification of comments changes"
     }
   }
 }

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import profPic from '@/assets/images/dashboard/notifications/user-profile.png';
 import { IconPencil } from '@/assets/icons';
-import { isAction } from '@reduxjs/toolkit';
+import { useTranslations } from 'next-intl';
 
 interface User {
   name: string;
@@ -26,14 +26,16 @@ const user: User = {
 
 export default function Page() {
 
+  const t = useTranslations("Dashboard.settings")
+
   const [settings, setSettings] = useState<Settings[]>([
-    { id: 1, title: 'Receive SMS after login', isActive: false },
-    { id: 2, title: 'Receive email after login', isActive: false },
-    { id: 3, title: 'Receive email after booking', isActive: false },
-    { id: 4, title: 'Receive SMS after booking', isActive: false },
-    { id: 5, title: 'Receive notification after booking', isActive: false },
-    { id: 6, title: 'Receive notification of new messages', isActive: false },
-    { id: 7, title: 'Receive notification of comments changes', isActive: false },
+    { id: 1, title: t("setting1"), isActive: false },
+    { id: 2, title: t("setting2"), isActive: false },
+    { id: 3, title: t("setting3"), isActive: false },
+    { id: 4, title: t("setting4"), isActive: false },
+    { id: 5, title: t("setting5"), isActive: false },
+    { id: 6, title: t("setting6"), isActive: false },
+    { id: 7, title: t("setting7"), isActive: false },
   ]);
 
   // handlers
@@ -46,7 +48,7 @@ export default function Page() {
   };
 
   return (
-    <div className='p-10 flex flex-col gap-20'>
+    <div className='max-w-[1100px] mx-auto p-10 flex flex-col gap-20'>
       {/* Profile Card */}
       <div className="p-5 flex gap-6 items-center w-full border border-grayC rounded-lg bg-[rgba(229,199,255,0.25)]">
         <Image src={user.pic} alt='profile-image' width={90} height={90} className='rounded-xl' />
@@ -76,7 +78,7 @@ export default function Page() {
               className={`p-1 w-12 h-6 rounded-full border-2 transition duration-200 flex
               ${s.isActive ? 'border-primary bg-primary' : 'justify-start border-black bg-white'}`}
             >
-              <div className={`my-auto h-[14px] w-[14px] rounded-full transition duration-200
+              <div className={`mb-px h-[14px] w-[14px] rounded-full transition duration-200
               ${s.isActive ? 'bg-white translate-x-[22px]' : 'bg-black'}`}></div>
             </button>
           </div>
