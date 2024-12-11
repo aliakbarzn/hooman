@@ -77,7 +77,7 @@ export default function Dashboard() {
     },
     {
       id: 'payment-history',
-      href: '/',
+      href: '/payment-history',
       icon: <CircledDollarIcon />,
       title: t('Payment history'),
       hasChevron: false,

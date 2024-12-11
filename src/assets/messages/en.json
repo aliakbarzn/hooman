@@ -211,6 +211,12 @@
       "title": "Support",
       "text1": "You can communicate with site officials through tickets.",
       "text2": "And make your comments and suggestions."
+    },
+    "notifications": {
+      "empty-notifications": {
+        "title": "No notification",
+        "text": "There are currently no notifications"
+      }
     }
   }
 }
