@@ -217,6 +217,11 @@
         "title": "No notification",
         "text": "There are currently no notifications"
       }
+    },
+    "payment-history": {
+      "header": {
+        "title": "Financial history"
+      }
     }
   }
 }

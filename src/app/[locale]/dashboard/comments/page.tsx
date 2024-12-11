@@ -6,7 +6,6 @@ import profPic from '@/assets/images/dashboard/notifications/user-profile.png'
 import Image, { StaticImageData } from 'next/image';
 import { CloseIcon, IconReply, IconThumb, QuoteIcon } from '@/assets/icons';
 import Pagination from '@/sections/dashboard/messages/Pagination';
-import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 import CommentCard from '@/sections/dashboard/comments/comment-card';
 
