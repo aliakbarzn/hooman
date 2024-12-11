@@ -86,7 +86,7 @@ export default function Dashboard() {
     },
     {
       id: 'connect-booking',
-      href: '/',
+      href: '/connect-booking',
       icon: <BookingIcon />,
       title: t('Connect to booking program'),
       hasChevron: false,
@@ -120,13 +120,9 @@ export default function Dashboard() {
       href: '/security',
       icon: <ShieldIcon />,
       title: t('security.title'),
-      hasChevron: true,
+      hasChevron: false,
       hasBorder: false,
-      subItems: [
-        t('security.subItem1'),
-        t('security.subItem2'),
-        t('security.subItem3'),
-      ],
+      subItems: [],
     },
     {
       id: 'notifications',
@@ -144,11 +140,7 @@ export default function Dashboard() {
       title: t('Support'),
       hasChevron: false,
       hasBorder: false,
-      subItems: [
-        'Set up payment notifications',
-        'Edit information',
-        'Set up login notifications'
-      ],
+      subItems: [],
     },
     {
       id: 'exit',
@@ -169,7 +161,7 @@ export default function Dashboard() {
     <div className="w-[315px] p-2 bg-white border-y border-r border-[#D9D9D9]">
       {dashboardItems.map((item) => (
         <>
-        {item.hasBorder && <div className='h-[1px] w-[282px] bg-grayC ml-3 mb-3'></div>}
+          {item.hasBorder && <div className='h-[1px] w-[282px] bg-grayC ml-3 mb-3'></div>}
           <div key={item.id} className="mb-2">
             {/* Main Menu Item */}
             <Link href={`/dashboard${item.href}`}

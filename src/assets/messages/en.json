@@ -222,6 +222,39 @@
       "header": {
         "title": "Financial history"
       }
+    },
+    "connect-booking": {
+      "title": "What is connection to the booking program?",
+      "item1": {
+        "title": "Instant settlement!",
+        "text": "By connecting to the booking program, you no longer need difficult payment methods, you can easily charge your customers for your services by connecting to the booking program of our site."
+      },
+      "item2": {
+        "title": "Easy payment for the customer",
+        "text": "This model of taking fees will be a very easy way for customers because once the booking is confirmed by you, it will be easy for them to pay. "
+      },
+      "item3": {
+        "title": "Payment history",
+        "text": "Also, in this way, you and your customers will have access to your payment history and will be informed about the details of the work."
+      },
+      "item4": {
+        "title": "Various facilities",
+        "text": "Various filters as well as the ability to print your invoices help you manage your work better."
+      },
+      "button1": "cancel",
+      "button2": "connect",
+      "modal": {
+        "title1": "Name",
+        "title2": "Surname",
+        "title3": "Email",
+        "title4": "Message",
+        "placeholder": "Value",
+        "button": "Submit",
+        "success": {
+          "title": "success",
+          "text": "Your connection to the booking system has been successfully completed."
+        }
+      }
     }
   }
 }

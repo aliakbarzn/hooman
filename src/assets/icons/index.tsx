@@ -66,3 +66,5 @@ export { default as PicPayment } from './dashboard/bookings-history/pic-payment'
 // Dashboard >>> support
 export { default as BgSupport } from './dashboard/support/bg-support'
 export { default as IconSupport } from './dashboard/support/icon-support'
+// Dashboard >>> connect booking
+export { default as IconSimpleTick } from './dashboard/connect-booking/icon-simple-tick'
