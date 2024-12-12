@@ -256,5 +256,23 @@
         }
       }
     }
+  },
+  "Single": {
+    "header": {
+      "title": "DAS Thai massage",
+      "label": "Participant in the survey",
+      "comments": "comments"
+    },
+    "facilities": {
+      "title": "Facilities"
+    },
+    "booking": "Book your favorite salon now",
+    "about": {
+      "title": "about DAS Thai massage",
+      "text": "your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  m."
+    },
+    "prices": {
+      "title": "prices"
+    }
   }
 }

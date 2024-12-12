@@ -68,3 +68,9 @@ export { default as BgSupport } from './dashboard/support/bg-support'
 export { default as IconSupport } from './dashboard/support/icon-support'
 // Dashboard >>> connect booking
 export { default as IconSimpleTick } from './dashboard/connect-booking/icon-simple-tick'
+// single
+export { default as IconMiniPicture } from './single/icon-mini-picture'
+export { default as IconFlag } from './single/icon-flag'
+export { default as IconShare } from './single/icon-share'
+export { default as IconHeart } from './single/icon-heart'
+export { default as IconRingingBell } from './single/icon-ringing-bell'
