@@ -1,9 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
 import banner from '@/assets/images/search-page/baner.png'
-import { CalenderIcon, CommentsIcon, EnvelopeIcon, HomeIcon, IconArrow, IconFlag, IconHeart, IconMiniPicture, IconRingingBell, IconShare, InventoryIcon } from '@/assets/icons'
+import { CalenderIcon, ChevronDownIcon, CommentsIcon, EnvelopeIcon, HomeIcon, IconArrow, IconColoredPayment, IconFlag, IconHeart, IconLike2, IconMiniPicture, IconRingingBell, IconShare, IconSharpStar, IconVisa, InventoryIcon } from '@/assets/icons'
 import { useTranslations } from 'next-intl'
 import IcStar from '@/assets/icons/search-page/ic-star'
+import IconPaypal from '@/assets/icons/single/payment-methods/icon-paypal'
+import SinglePageComment from '@/sections/single/single-page-comment'
+import ChevronDown from '@/assets/icons/ChevronDown'
+import SinglePageAddComment from '@/sections/single/single-page-add-comment'
+import SinglePageWorkingHours from '@/sections/single/single-page-working-hours'
+import SinglePageLocation from '@/sections/single/single-page-location'
 
 export default function page() {
 
@@ -42,6 +48,32 @@ export default function page() {
     },
   ]
 
+  const comments = [
+    {
+      id: 1,
+      sender: 'gaslin mina',
+      stars: 5,
+      time: 3,
+      text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  m.',
+      likes: 23
+    },
+    {
+      id: 1,
+      sender: 'gaslin mina',
+      stars: 5,
+      time: 3,
+      text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  m.',
+      likes: 23
+    },
+    {
+      id: 1,
+      sender: 'gaslin mina',
+      stars: 5,
+      time: 3,
+      text: 'your masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  myour masage type in there. your masage type in there, your masage type in there m your masage type in there. your masage type in there, your masage type in there  m.',
+      likes: 23
+    },
+  ]
 
   return (
     <div className='flex flex-col '>
@@ -142,13 +174,35 @@ export default function page() {
           </tbody>
         </table>
       </div>
-      {/* payment methods */}
-      <div className="bg-[#FFF0F0] flex items-center p-14">
-        <h2 className="text-[40px] font-semibold text-[#762925]">Payment methods for booking</h2>
+      {/* payment methods -------------------------------------------------------------------------------------------------------- */}
+      <div className="bg-[#FFF0F0] flex items-center justify-between px-14 py-8">
+        <h2 className="text-[40px] font-semibold text-[#762925]">{t("payment-methods")}</h2>
         <div className="flex items-center gap-8">
-
+          <IconVisa />
+          <IconPaypal />
+          <IconColoredPayment />
         </div>
       </div>
+      {/* comments -------------------------------------------------------------------------------------------------------- */}
+      <div className="px-2 flex flex-col">
+        <h3 className="px-12 py-14 text-3xl font-semibold border-b border-grayC">{t('comments.title')}</h3>
+        {comments.map(c => (
+          <SinglePageComment id={c.id} sender={c.sender} stars={c.stars} time={c.time} text={c.text} likes={c.likes} />
+        ))}
+        {/* see more */}
+        <div className="py-6 flex items-center justify-center border-b border-grayC">
+          <button className="flex gap-4 items-center">
+            <h3 className="font-medium text-[40px] text-primary">{t("comments.see-more")}</h3>
+            <div className="bg-[#FFF0F0] rounded-full w-10 h-10 text-primary text-4xl pt-[2px]">{'>'}</div>
+          </button>
+        </div>
+        {/* add a comment */}
+        <SinglePageAddComment />
+      </div>
+      {/* working hours -------------------------------------------------------------------------------------------------------- */}
+      <SinglePageWorkingHours />
+      {/* location */}
+      <SinglePageLocation />
     </div>
   )
 }

@@ -273,6 +273,38 @@
     },
     "prices": {
       "title": "prices"
+    },
+    "payment-methods": "Payment methods for booking",
+    "comments": {
+      "title": "Comments",
+      "comment-time": " Days ago",
+      "person": " person",
+      "see-more": "see more comment",
+      "add-a-comment": {
+        "title": "Add a comment",
+        "value": "Value",
+        "name": "Name",
+        "surname": "Surname",
+        "email": "Email",
+        "message": "Message",
+        "words-count": " to 1000 words",
+        "rate-title": "Rate the usefulness of the article",
+        "rate": "rate",
+        "submit": "submit"
+      }
+    },
+    "working-hours": {
+      "title": "working hours",
+      "Monday": "Monday",
+      "Tuesday": "Tuesday",
+      "Wednesday": "Wednesday",
+      "Thursday": "monday",
+      "Friday": "Friday",
+      "Saturday": "Saturday",
+      "Sunday": "Sunday"
+    },
+    "location": {
+      "title": "location"
     }
   }
 }
