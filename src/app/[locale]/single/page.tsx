@@ -10,6 +10,7 @@ import ChevronDown from '@/assets/icons/ChevronDown'
 import SinglePageAddComment from '@/sections/single/single-page-add-comment'
 import SinglePageWorkingHours from '@/sections/single/single-page-working-hours'
 import SinglePageLocation from '@/sections/single/single-page-location'
+import Discounts from '@/sections/single/discounts'
 
 export default function page() {
 
@@ -203,6 +204,8 @@ export default function page() {
       <SinglePageWorkingHours />
       {/* location */}
       <SinglePageLocation />
+      {/* discounts */}
+      <Discounts />
     </div>
   )
 }
