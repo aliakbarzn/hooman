@@ -3,8 +3,7 @@ import React from 'react'
 import TicketCard from './ticket-card'
 
 interface TicketsProps {
-  isNewTicket: boolean;
-  handler: (v: boolean) => void
+  handler: (v: string) => void
 }
 
 interface Tickets {
@@ -14,7 +13,7 @@ interface Tickets {
   updated: string;
 }
 
-export default function Tickets({ isNewTicket, handler }: TicketsProps) {
+export default function Tickets({ handler }: TicketsProps) {
 
   const t = useTranslations('Ticket.tickets')
 
@@ -54,7 +53,7 @@ export default function Tickets({ isNewTicket, handler }: TicketsProps) {
       </div>
       {/* tickets */}
       {tickets.map(t => <TicketCard key={t.number} subject={t.subject} number={t.number} status={t.status} updated={t.updated} />)}
-      <button onClick={() => handler(true)} className='rounded-lg bg-[#47C666] py-2 text-white'>{t('button')}</button>
+      <button onClick={() => handler('newTicket')} className='rounded-lg bg-[#47C666] py-2 text-white'>{t('button')}</button>
     </div>
   )
 }

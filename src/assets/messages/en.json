@@ -344,6 +344,23 @@
       "category3": "category3",
       "category4": "category4",
       "category5": "category5"
+    },
+    "sendTicket": {
+      "title": "send a ticket",
+      "modal": {
+        "success": {
+          "title": "successful",
+          "text": "Your message has been sent successfully",
+          "button1": "New ticket",
+          "button2": "View ticket"
+        },
+        "unsuccess": {
+          "title": "Unsuccessful",
+          "text": "Unfortunately, your message was not sent! Please try again",
+          "button1": "cancel",
+          "button2": "Try again"
+        }
+      }
     }
   }
 }

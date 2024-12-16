@@ -2,7 +2,11 @@ import { PaperClipIcon } from '@/assets/icons';
 import { useTranslations } from 'next-intl';
 import React, { useRef, useState } from 'react';
 
-export default function NewTicket() {
+interface NewTicketProps {
+  handler: (v: string) => void;
+}
+
+export default function NewTicket({ handler }: NewTicketProps) {
   const t = useTranslations('Ticket.new-ticket');
 
   // States
@@ -112,7 +116,7 @@ export default function NewTicket() {
           </div>
         </div>
       </div>
-      <button className="rounded-lg bg-[#47C666] py-2 text-white">
+      <button onClick={() => handler('sendTicket')} className="rounded-lg bg-[#47C666] py-2 text-white">
         {t('button')}
       </button>
     </div>
