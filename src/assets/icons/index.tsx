@@ -86,3 +86,6 @@ export { default as IconPokerFace } from './single/emojis/icon-poker-face'
 export { default as IconHappyFace } from './single/emojis/icon-happy-face'
 export { default as IconLovingFace } from './single/emojis/icon-loving-face'
 export { default as IconStarryFace } from './single/emojis/icon-starry-face'
+// single >>> location
+export { default as IconPhoneBook } from './single/location/icon-phone-book'
+export { default as IconPhone2 } from './single/location/icon-phone2'
