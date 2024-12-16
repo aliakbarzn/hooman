@@ -255,6 +255,17 @@
           "text": "Your connection to the booking system has been successfully completed."
         }
       }
+    },
+    "offers": {
+      "title": "Discount codes",
+      "discountCodeCard": {
+        "salon": "salon",
+        "discountCode": "discount code",
+        "validFor": "Valid for",
+        "days": "days",
+        "disposable": "disposable",
+        "copy": "copy"
+      }
     }
   },
   "Single": {
