@@ -7,7 +7,8 @@ interface ChatBoxPropTypes {
 }
 
 export default function ChatBox({ onClick, onClose }: ChatBoxPropTypes) {
-  const messages = [
+  
+  const chatMessages = [
     {
       id: 1,
       sender: 'admin',
@@ -23,35 +24,35 @@ export default function ChatBox({ onClick, onClose }: ChatBoxPropTypes) {
       time: '19:65'
     },
     {
-      id: 2,
+      id: 3,
       sender: 'admin',
       text: 'I need help with my account.I need help with my account.I need help with my account.I need help with my account.',
       date: '04/13/2024',
       time: '19:65'
     },
     {
-      id: 2,
+      id: 4,
       sender: 'user',
       text: 'I need help with my account.I need help with my account.I need help with my account.I need help with my account.',
       date: '04/13/2024',
       time: '19:65'
     },
     {
-      id: 2,
+      id: 5,
       sender: 'admin',
       text: 'I need help with my account.I need help with my account.I need help with my account.I need help with my account.',
       date: '04/13/2024',
       time: '19:65'
     },
     {
-      id: 2,
+      id: 6,
       sender: 'user',
       text: 'I need help with my account.I need help with my account.I need help with my account.I need help with my account.',
       date: '04/13/2024',
       time: '19:65'
     },
     {
-      id: 2,
+      id: 7,
       sender: 'user',
       text: 'I need help with my account.I need help with my account.I need help with my account.I need help with my account.',
       date: '04/13/2024',
@@ -91,7 +92,7 @@ export default function ChatBox({ onClick, onClose }: ChatBoxPropTypes) {
       {/* Body */}
       <div className="flex flex-col flex-grow overflow-y-auto p-8 gap-10">
         {/* Messages Section */}
-        {messages.map((message) => (
+        {chatMessages.map((message) => (
           <div
             key={message.id}
             className={`flex ${message.sender === 'user' ? 'justify-start' : 'justify-end'}`}
