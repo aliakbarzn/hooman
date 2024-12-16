@@ -304,7 +304,46 @@
       "Sunday": "Sunday"
     },
     "location": {
-      "title": "location"
+      "title": "location",
+      "address-title": "Address sharing",
+      "address-text": "your masage type in there. your masage type in there, your masage type in there .",
+      "hall-title": "hall number",
+      "hall-number1": "09157934-2340",
+      "hall-number2": "948-384823"
+    }
+  },
+  "Ticket": {
+    "tickets": {
+      "title": "My tickets",
+      "subtitle": "History of tickets",
+      "ticket-card": {
+        "ticket-number": "Ticket number",
+        "updated": "Updated",
+        "closed": "closed",
+        "awaiting reply": "awaiting reply",
+        "under review": "under review",
+        "answered": "answered"
+      },
+      "button": "New ticket"
+    },
+    "new-ticket": {
+      "mainTitle": "Write a ticket",
+      "title1": "subject",
+      "placeholder1": "Write subject",
+      "title2": "Category",
+      "placeholder2": "choose your category",
+      "title3": "Description",
+      "placeholder3": "write description",
+      "title4": "Add image (optional)",
+      "placeholder4": "Add image",
+      "imageSize": "Maximum file size: 25MB",
+      "imageExtension": "Allowed extensions to upload: JPG, PNG",
+      "button": "New ticket",
+      "category1": "category1",
+      "category2": "category2",
+      "category3": "category3",
+      "category4": "category4",
+      "category5": "category5"
     }
   }
 }
