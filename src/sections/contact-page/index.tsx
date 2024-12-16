@@ -20,7 +20,7 @@ const ContactIndex = () => {
 		// what should the click do ? :
 	}
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+	const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
 		setInputCharacters(e.target.value.length)
 	}
 
@@ -60,16 +60,15 @@ const ContactIndex = () => {
 					{/* message */}
 					<div className='flex flex-col gap-y-2'>
 						<span className='text-[#1E1E1E]'>Message</span>
-						<input className='h-20 rounded-lg border border-grayC px-4 py-3' type="text" placeholder='Value' onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange(e)} />
+						<textarea maxLength={1000} className='h-20 rounded-lg border border-grayC px-4 py-3' placeholder='Value' onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => handleInputChange(e)} />
 						<span className='text-blackC-light font-normal'>{inputCharacters} to 1000 word</span>
 					</div>
 					{/* button */}
-					{
-						isLoggedIn
-							?
-							<button className='w-[394px] h-10 bg-[#47C666] text-[#F5F5F5] rounded-lg hover:bg-green-400 transition-all' onClick={handleClick}>Submit</button>
-							:
-							<label htmlFor='popupToggle' className='h-10 bg-[#47C666] text-[#F5F5F5] rounded-lg hover:bg-green-400 text-center pt-2 cursor-pointer'>Submit</label>
+					{isLoggedIn
+						?
+						<button className='w-[394px] h-10 bg-[#47C666] text-[#F5F5F5] rounded-lg hover:bg-green-400 transition-all' onClick={handleClick}>Submit</button>
+						:
+						<label htmlFor='popupToggle' className='h-10 bg-[#47C666] text-[#F5F5F5] rounded-lg hover:bg-green-400 text-center pt-2 cursor-pointer'>Submit</label>
 					}
 				</form>
 			</div>
