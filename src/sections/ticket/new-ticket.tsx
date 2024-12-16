@@ -5,31 +5,31 @@ import React, { useRef, useState } from 'react';
 export default function NewTicket() {
   const t = useTranslations('Ticket.new-ticket');
 
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const [fileError, setFileError] = useState<string | null>(null)
-
+  // States
+  const fileInputRef = useRef<HTMLInputElement>(null); // Ref to open the file uploader
+  const [fileError, setFileError] = useState<string | null>(null) // State for file error
   const [isCategoryOpen, setIsCategoryOpen] = useState(false); // State to toggle dropdown visibility
+  const [subjectCharactersCount, setSubjectCharactersCount] = useState(0) // State to store subject characters count
+  const [descriptionCharactersCount, setDescriptionCharactersCount] = useState(0) // State to store description characters count
 
+  // Handlers
   const openUploader = () => {
-    fileInputRef.current && fileInputRef.current.click(); // Ref to open the file uploader
+    fileInputRef.current && fileInputRef.current.click();
   };
-
   const toggleCategoryDropdown = () => {
     setIsCategoryOpen((prev) => !prev);
   };
-
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
 
     if (file) {
-
-      if (file.size > 26_214_400) {
-        setFileError('File size must be less than 25MB.')
+      console.log(file)
+      if (file.size > 100000000) { // 26_214_400
+        setFileError('Size')
         return;
       }
       if (!['image/png', 'image/jpg'].includes(file.type)) {
-        setFileError('File size must be less than 25MB.')
+        setFileError('Format')
         return;
       }
       setFileError(null)
@@ -46,12 +46,13 @@ export default function NewTicket() {
         <div className="flex flex-col gap-2">
           <h5>{t('title1')}</h5>
           <input
-            className="p-2 border border-grayC rounded-lg"
+            onChange={e => setSubjectCharactersCount(e.target.value.length)}
+            className="p-2 border border-grayC rounded-lg outline-none "
             type="text"
             placeholder={t('placeholder1')}
             maxLength={10}
           />
-          <p className="text-blackC-light flex justify-end">{0}/10</p>
+          <p className="text-blackC-light flex justify-end">{subjectCharactersCount}/10</p>
         </div>
 
         {/* category dropdown */}
@@ -86,14 +87,15 @@ export default function NewTicket() {
         <div className="flex flex-col gap-2">
           <h5>{t('title3')}</h5>
           <textarea
-            className="p-4 border border-grayC rounded-lg h-32"
+            onChange={e => setDescriptionCharactersCount(e.target.value.length)}
+            className="p-4 border border-grayC rounded-lg h-32 outline-none "
             placeholder={t('placeholder3')}
             maxLength={1000}
           />
-          <p className="text-blackC-light flex justify-end">{0}/1000</p>
+          <p className="text-blackC-light flex justify-end">{descriptionCharactersCount}/1000</p>
         </div>
 
-        {/* image */}
+        {/* image input */}
         <div className="flex flex-col gap-2">
           <h5>{t('title4')}</h5>
           <button
@@ -102,11 +104,11 @@ export default function NewTicket() {
           >
             <h6 className="text-blackC-light">{t('placeholder4')}</h6>
             <PaperClipIcon />
-            <input onChange={e => handleFileChange} accept='.png, .jpg' type="file" className="hidden" ref={fileInputRef} />
+            <input onChange={handleFileChange} accept='.png, .jpg' type="file" className="hidden" ref={fileInputRef} />
           </button>
-          <div className="flex items-center justify-between text-blackC-light mt-3">
-            <h6>{t('imageSize')}</h6>
-            <h6>{t('imageExtension')}</h6>
+          <div className="flex items-center justify-between mt-3">
+            <h6 className={`${fileError === 'Size' ? 'text-primary font-bold' : 'text-blackC-light'}`}>{t('imageSize')}</h6>
+            <h6 className={`${fileError === 'Format' ? 'text-primary font-bold' : 'text-blackC-light'}`}>{t('imageExtension')}</h6>
           </div>
         </div>
       </div>
