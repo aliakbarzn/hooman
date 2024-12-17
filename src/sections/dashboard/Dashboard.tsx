@@ -67,6 +67,15 @@ export default function Dashboard() {
       subItems: [],
     },
     {
+      id: 'my-bookings',
+      href: '/my-bookings',
+      icon: <InventoryIcon />,
+      title: t('MyBookings'),
+      hasChevron: false,
+      hasBorder: false,
+      subItems: [],
+    },
+    {
       id: 'history-bookings',
       href: '/bookings-history',
       icon: <InventoryIcon />,
