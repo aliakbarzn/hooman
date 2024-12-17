@@ -265,6 +265,10 @@
         "days": "days",
         "disposable": "disposable",
         "copy": "copy"
+      },
+      "emptyPage": {
+        "title": "No Discount codes",
+        "text": "you have no active Discount codes yet"
       }
     }
   },

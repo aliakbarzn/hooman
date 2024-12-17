@@ -1,5 +1,6 @@
 'use client'
 
+import { QuoteIcon } from '@/assets/icons';
 import Pagination from '@/sections/dashboard/messages/Pagination';
 import DiscountCodeCard from '@/sections/dashboard/offers/discount-code-card';
 import { useTranslations } from 'next-intl'
@@ -59,6 +60,7 @@ export default function page() {
       code: 'hdodyws78d0fg4s4adss020'
     },
   ]
+  // const discountCodes = []
 
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
@@ -82,10 +84,24 @@ export default function page() {
       <h2 className="text-xl font-semibold">{t('title')}</h2>
       {/* code cards */}
       {currentDiscountCodes.length !== 0
-      ?
-      currentDiscountCodes.map(code => <DiscountCodeCard />)
-      :
-      <></>
+        ?
+        currentDiscountCodes.map(discountCode =>
+          <DiscountCodeCard
+            id={discountCode.id}
+            salonName={discountCode.salonName}
+            percentage={discountCode.percentage}
+            remainingTime={discountCode.remainingTime}
+            disposable={discountCode.disposable}
+            code={discountCode.code}
+          />)
+        :
+        <div className='w-full h-full flex flex-col items-center justify-center gap-y-12'>
+          <div className='-mb-5 mt-20'><QuoteIcon /></div>
+          <div className='flex flex-col gap-y-3 items-center'>
+            <h3 className='text-2xl font-semibold'>{t('emptyPage.title')}</h3>
+            <p className='text-blackC-light'>{t('emptyPage.text')}</p>
+          </div>
+        </div>
       }
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
     </div>
