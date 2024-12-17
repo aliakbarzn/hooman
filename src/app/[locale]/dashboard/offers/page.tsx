@@ -33,7 +33,7 @@ export default function page() {
       percentage: 50,
       remainingTime: 5,
       disposable: true,
-      code: 'hdodyws78d0fg4s4adss020'
+      code: 'kdo390hfnvhf730skvmgja324'
     },
     {
       id: 4,
@@ -63,7 +63,7 @@ export default function page() {
   // const discountCodes = []
 
   // Pagination states
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 4;
   const totalPages = Math.ceil(discountCodes?.length / itemsPerPage);
 
