@@ -1,22 +1,37 @@
 const colors = {
-    background: "var(--background)",
-    foreground: "var(--foreground)",
+  background: "var(--background)",
+  foreground: "var(--foreground)",
 
 
-    primary: "var(--primary)", // رنگ اصلی
-    secondary: "var(--secendery)", // رنگ ثانویه
-    blackC: {
-      DEFAULT: "var(--blackC)", // رنگ سیاه اصلی
-      light: "var(--blackC-light)", // رنگ سیاه روشن
-    },
-    whiteC: "var(--whiteC)", // رنگ سفید
-    greenC: {
-      light: "var(--greenC-light)", // رنگ سبز روشن
-    },
-    grayC: {
-      DEFAULT: "var(--grayC)", // رنگ خاکستری
-    },
-  };
+  primary: "var(--primary)", // Primary
+  secondary: "var(--secondary)", // Secondary
+  blackC: {
+    DEFAULT: "var(--blackC)", // Main black
+    light: "var(--blackC-light)", // Light black
+  },
+  whiteC: "var(--whiteC)", // Main white
+  greenC: {
+    light: "var(--greenC-light)", // Light green
+    lighter: "var(--greenC-lighter)", // Lighter green
+    lightest: "var(--greenC-lightest)", // Lightest green
+    dark: "var(--greenC-dark)" // Dark green
+  },
+  grayC: {
+    DEFAULT: "var(--grayC)", // Main gray
+  },
+  pinkC: {
+    DEFAULT: "var(--pinkC)", // Main pink
+    light: "var(--pinkC-light)", // Light pink
+  },
+  purpleC: {
+    DEFAULT: "var(--purpleC)", // Main purple
+  },
+  blueC: {
+    DEFAULT: "var(--blueC)", // Main blue
+    dark: "var(--blueC-dark)", // Dark blue
+    darkPale: "var(--blueC-darkPale)", // Dark pale blue
+  },
+};
 
 
 export default colors;

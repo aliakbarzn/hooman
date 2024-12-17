@@ -10,14 +10,28 @@
   --color: black;
 
   --primary:#f58882;
-  --secendery:#47c666;
+  --secondary:#47c666;
 
   --blackC: #1e1e1e; 
   --blackC-light: #757575; 
-  --whiteC: #f3f3f3; 
+
+  --whiteC: #f3f3f3;
+
   --greenC-light: #c6fad2;
+  --greenC-lighter: #E2FFE9;
+  --greenC-lightest: #F9FFFA;
+  --greenC-dark: #107629;
+
   --grayC: #d9d9d9;
- 
+
+  --pinkC: #FAD2CC;
+  --pinkC-light: #FFF3F1;
+
+  --purpleC: #DD9BCF;
+
+  --blueC: #6EA0FE;
+  --blueC-dark: #226EFF;
+  --blueC-darkPale: #DADEE9;
 }
 
 
