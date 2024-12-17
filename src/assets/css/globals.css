@@ -16,6 +16,7 @@
   --blackC-light: #757575; 
 
   --whiteC: #f3f3f3;
+  --whiteC-light: #F5F5F5;
 
   --greenC-light: #c6fad2;
   --greenC-lighter: #E2FFE9;
@@ -34,7 +35,10 @@
   --blueC-darkPale: #DADEE9;
 }
 
-
+/* Custom classes */
+.container-style {
+  @apply max-w-[1200px] mx-auto flex flex-col gap-8 p-20
+}
 
 body {
   color: var(--color);

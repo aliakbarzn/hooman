@@ -208,6 +208,10 @@
       "title": "user comments",
       "filter": "filter"
     },
+    "myBookings": {
+      "title": "My bookings ",
+      "date": "date"
+    },
     "support": {
       "title": "Support",
       "text1": "You can communicate with site officials through tickets.",

@@ -9,7 +9,10 @@ const colors = {
     DEFAULT: "var(--blackC)", // Main black
     light: "var(--blackC-light)", // Light black
   },
-  whiteC: "var(--whiteC)", // Main white
+  whiteC: {
+    DEFAULT: "var(--whiteC)", // Main white
+    light: "var(--whiteC-light)" // Light white
+  }, 
   greenC: {
     light: "var(--greenC-light)", // Light green
     lighter: "var(--greenC-lighter)", // Lighter green
