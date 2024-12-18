@@ -1,4 +1,4 @@
-import ThaiCard from '@/sections/aboutThai/thai-card';
+
 import React from 'react'
 import MyBookingsThaiCard from './my-bookings-thai-card';
 
@@ -7,7 +7,7 @@ export default function MyBookingsCardsContainer({cardsData}: any) {
 
 
 
-    <div className="flex mt-10 gap-10 justify-between w-full flex-wrap">
+    <div className="flex mt-10 gap-5 self-center md:justify-center lg:justify-between w-full flex-wrap">
       {cardsData.map((CardData: any, index: number) => {
         // Determine the column index (0-based)
         const columnIndex: number = index % 3;
