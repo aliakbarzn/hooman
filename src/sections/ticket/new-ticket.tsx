@@ -27,8 +27,7 @@ export default function NewTicket({ handler }: NewTicketProps) {
     const file = e.target.files?.[0]
 
     if (file) {
-      console.log(file)
-      if (file.size > 100000000) { // 26_214_400
+      if (file.size > 26_214_400) {
         setFileError('Size')
         return;
       }
