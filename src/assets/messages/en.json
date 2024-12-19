@@ -382,5 +382,43 @@
         }
       }
     }
+  },
+  "Booking": {
+    "note": {
+      "note": "Note",
+      "text": "The Thai massage site is not responsible for your appointment and refund",
+      "beCareful": "Be careful in your choice"
+    },
+    "detailsCard": {
+      "title": "Order details",
+      "fieldTitle1": "Type of service",
+      "fieldValue1": "90 minutes of Thai massage",
+      "fieldTitle2": "price",
+      "fieldTitle3": "date",
+      "fieldTitle4": "Description"
+    },
+    "paymentCard": {
+      "title": "payment method",
+      "swish": {
+        "title": "swish",
+        "description": "swish Description",
+        "inputTitle": "Please enter your mobile number",
+        "placeholder": "insert your phone number",
+        "format": "format"
+      },
+      "visa": {
+        "title": "visa",
+        "visaDescription": "visa Description",
+        "cardInformation": {
+          "title": "Please enter your card information",
+          "inputTitle1": "Card number",
+          "inputTitle2": "expiration date",
+          "cvv2": "cvv2",
+          "Value": "Value",
+          "saveCard": "Save card"
+        }
+      },
+      "button": "payment"
+    }
   }
 }
