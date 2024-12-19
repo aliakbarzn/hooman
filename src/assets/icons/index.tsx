@@ -91,3 +91,5 @@ export { default as IconStarryFace } from './single/emojis/icon-starry-face'
 // single >>> location
 export { default as IconPhoneBook } from './single/location/icon-phone-book'
 export { default as IconPhone2 } from './single/location/icon-phone2'
+// booking
+export { default as LogoSwish } from './booking/logo-swish'

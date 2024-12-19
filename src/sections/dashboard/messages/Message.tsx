@@ -52,7 +52,7 @@ export default function Message({ onClick, onClose }: MessagePropTypes) {
           </div>
         </div>
         {/* note :  */}
-        <div className='py-3 px-8 border border-[#70E38C] bg-[#DFFFE7] text-[#31623D] rounded-lg mb-8'>
+        <div className='py-3 px-8 border border-greenC bg-greenC-lightPale text-greenC-darkPale rounded-lg mb-8'>
           <p><i>Note:</i> The Thai massage site is not responsible for your appointment and refund. <strong>Be careful in your choice!</strong></p>
         </div>
         {/* validity */}
