@@ -18,9 +18,12 @@
   --whiteC: #f3f3f3;
   --whiteC-light: #F5F5F5;
 
+  --greenC: #70E38C;
   --greenC-light: #c6fad2;
   --greenC-lighter: #E2FFE9;
   --greenC-lightest: #F9FFFA;
+  --greenC-lightPale: #DFFFE7;
+  --greenC-darkPale: #31623D;
   --greenC-dark: #107629;
 
   --grayC: #d9d9d9;

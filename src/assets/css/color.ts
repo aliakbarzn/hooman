@@ -14,10 +14,13 @@ const colors = {
     light: "var(--whiteC-light)" // Light white
   }, 
   greenC: {
+    DEFAULT: "var(--greenC)", // Main green
     light: "var(--greenC-light)", // Light green
     lighter: "var(--greenC-lighter)", // Lighter green
     lightest: "var(--greenC-lightest)", // Lightest green
-    dark: "var(--greenC-dark)" // Dark green
+    lightPale: "var(--greenC-lightPale)", // Light pale green
+    dark: "var(--greenC-dark)", // Dark green
+    darkPale: "var(--greenC-darkPale)", // Dark pale green
   },
   grayC: {
     DEFAULT: "var(--grayC)", // Main gray
