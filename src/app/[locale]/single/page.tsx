@@ -179,7 +179,7 @@ export default function page() {
       <div className="bg-[#FFF0F0] flex items-center justify-between px-14 py-8">
         <h2 className="text-[40px] font-semibold text-[#762925]">{t("payment-methods")}</h2>
         <div className="flex items-center gap-8">
-          <IconVisa />
+          <span className='h-12 w-26'><IconVisa /></span>
           <IconPaypal />
           <IconColoredPayment />
         </div>
