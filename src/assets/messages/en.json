@@ -275,6 +275,26 @@
         "title": "No Discount codes",
         "text": "you have no active Discount codes yet"
       }
+    },
+    "profile": {
+      "field1": {
+        "inputTitle": "Write salon/shop name",
+        "placeholder": "Write the name of your salon here"
+      },
+      "field2": {
+        "title": "Add treatments, prices & minutes",
+        "placeholder1": "Write the name of the service",
+        "placeholder2": "price",
+        "placeholder3": "time",
+        "button": "add more services"
+      },
+      "field3": {
+        "title1": "Pictures",
+        "title2": "(Tip! nice pictures increase the ad's traffic)",
+        "placeholder": "Add image",
+        "size": "Maximum file size: 25MB",
+        "forma": "min 4 picture, Allowed extensions to upload: JPG, PNG"
+      }
     }
   },
   "Single": {
