@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import React, { useRef, useState } from 'react';
 
 interface NewTicketProps {
-  handler: (v: string) => void;
+  handler: (value: string) => void;
 }
 
 export default function NewTicket({ handler }: NewTicketProps) {
@@ -16,10 +16,7 @@ export default function NewTicket({ handler }: NewTicketProps) {
   const [subjectCharactersCount, setSubjectCharactersCount] = useState(0) // State to store subject characters count
   const [descriptionCharactersCount, setDescriptionCharactersCount] = useState(0) // State to store description characters count
 
-  // Handlers
-  const openUploader = () => {
-    fileInputRef.current && fileInputRef.current.click();
-  };
+  // handlers
   const toggleCategoryDropdown = () => {
     setIsCategoryOpen((prev) => !prev);
   };
@@ -102,7 +99,7 @@ export default function NewTicket({ handler }: NewTicketProps) {
         <div className="flex flex-col gap-2">
           <h5>{t('title4')}</h5>
           <button
-            onClick={openUploader}
+            onClick={() => fileInputRef.current && fileInputRef.current.click()}
             className="p-2 border border-grayC rounded-lg flex items-center justify-between hover:bg-slate-50 transition duration-200"
           >
             <h6 className="text-blackC-light">{t('placeholder4')}</h6>

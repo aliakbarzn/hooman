@@ -293,7 +293,7 @@
         "title2": "(Tip! nice pictures increase the ad's traffic)",
         "placeholder": "Add image",
         "size": "Maximum file size: 25MB",
-        "forma": "min 4 picture, Allowed extensions to upload: JPG, PNG"
+        "extensions": "min 4 picture, Allowed extensions to upload: JPG, PNG"
       }
     }
   },
