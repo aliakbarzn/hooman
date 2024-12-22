@@ -40,7 +40,7 @@
 
 /* Custom classes */
 .container-style {
-  @apply max-w-[1200px] mx-auto flex flex-col gap-8 py-20
+  @apply max-w-[1100px] mx-auto flex flex-col gap-8 py-20
 }
 
 .profile-page-number {
@@ -48,7 +48,7 @@
 }
 
 .profile-page-input {
-  @apply outline-none py-4 px-6 border border-primary rounded-full
+  @apply outline-none py-4 px-6 border border-primary rounded-[40px]
 }
 
 body {

@@ -3,8 +3,17 @@
 import Image from 'next/image'
 import React, { useRef, useState } from 'react'
 import profPic from '@/assets/images/dashboard/notifications/user-profile.png'
-import { IconPencil, PaperClipIcon, PlusIcon } from '@/assets/icons'
+import { IconActiway, IconBath, IconCardPayment, IconCashPayment, IconGiftCard, IconIndividualRooms, IconMassageBench, IconMattress, IconMiniHealthCare, IconParking, IconPencil, IconSauna, IconShower, IconSwish, IconTwoMasseuses, IconWC, IconWellnessCheck, IconWellnet, PaperClipIcon, PlusIcon } from '@/assets/icons'
 import { useTranslations } from 'next-intl'
+import FieldWriteAbout from '@/sections/dashboard/profile/field-write-about'
+import FieldWorkingHours from '@/sections/dashboard/profile/field-working-hours'
+
+interface SalonFeature {
+  id: number;
+  title: string[];
+  icon: React.JSX.Element;
+  isActive: boolean;
+}
 
 export default function page() {
   const t = useTranslations('Dashboard.profile')
@@ -12,6 +21,26 @@ export default function page() {
   const [fileError, setFileError] = useState<string | null>(null)
   const [uploadedImages, setUploadedImages] = useState<string[]>([])
   const fileInputRef = useRef<HTMLInputElement>(null)
+
+  const [salonFeatures, setSalonFeatures] = useState<SalonFeature[]>([
+    { id: 1, title: [t('field4.giftCard')], icon: <IconGiftCard />, isActive: false },
+    { id: 2, title: [t('field4.sauna')], icon: <IconSauna />, isActive: false },
+    { id: 3, title: [t('field4.Swish')], icon: <IconSwish />, isActive: false },
+    { id: 4, title: [t('field4.parking')], icon: <IconParking />, isActive: false },
+    { id: 5, title: [t('field4.cash'), t('field4.payment')], icon: <IconCashPayment />, isActive: false },
+    { id: 6, title: [t('field4.Wellnet')], icon: <IconWellnet />, isActive: false },
+    { id: 7, title: [t('field4.jacuzzi'), t('field4.bath')], icon: <IconBath />, isActive: false },
+    { id: 8, title: [t('field4.shower')], icon: <IconShower />, isActive: false },
+    { id: 9, title: [t('field4.WC')], icon: <IconWC />, isActive: false },
+    { id: 10, title: [t('field4.MiniHealth'), t('field4.care')], icon: <IconMiniHealthCare />, isActive: false },
+    { id: 11, title: [t('field4.individual'), t('field4.rooms')], icon: <IconIndividualRooms />, isActive: false },
+    { id: 12, title: [t('field4.massage'), t('field4.bench')], icon: <IconMassageBench />, isActive: false },
+    { id: 13, title: [t('field4.Actiway')], icon: <IconActiway />, isActive: false },
+    { id: 14, title: [t('field4.two'), t('field4.masseuses')], icon: <IconTwoMasseuses />, isActive: false },
+    { id: 15, title: [t('field4.Mattress')], icon: <IconMattress />, isActive: false },
+    { id: 16, title: [t('field4.Card'), t('field4.payment')], icon: <IconCardPayment />, isActive: false },
+    { id: 17, title: [t('field4.Wellness'), t('field4.check')], icon: <IconWellnessCheck />, isActive: false },
+  ])
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -37,9 +66,15 @@ export default function page() {
     }
   }
 
+  const handleFeature = (id: number) => {
+    setSalonFeatures(prev => prev.map(feature =>
+      feature.id === id ? { ...feature, isActive: !feature.isActive } : feature
+    ))
+  }
+
   return (
     <div className='bg-[#F8F8F8]'>
-      <div className="container-style">
+      <div className="container-style max-w-[1000px]">
         {/* picture and email card */}
         <div className="p-5 flex gap-6 items-center rounded-lg bg-white">
           <Image src={profPic} alt='profile-image' width={83} height={107} className='rounded-xl' />
@@ -111,6 +146,27 @@ export default function page() {
             <h6 className={`${fileError === 'Format' ? 'text-primary font-bold' : 'text-[#acacac]'}`}>{t('field3.extensions')}</h6>
           </div>
         </div>
+        {/* field add features ( field 4 ) */}
+        <div className="relative bg-white rounded-lg px-5 flex flex-col gap-3 pt-14 pb-6">
+          <div className='profile-page-number'>
+            4
+          </div>
+          <h4>{t('field4.title')}</h4>
+          <div className="flex gap-8 flex-wrap">
+            {salonFeatures.map(feature =>
+              <div onClick={() => handleFeature(feature.id)} key={feature.id} className={`flex flex-col items-center gap-4 ${feature.isActive ? 'text-primary' : 'text-blackC-light'}`}>
+                <button className={`rounded-md w-20 h-20 flex items-center justify-center ${feature.isActive ? 'border-primary border-2' : 'border-blackC-light border'}`}>{feature.icon}</button>
+                <div className="flex flex-col items-center">{feature.title.map(subTitle =>
+                  <h6>{subTitle}</h6>
+                )}</div>
+              </div>
+            )}
+          </div>
+        </div>
+        {/* field write about ( field 5 ) */}
+        <FieldWriteAbout />
+        {/* field working hours table ( field 6 ) */}
+        <FieldWorkingHours />
       </div>
     </div>
   )

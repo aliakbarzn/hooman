@@ -16,34 +16,34 @@ export default function page() {
 
   const t = useTranslations("Single")
 
-  const salonPrices = [
+  const salonMassagePrices = [
     {
-      massageType: 'Back massage',
+      massageName: 'Back massage',
       time: '1 over',
       price: '230 $',
     },
     {
-      massageType: 'Mix Thai massage',
+      massageName: 'Mix Thai massage',
       time: '45 min',
       price: '230 $',
     },
     {
-      massageType: 'Foot massage',
+      massageName: 'Foot massage',
       time: '90 min',
       price: '230 $',
     },
     {
-      massageType: 'Body scrub',
+      massageName: 'Body scrub',
       time: '45 min',
       price: '230 $',
     },
     {
-      massageType: 'Child Thai massage',
+      massageName: 'Child Thai massage',
       time: '90 min',
       price: '230 $',
     },
     {
-      massageType: '2 masseuse thai oil massage',
+      massageName: '2 masseuse thai oil massage',
       time: '1 over',
       price: '230 $',
     },
@@ -165,11 +165,11 @@ export default function page() {
             </tr>
           </thead>
           <tbody>
-            {salonPrices.map((mType, index) => (
+            {salonMassagePrices.map((massageType, index) => (
               <tr key={index} className={`${index % 2 === 0 ? 'bg-[#CBFDD7]' : 'bg-[#ECFFF1]'}`}>
-                <td className={`px-10 py-5 text-xl font-medium text-left border-r border-[#cccccc] ${index === salonPrices.length - 1 && 'rounded-bl-lg'}`}>{mType.massageType}</td>
-                <td className={`px-10 py-5 text-xl font-medium text-center border-r border-[#cccccc]`}>{mType.time}</td>
-                <td className={`px-10 py-5 text-xl font-medium text-center ${index === salonPrices.length - 1 && 'rounded-br-lg'}`}>{mType.price}</td>
+                <td className={`px-10 py-5 text-xl font-medium text-left border-r border-[#cccccc] ${index === salonMassagePrices.length - 1 && 'rounded-bl-lg'}`}>{massageType.massageName}</td>
+                <td className={`px-10 py-5 text-xl font-medium text-center border-r border-[#cccccc]`}>{massageType.time}</td>
+                <td className={`px-10 py-5 text-xl font-medium text-center ${index === salonMassagePrices.length - 1 && 'rounded-br-lg'}`}>{massageType.price}</td>
               </tr>
             ))}
           </tbody>

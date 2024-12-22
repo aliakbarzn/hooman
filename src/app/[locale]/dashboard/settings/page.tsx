@@ -12,7 +12,7 @@ interface User {
   pic: StaticImageData;
 }
 
-interface Settings {
+interface Setting {
   id: number;
   title: string;
   isActive: boolean;
@@ -28,7 +28,7 @@ export default function Page() {
 
   const t = useTranslations("Dashboard.settings")
 
-  const [settings, setSettings] = useState<Settings[]>([
+  const [settings, setSettings] = useState<Setting[]>([
     { id: 1, title: t("setting1"), isActive: false },
     { id: 2, title: t("setting2"), isActive: false },
     { id: 3, title: t("setting3"), isActive: false },

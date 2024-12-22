@@ -14,7 +14,7 @@
     "copyright": "© 2024 Your App. All rights reserved."
   },
   "SearchPage": {
-    "Baner": {
+    "Banner": {
       "content": {
         "text1": "get up to",
         "text2": "50%",
@@ -294,6 +294,41 @@
         "placeholder": "Add image",
         "size": "Maximum file size: 25MB",
         "extensions": "min 4 picture, Allowed extensions to upload: JPG, PNG"
+      },
+      "field4": {
+        "title": "Add your features",
+        "giftCard": "gift card",
+        "sauna": "sauna",
+        "Swish": "Swish",
+        "parking": "parking",
+        "cash": "cash",
+        "payment": "payment",
+        "Wellnet": "Wellnet",
+        "jacuzzi": "jacuzzi/",
+        "bath": "bath",
+        "shower": "shower",
+        "WC": "WC",
+        "MiniHealth": "Mini health",
+        "care": "care",
+        "individual": "individual",
+        "rooms": "rooms",
+        "massage": "Massage",
+        "bench": "bench",
+        "Actiway": "Actiway",
+        "two": "Two",
+        "masseuses": "masseuses",
+        "Mattress": "Mattress",
+        "Card": "Card",
+        "Wellness": "Wellness",
+        "check": "check"
+      },
+      "field5": {
+        "title": "Write about your salon",
+        "placeholder": "The audience wants to know you",
+        "words": "words"
+      },
+      "field6": {
+        "title": "Determine the working hours of the salon during the week"
       }
     }
   },
