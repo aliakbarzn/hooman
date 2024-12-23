@@ -20,6 +20,7 @@ const colors = {
     lightest: "var(--greenC-lightest)", // Lightest green
     lightPale: "var(--greenC-lightPale)", // Light pale green
     dark: "var(--greenC-dark)", // Dark green
+    darker: "var(--greenC-darker)", // Darker green
     darkPale: "var(--greenC-darkPale)", // Dark pale green
   },
   grayC: {

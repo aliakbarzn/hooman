@@ -328,7 +328,18 @@
         "words": "words"
       },
       "field6": {
-        "title": "Determine the working hours of the salon during the week"
+        "title": "Determine the working hours of the salon during the week",
+        "daysOfTheWeek": "days of the week",
+        "openingHours": "opening hours",
+        "closingHours": "closing hours",
+        "Monday": "Monday",
+        "Tuesday": "Tuesday",
+        "Wednesday": "Wednesday",
+        "Thursday": "Thursday",
+        "Friday": "Friday",
+        "Saturday": "Saturday",
+        "Sunday": "Sunday",
+        "closed":"closed"
       }
     }
   },
