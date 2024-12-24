@@ -9,49 +9,32 @@ type IsLogin = {
   isLogin: boolean;
 };
 export default function Menu() {
-  const { isLogin, setIsLogin } = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   return (
-    <div className="w-full flex justify-between justify-center items-center h-28 px-8 shadow">
+    <div className="w-full flex justify-between items-center h-28 px-8 shadow border-b border-grayC">
       <div>
-        <Link href={"/"}>
-          <Image alt="logo" src={logo} width={150} height={160} />
-        </Link>
+        <Link href={"/"}><Image alt="logo" src={logo} width={150} height={160} /></Link>
       </div>
-      <span className=" sm:hidden w-12">
-        <Bar/>
-      </span>
-      <div className="flex hidden sm:flex sm:block ">
+      <span className=" sm:hidden w-12"><Bar /></span>
+      <div className="flex sm:flex">
         <div className="flex items-center gap-8 mr-8">
-          <div className="cursor-pointer">NEWS</div>
-          <div className="cursor-pointer">buy ads</div>
-          <Link href='/contact'>
-          <div className="cursor-pointer">Contact</div>
-          </Link>
-        </div>
-        <div>
-
+          <Link href='' className="cursor-pointer">NEWS</Link>
+          <Link href='' className="cursor-pointer">buy ads</Link>
+          <Link href='/contact'>Contact</Link>
         </div>
         <div className="flex items-center gap-8 cursor-pointer">
-          {isLogin && (
-            <>
-              <div>
-                <UserIcon />
-              </div>
-              <div>
-                <AlertIcon />
-              </div>
-            </>
-          )}
-          <div>
-            <Link href="/signin">
-              <button className="px-4 rounded-lg mr-3 py-2 bg-greenC-light">
-                Sign in
-              </button>
-            </Link>
-            <Link href="/register">
-              <button className="px-4 rounded-lg py-2 bg-primary">Register</button>
-            </Link>
-          </div>
+          {isLogin
+            ?
+            <div className="flex gap-6">
+              <span><AlertIcon /></span>
+              <Link href='/dashboard'><UserIcon /></Link>
+            </div>
+            :
+            <div>
+              <Link href="/signin" className="px-4 py-3 rounded-lg mr-3 bg-greenC-light">Sign in</Link>
+              <Link href="/register" className="px-4 rounded-lg py-3 bg-primary">Register</Link>
+            </div>
+          }
         </div>
       </div>
     </div>
