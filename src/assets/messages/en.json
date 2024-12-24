@@ -498,5 +498,13 @@
       },
       "button": "payment"
     }
+  },
+  "Ads": {
+    "mainBanner": {
+      "getUpTo": "get up to",
+      "off": "off",
+      "text": "on booking with my site",
+      "button": "check out all the massage salon"
+    }
   }
 }
