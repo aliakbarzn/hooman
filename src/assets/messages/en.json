@@ -339,8 +339,20 @@
         "Friday": "Friday",
         "Saturday": "Saturday",
         "Sunday": "Sunday",
-        "closed":"closed"
-      }
+        "closed": "closed"
+      },
+      "field7": {
+        "title": "Add Address, contact number, location",
+        "placeholder1": " write Address sharing",
+        "placeholder2": "write hall number",
+        "placeholder3": "Select the exact location of the hall on the map"
+      },
+      "connectBooking": {
+        "text": "Do you want to connect to the booking system?",
+        "Yes": "Yes",
+        "No": "No"
+      },
+      "buttonSave": "save and active my ads"
     }
   },
   "Single": {

@@ -7,6 +7,8 @@ import { IconActiway, IconBath, IconCardPayment, IconCashPayment, IconGiftCard, 
 import { useTranslations } from 'next-intl'
 import FieldWriteAbout from '@/sections/dashboard/profile/field-write-about'
 import FieldWorkingHours from '@/sections/dashboard/profile/field-working-hours'
+import FieldAddAddress from '@/sections/dashboard/profile/filed-add-address'
+import ConnectBooking from '@/sections/dashboard/profile/connect-booking'
 
 interface SalonFeature {
   id: number;
@@ -167,6 +169,14 @@ export default function page() {
         <FieldWriteAbout />
         {/* field working hours table ( field 6 ) */}
         <FieldWorkingHours />
+        {/* field add address ( field 7 ) */}
+        <FieldAddAddress />
+        {/* connect booking */}
+        <ConnectBooking />
+        {/* save button */}
+        <button className="rounded-full py-3 border border-primary text-primary bg-white">{t('buttonSave')}</button>
+        {/* ads */}
+        
       </div>
     </div>
   )
