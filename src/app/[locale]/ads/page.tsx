@@ -1,5 +1,7 @@
+'use client'
+
 import Image, { StaticImageData } from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import banner1 from '@/assets/images/ads/banner1.png';
 import banner2 from '@/assets/images/ads/banner2.png';
 import banner3 from '@/assets/images/ads/banner3.png';
@@ -7,6 +9,8 @@ import mainBanner from '@/assets/images/search-page/baner.png'
 import salonCardImage from '@/assets/images/search-page/i-card.png'
 import { useTranslations } from 'next-intl';
 import SalonDataCard from '@/components/cards/card-salon-data';
+import { IconSimpleTick, IconTwoMasseuses } from '@/assets/icons';
+import CheckIcon from '@/assets/icons/search-page/checkIcon';
 
 interface SalonCardsData {
   type?: 'timed' | 'pink' | 'free';
@@ -284,6 +288,21 @@ export default function Page() {
     },
   ]
 
+  const [activeFilters, setActiveFilters] = useState({
+    open: false,
+    offer: false,
+    rating4: false,
+    sauna: false,
+    shower: false,
+    twoMasseuses: false,
+  })
+
+  const handleFilterChange = (filter: string, value: boolean) => {
+    setActiveFilters(prev => {
+      return {...prev, filter: !value}
+    })
+  }
+
   return (
     <div className="flex flex-col">
       {/* 3 banners */}
@@ -309,14 +328,14 @@ export default function Page() {
       </div>
       {/* cards filters */}
       <div className="flex gap-2 p-14">
-        <button className="bg-whiteC-light text-blackC-light p-2 rounded-lg">{t('cards.filterButtons.filter')}</button>
-        <button className="bg-whiteC-light text-blackC-light p-2 rounded-lg">{t('cards.filterButtons.openNow')}</button>
-        <button className="bg-whiteC-light text-blackC-light p-2 rounded-lg">{t('cards.filterButtons.offer')}</button>
-        <button className="bg-whiteC-light text-blackC-light p-2 rounded-lg">{t('cards.filterButtons.rating')} {'+4'}</button>
-        <button className="bg-whiteC-light text-blackC-light p-2 rounded-lg">{t('cards.filterButtons.sauna')}</button>
-        <button className="bg-whiteC-light text-blackC-light p-2 rounded-lg">{t('cards.filterButtons.shower')}</button>
-        <button className="bg-whiteC-light text-blackC-light p-2 rounded-lg">{t('cards.filterButtons.twoMasseuses')}</button>
+        {Object.entries(activeFilters).map(([filter, value]) =>
+          <button onClick={() => handleFilterChange(filter, value)} className={`flex items-center gap-1 px-3 py-2 rounded-lg ${value ? 'bg-[#2C2C2C] text-whiteC-light' : 'bg-whiteC-light text-blackC-light'}`}>
+            {value && <span className='text-whiteC-light w-4 h-4'><CheckIcon /></span>}
+            {filter}
+          </button>
+        )}
       </div>
+
       {/* cards */}
       <div className="flex flex-wrap justify-center max-w-[1200px] mx-auto p-14">
         {salonCardsData.map(cardData =>
@@ -334,6 +353,7 @@ export default function Page() {
             isOpen={cardData.isOpen}
             features={cardData.features}
           />
+
         )}
       </div>
     </div>
