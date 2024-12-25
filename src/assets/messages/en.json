@@ -505,6 +505,21 @@
       "off": "off",
       "text": "on booking with my site",
       "button": "check out all the massage salon"
+    },
+    "cards": {
+      "filterButtons": {
+        "filter": "filter",
+        "openNow": "open now",
+        "offer": "offer",
+        "rating": "rating",
+        "sauna": "sauna",
+        "shower": "shower",
+        "twoMasseuses": "two masseuses"
+      },
+      "title": "massage parlors in Tyresö"
+    },
+    "card": {
+      "sponsored": "Sponsored"
     }
   }
 }

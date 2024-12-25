@@ -114,3 +114,6 @@ export { default as IconPhoneBook } from './single/location/icon-phone-book'
 export { default as IconPhone2 } from './single/location/icon-phone2'
 // booking
 export { default as LogoSwish } from './booking/logo-swish'
+// components >>> salon data card
+export { default as IconBluntStar } from './components/card-salon-data/icon-blunt-star'
+export { default as IconMiniMessage } from './components/card-salon-data/icon-mini-message'
