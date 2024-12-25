@@ -157,7 +157,9 @@ export default function page() {
           <div className="flex gap-8 flex-wrap">
             {salonFeatures.map(feature =>
               <div onClick={() => handleFeature(feature.id)} key={feature.id} className={`flex flex-col items-center gap-4 ${feature.isActive ? 'text-primary' : 'text-blackC-light'}`}>
-                <button className={`rounded-md w-20 h-20 flex items-center justify-center ${feature.isActive ? 'border-primary border-2' : 'border-blackC-light border'}`}>{feature.icon}</button>
+                <button className={`rounded-md w-20 h-20 flex items-center justify-center ${feature.isActive ? 'border-primary border-2' : 'border-blackC-light border'}`}>
+                  <span className='w-12 h-12'>{feature.icon}</span>
+                </button>
                 <div className="flex flex-col items-center">{feature.title.map(subTitle =>
                   <h6>{subTitle}</h6>
                 )}</div>
@@ -176,7 +178,7 @@ export default function page() {
         {/* save button */}
         <button className="rounded-full py-3 border border-primary text-primary bg-white">{t('buttonSave')}</button>
         {/* ads */}
-        
+
       </div>
     </div>
   )

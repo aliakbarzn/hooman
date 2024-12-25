@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function IconWellnet() {
   return (
-    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <svg className='w-full h-full' width="" height="" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
       <rect width="50" height="50" fill="url(#pattern0_1647_7526)" />
       <defs>
         <pattern id="pattern0_1647_7526" patternContentUnits="objectBoundingBox" width="1" height="1">
