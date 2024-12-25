@@ -9,7 +9,7 @@ type IsLogin = {
   isLogin: boolean;
 };
 export default function Menu() {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   return (
     <div className="w-full flex justify-between items-center h-28 px-8 shadow border-b border-grayC">
       <div>
@@ -18,11 +18,11 @@ export default function Menu() {
       <span className=" sm:hidden w-12"><Bar /></span>
       <div className="flex sm:flex">
         <div className="flex items-center gap-8 mr-8">
-          <Link href='' className="cursor-pointer">NEWS</Link>
-          <Link href='' className="cursor-pointer">buy ads</Link>
+          <Link href=''>NEWS</Link>
+          <Link href=''>buy ads</Link>
           <Link href='/contact'>Contact</Link>
         </div>
-        <div className="flex items-center gap-8 cursor-pointer">
+        <div className="flex items-center gap-8">
           {isLogin
             ?
             <div className="flex gap-6">
