@@ -1,30 +1,33 @@
 import { Link } from '@/navigation'
 import { useTranslations } from 'next-intl'
 import React from 'react'
+import logo from '@/assets/logo.svg'
+import Image from 'next/image'
 
 export default function page() {
-    // hooks
-    const t = useTranslations()
+	const t = useTranslations('ForgetPage.forget1')
 
-    return (
-        <div className='w-1/2 h-full flex flex-col items-center justify-center'>
-            <form className='gap-y-10 flex flex-col w-[436px]'>
-                <div className="flex flex-col gap-y-3">
-                    <h2 className='font-bold text-2xl text-[#5B5B5B]'>{t('ForgetPage.Forget2.forgot')}</h2>
-                    <p className='text-[#5B5B5B]'>{t('ForgetPage.Forget2.message')}</p>
-                </div>
-                {/* email */}
-                <div className='gap-y-3 flex flex-col'>
-                    <p>{t('ForgetPage.Forget2.emailAddress')}</p>
-                    <input className='px-8 py-4 text-base font-light w-[317.15px] sm:w-[435px] h-14 border border-[#47C666] rounded-[40px]' placeholder={t('ForgetPage.Forget2.enterEmail')} type="text" />
-                </div>
-                {/* reset password button */}
-                <Link href='/forget/email-code'>
-                    <button
-                        className='mt-5 text-base font-light text-white w-[317.15px] sm:w-[435px] h-14 bg-[#47C666] rounded-[36px]'
-                    >{t('ForgetPage.Forget2.button')}</button>
-                </Link>
-            </form>
-        </div>
-    )
+	return (
+		<div className='h-full flex flex-col gap-20 items-center p-20'>
+			{/* logo */}
+			<Link className='self-end' href={"/"}><Image alt="logo" src={logo} width={150} height={160} /></Link>
+			{/* form */}
+			<form className='gap-8 flex flex-col'>
+				<div className="flex flex-col gap-3 text-blackC-dark">
+					<h2 className='font-bold text-2xl'>{t('title')}</h2>
+					<p>{t('message')}</p>
+				</div>
+				{/* email input */}
+				<div className='gap-3 flex flex-col'>
+					<p>{t('emailAddress')}</p>
+					<input className='px-8 py-4 font-light w-[318px] sm:w-[435px] border border-secondary rounded-full outline-none' placeholder={t('enterEmail')} type="text" />
+				</div>
+				{/* reset password button */}
+				<Link href='/forget/email-code' className='py-[14px] text-center text-white w-[317.15px] sm:w-[435px] bg-secondary rounded-full'>
+					{t('button')}
+				</Link>
+			</form>
+		</div>
+	)
 }
+
