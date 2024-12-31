@@ -11,7 +11,33 @@
     "home": "Home"
   },
   "Footer": {
-    "copyright": "© 2024 Your App. All rights reserved."
+    "inputSection": {
+      "title": "Subscribe to our news channel",
+      "placeholder": "you@example.com",
+      "button": "Submit"
+    },
+    "footerItems1": {
+      "title": "Explore",
+      "item1": "About Thai massage",
+      "item2": "Thai massage news",
+      "item3": "About us",
+      "item4": "Support",
+      "item5": "Guest account to find, book and leave a review",
+      "item6": "Connect your business",
+      "item7": "Log in/as salon owner or as guest account"
+    },
+    "footerItems2": {
+      "title": "Resources",
+      "item1": "Buy ad space",
+      "item2": "All Thai salons",
+      "item3": "Thai massage Stockholm",
+      "item4": "Thai massage Gothenburg",
+      "item5": "Thai massage Malmö",
+      "item6": "Webshop"
+    },
+    "copyright1": "Copyright",
+    "copyright2": "2024 Dscode",
+    "copyright3": " All rights reserved"
   },
   "SearchPage": {
     "Banner": {
@@ -51,55 +77,48 @@
     }
   },
   "ForgetPage": {
-    "Forget1": {
-      "message1": "If you don’t have an account register",
-      "message2": "You can ",
-      "messageColored": "Register here !",
-      "emailTitle": "Email Address",
-      "emailPlaceholder": "contact@dscodetech.com",
-      "usernameTitle": "User name",
-      "usernamePlaceholder": "contact",
-      "passwordTitle": "Password",
-      "remember": "Remember me",
-      "forgot": "Forgot Password ?",
-      "button": "Login",
-      "or": "OR",
-      "loginGoogle": "Login with Google"
+    "leftContent": {
+      "option1": "Try it completely free for 14 days",
+      "option2": "Digital booking calendar with online booking",
+      "option3": "Visibility on Sweden's largest marketplace for beauty and health services",
+      "option4": "Free support"
     },
-    "Forget2": {
-      "forgot": "Forgot password",
+    "forget1": {
+      "title": "Forgot password",
       "message": "Please enter your email to reset the password",
       "emailAddress": "Email Address",
       "enterEmail": "contact@dscodetech.com",
       "button": "reset password"
     },
-    "Forget3": {
-      "check": "Forgot password",
-      "message1": "We sent a reset link to contact@dscode...com",
+    "forget2": {
+      "title": "Forgot password",
+      "message1": "We sent a reset link to ",
       "message2": "enter 5 digit code that mentioned in the email",
       "button": "Verify Code",
       "subtext": "Haven’t got the email yet",
       "subtextColored": "? Resend email"
     },
-    "Forget4": {
+    "forget3": {
       "title": "Password reset",
-      "message": "Your password has been successfully reset. click confirm to set a new password",
+      "message1": "Your password has been successfully reset.",
+      "message2": " click confirm to set a new password",
       "button": "Confirm"
     },
-    "Forget5": {
+    "forget4": {
       "title": "Set a new password",
       "message": "Create a new password. Ensure it differs from previous ones for security",
       "password": "Password",
+      "placeholderPassword": "Enter your password",
       "confirmPassword": "Confirm Password",
       "confirmPasswordText": "Re-enter password",
-      "button": "Update Password"
-    },
-    "Forget6": {
-      "title": "Successful",
-      "message1": "Congratulations! Your password has",
-      "message2": " been changed. Click continue to login",
-      "button1": "cancel",
-      "button2": "continue"
+      "button": "Update Password",
+      "popup": {
+        "title": "Successful",
+        "message1": "Congratulations! Your password has",
+        "message2": " been changed. Click continue to login",
+        "button1": "cancel",
+        "button2": "continue"
+      }
     }
   },
   "Services": {
@@ -214,8 +233,7 @@
     },
     "support": {
       "title": "Support",
-      "text1": "You can communicate with site officials through tickets.",
-      "text2": "And make your comments and suggestions."
+      "text1": "You can communicate with us through the messages of the site, Telegram and WhatsApp."
     },
     "notifications": {
       "empty-notifications": {

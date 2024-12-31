@@ -65,7 +65,9 @@ export { default as IconPrinter } from './dashboard/bookings-history/icon-printe
 export { default as PicPayment } from './dashboard/bookings-history/pic-payment'
 // Dashboard >>> support
 export { default as BgSupport } from './dashboard/support/bg-support'
-export { default as IconSupport } from './dashboard/support/icon-support'
+export { default as IconTicketSupport } from './dashboard/support/icon-ticket-support'
+export { default as IconTelegramSupport } from './dashboard/support/icon-telegram-support'
+export { default as IconWhatsappSupport } from './dashboard/support/icon-whatsapp-support'
 // Dashboard >>> connect booking
 export { default as IconSimpleTick } from './dashboard/connect-booking/icon-simple-tick'
 // Dashboard >>> offers

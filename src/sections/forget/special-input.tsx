@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react'
 
-export default function CodeInput({ length = 5, onComplete, onImcomplete }: { length: number; onComplete: (code: string) => void; onImcomplete: () => void }) {
+export default function CodeInput({ length = 5, onComplete, onIncomplete }: { length: number; onComplete: (code: string) => void; onIncomplete: () => void }) {
 
 	// states ------------------------------------------------------------------------------------------------------------------------------
 	const [values, setValues] = useState(Array(length).fill('')) // Array to hold input values
@@ -32,7 +32,7 @@ export default function CodeInput({ length = 5, onComplete, onImcomplete }: { le
 			// Move to the previous input
 			if (index > 0) {
 				inputsRef.current[index - 1]?.focus()
-				onImcomplete()
+				onIncomplete()
 			}
 		}
 	}

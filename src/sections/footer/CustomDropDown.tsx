@@ -7,15 +7,15 @@ import { SwedenIcon, GermanyIcon, BritainIcon, ThailandIcon } from '@/assets/ico
 
 interface Option {
   value: string;
-  country: React.ReactNode;
+  icon: React.ReactNode;
   lang: string;
 }
 
 const options: Option[] = [
-  { value: 'Sweden', country: <SwedenIcon />, lang: 'se' },
-  { value: 'Germany', country: <GermanyIcon />, lang: 'de' },
-  { value: 'Britain', country: <BritainIcon />, lang: 'en' },
-  { value: 'Thailand', country: <ThailandIcon />, lang: 'th' },
+  { value: 'Sweden', icon: <SwedenIcon />, lang: 'se' },
+  { value: 'Germany', icon: <GermanyIcon />, lang: 'de' },
+  { value: 'Britain', icon: <BritainIcon />, lang: 'en' },
+  { value: 'Thailand', icon: <ThailandIcon />, lang: 'th' },
 ];
 
 const CustomDropDown: React.FC = () => {
@@ -30,13 +30,13 @@ const CustomDropDown: React.FC = () => {
   };
 
   return (
-    <div className="relative min-w-[260px] bg-white md:min-w-48">
+    <div className="relative min-w-[260px] w-full bg-white md:min-w-48">
       <div
         className="flex items-center justify-between h-[42px] rounded-lg border py-3 px-4 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex items-center gap-x-2">
-          {selectedOption.country}
+          {selectedOption.icon}
           <span>{selectedOption.value}</span>
         </div>
         <ChevronDownIcon />
@@ -55,7 +55,7 @@ const CustomDropDown: React.FC = () => {
                 className="pl-4 flex items-center gap-3 p-2 hover:bg-gray-100 cursor-pointer"
                 onClick={() => handleOptionClick(option)}
               >
-                {option.country}
+                {option.icon}
                 <span>{option.value}</span>
               </div>
             ))}

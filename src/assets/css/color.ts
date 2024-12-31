@@ -5,17 +5,20 @@ const colors = {
 
   primary: "var(--primary)", // Primary
   secondary: "var(--secondary)", // Secondary
+
   blackC: {
     DEFAULT: "var(--blackC)", // Main black
     light: "var(--blackC-light)", // Light black
+    dark: "var(--blackC-dark)", // Dark black
   },
   whiteC: {
     DEFAULT: "var(--whiteC)", // Main white
     light: "var(--whiteC-light)" // Light white
-  }, 
+  },
   greenC: {
     DEFAULT: "var(--greenC)", // Main green
     light: "var(--greenC-light)", // Light green
+    light2: "var(--greenC-light2)", // Light2 green
     lighter: "var(--greenC-lighter)", // Lighter green
     lightest: "var(--greenC-lightest)", // Lightest green
     lightPale: "var(--greenC-lightPale)", // Light pale green

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function PopularCatagories() {
   return (
-    <div className="w-full flex flex-col justify-center items-center w-full">
+    <div className="w-full flex flex-col justify-center items-center">
       <div className="text-3xl font-bold">Popular Catagories</div>
       <div className="sm:flex gap-3">
         <div className="flex flex-col justify-center items-center min-w-60  shadow-xl  mt-12 pb-5  cursor-pointer">
@@ -17,7 +17,7 @@ export default function PopularCatagories() {
             <span className="font-bold">22 product</span>
           </div>
         </div>
-        <div className="flex flex-col justify-center  items-center w-60 shadow-xl h-56 shadow mt-12 pb-5 cursor-pointer">
+        <div className="flex flex-col justify-center  items-center w-60 shadow-xl h-56 mt-12 pb-5 cursor-pointer">
          <div>
           <span className="text-[#F58882]">
 

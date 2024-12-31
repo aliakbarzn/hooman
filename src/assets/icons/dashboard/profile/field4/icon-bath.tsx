@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function IconBath() {
   return (
-    <svg className='w-full h-full' width="" height="" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100%" height="100%" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M43.75 27.0833V33.3333C43.75 35.5435 42.872 37.6631 41.3092 39.2259C39.7464 40.7887 37.6268 41.6667 35.4167 41.6667H14.5833C12.3732 41.6667 10.2536 40.7887 8.69078 39.2259C7.12797 37.6631 6.25 35.5435 6.25 33.3333V28.3333C6.25 28.0018 6.3817 27.6839 6.61612 27.4495C6.85054 27.215 7.16848 27.0833 7.5 27.0833H43.75ZM43.75 27.0833V14.5833C43.75 12.3732 42.872 10.2536 41.3092 8.69078C39.7464 7.12797 37.6268 6.25 35.4167 6.25H25M33.3333 41.6667L35.4167 45.8333M16.6667 41.6667L14.5833 45.8333" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M32.0833 16.6667H17.9167C17.2271 16.6667 16.675 16.1083 16.75 15.4208C17.0542 12.6563 18.4646 6.25 25 6.25C31.5354 6.25 32.9458 12.6563 33.25 15.4208C33.325 16.1083 32.7729 16.6667 32.0833 16.6667Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>

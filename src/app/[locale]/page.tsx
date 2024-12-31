@@ -14,7 +14,7 @@ import StockholmSalons from "@/sections/home/StockholmSalons";
 
 export default function Home() {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center pt-8 px-32">
+    <div className="w-full h-full flex flex-col justify-center items-center pt-8">
       <Header />
       <FindSalon />
       <PopularCatagories />

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function GothenburgSalons() {
   return (
-    <div className="w-full py-16">
+    <div className="w-full py-16 px-32">
         <h1 className="mb-11">Gothenburg salons</h1>
       <SimpleCard />
     </div>

@@ -7,7 +7,7 @@ import { Link } from "@/navigation";
 export default function Professional() {
 
     return (
-        <div className="w-screen h-[311px] bg-[#E9FFEC]  relative flex items-center justify-between px-10">
+        <div className="w-full h-[311px] bg-[#E9FFEC]  relative flex items-center justify-between px-10">
            
             <div
                 className="absolute w-[311px] h-[311px] bg-[#C6FAD2] ml-20"

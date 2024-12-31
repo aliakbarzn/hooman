@@ -27,19 +27,19 @@ const Auth = ({isSignin}:{isSignin:boolean}) => {
 					{isRegister ? <Image layout='responsive' className='object-contain' src={indexImage} alt='index-image' /> : <Image layout='responsive' className='object-contain' src={indexImage} alt='index-image' />}
 					<div className={`px-11 py-8 w-[615px] flex flex-col gap-y-8 bg-[#F6F9FF] rounded-md ${isRegister ? 'h-[425px]' : null}`}>
 						<div className='flex gap-x-8 items-start'>
-							<TickIcon />
+							<span className='max-w-5 min-w-5 h-5'><TickIcon /></span>
 							<p className='mt-[-5px] text-2xl font-normal leading-[37.5px]'>Prova helt gratis i 14 dagar.</p>
 						</div>
 						<div className='flex gap-x-8 items-start'>
-							<TickIcon />
+							<span className='max-w-5 min-w-5 h-5'><TickIcon /></span>
 							<p className='mt-[-5px] text-2xl font-normal leading-[37.5px]'>Digital bokningskalender med onlinebokning.</p>
 						</div>
 						{isRegister && <div className='flex gap-x-8 items-start'>
-							<TickIcon />
+							<span className='max-w-5 min-w-5 h-5'><TickIcon /></span>
 							<p className='mt-[-5px] text-2xl font-normal leading-[37.5px] max-w-[464px]'>Synlighet på sveriges största marknadsplats för tjänster inom skönhet och hälsa.</p>
 						</div>}
 						{isRegister && <div className='flex gap-x-8 items-start'>
-							<TickIcon />
+							<span className='max-w-5 min-w-5 h-5'><TickIcon /></span>
 							<p className='mt-[-5px] text-2xl font-normal leading-[37.5px]'>Fri support</p>
 						</div>}
 					</div>

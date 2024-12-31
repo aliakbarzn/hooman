@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 const BanerOff = () => {
   const t = useTranslations("SearchPage.BanerOff");
   return (
-    <div className="bg-[#fde5e1] flex flex-col my-16 w-screen md:px-2 sm:px-1 lg:px-10 px-16 pt-12 pb-20 h-full">
+    <div className="bg-[#fde5e1] flex flex-col my-16 w-full md:px-32 sm:px-1 lg:px-32 px-32 pt-12 pb-20 h-full">
       <span className="text-[#1E1E1E] text-xl font-semibold ml-6 ">
        {t("titleProducts")}
       </span>

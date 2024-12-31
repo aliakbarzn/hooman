@@ -3,11 +3,10 @@ import React from 'react'
 export default function IconActiway() {
   return (
     <svg
-    className='w-full h-full'
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width=""
-      height=""
+      width="100%"
+      height="100%"
       fill="none"
       viewBox="0 0 50 16"
     >

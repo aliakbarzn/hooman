@@ -38,7 +38,7 @@ export default function SalonDataCard
   const t = useTranslations('Ads.card')
 
   return (
-    <div className="relative w-80 max-h-[540px] p-6 mx-3 flex flex-col border-[1px] bg-white border-[#D9D9D9] rounded-lg mt-12">
+    <div className="relative w-80 max-h-[540px] p-6 flex flex-col border-[1px] bg-white border-[#D9D9D9] rounded-lg">
       {/* Sponsored label */}
       {true
         &&

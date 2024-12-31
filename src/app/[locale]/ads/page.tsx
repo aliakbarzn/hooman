@@ -9,10 +9,10 @@ import mainBanner from '@/assets/images/search-page/baner.png'
 import salonCardImage from '@/assets/images/search-page/i-card.png'
 import { useTranslations } from 'next-intl';
 import SalonDataCard from '@/components/cards/card-salon-data';
-import { IconSimpleTick, IconTwoMasseuses } from '@/assets/icons';
-import CheckIcon from '@/assets/icons/search-page/checkIcon';
+import Filters from '@/components/filters/Filters';
 
 interface SalonCardsData {
+  id: number
   type?: 'timed' | 'pink' | 'free';
   image: StaticImageData;
   title: string;
@@ -35,6 +35,7 @@ export default function Page() {
 
   const salonCardsData: SalonCardsData[] = [
     {
+      id: Math.random(),
       image: salonCardImage,
       title: "Elite Thai Massage",
       rating: 4.5,
@@ -44,11 +45,11 @@ export default function Page() {
       borderColor: '#47C666',
       reviewCount: 120,
       description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
-      isOpen: true,
+      isOpen: false,
       discount: "20% off",
       features: {
         giftCard: true,
-        shower: false,
+        shower: true,
         sauna: true,
         swish: true,
         parking: false,
@@ -56,9 +57,10 @@ export default function Page() {
       },
     },
     {
+      id: Math.random(),
       image: salonCardImage,
       title: "Elite Thai Massage",
-      rating: 4.5,
+      rating: 4,
       hasHeartTag: false,
       isSponsored: true,
       sponsoredColor: '#FD5950',
@@ -66,7 +68,7 @@ export default function Page() {
       reviewCount: 120,
       description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
       isOpen: true,
-      discount: "20% off",
+      discount: "",
       features: {
         giftCard: true,
         shower: false,
@@ -77,9 +79,10 @@ export default function Page() {
       },
     },
     {
+      id: Math.random(),
       image: salonCardImage,
       title: "Elite Thai Massage",
-      rating: 4.5,
+      rating: 2,
       hasHeartTag: false,
       isSponsored: true,
       sponsoredColor: '#FD5950',
@@ -87,7 +90,7 @@ export default function Page() {
       reviewCount: 120,
       description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
       isOpen: true,
-      discount: "20% off",
+      discount: "44% off",
       features: {
         giftCard: false,
         shower: false,
@@ -98,6 +101,7 @@ export default function Page() {
       },
     },
     {
+      id: Math.random(),
       image: salonCardImage,
       title: "Elite Thai Massage",
       rating: 4.5,
@@ -107,8 +111,8 @@ export default function Page() {
       borderColor: '#47C666',
       reviewCount: 120,
       description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
-      isOpen: true,
-      discount: "20% off",
+      isOpen: false,
+      discount: "",
       features: {
         giftCard: false,
         shower: false,
@@ -119,9 +123,10 @@ export default function Page() {
       },
     },
     {
+      id: Math.random(),
       image: salonCardImage,
       title: "Elite Thai Massage",
-      rating: 4.5,
+      rating: 5,
       hasHeartTag: false,
       isSponsored: true,
       sponsoredColor: '#FD5950',
@@ -129,7 +134,7 @@ export default function Page() {
       reviewCount: 120,
       description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
       isOpen: true,
-      discount: "20% off",
+      discount: "",
       features: {
         giftCard: false,
         shower: false,
@@ -140,6 +145,95 @@ export default function Page() {
       },
     },
     {
+      id: Math.random(),
+      image: salonCardImage,
+      title: "Elite Thai Massage",
+      rating: 5,
+      hasHeartTag: false,
+      isSponsored: true,
+      sponsoredColor: '#FD5950',
+      borderColor: '#47C666',
+      reviewCount: 120,
+      description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      isOpen: true,
+      discount: "",
+      features: {
+        giftCard: false,
+        shower: false,
+        sauna: false,
+        swish: false,
+        parking: false,
+        cashPayment: true,
+      },
+    },
+    {
+      id: Math.random(),
+      image: salonCardImage,
+      title: "Elite Thai Massage",
+      rating: 3,
+      hasHeartTag: false,
+      isSponsored: true,
+      sponsoredColor: '#FD5950',
+      borderColor: '#47C666',
+      reviewCount: 120,
+      description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      isOpen: true,
+      discount: "65% off",
+      features: {
+        giftCard: false,
+        shower: false,
+        sauna: false,
+        swish: false,
+        parking: false,
+        cashPayment: true,
+      },
+    },
+    {
+      id: Math.random(),
+      image: salonCardImage,
+      title: "Elite Thai Massage",
+      rating: 1,
+      hasHeartTag: false,
+      isSponsored: true,
+      sponsoredColor: '#FD5950',
+      borderColor: '#47C666',
+      reviewCount: 120,
+      description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      isOpen: true,
+      discount: "100% off",
+      features: {
+        giftCard: false,
+        shower: false,
+        sauna: false,
+        swish: false,
+        parking: false,
+        cashPayment: true,
+      },
+    },
+    {
+      id: Math.random(),
+      image: salonCardImage,
+      title: "Elite Thai Massage",
+      rating: 4.5,
+      hasHeartTag: false,
+      isSponsored: true,
+      sponsoredColor: '#FD5950',
+      borderColor: '#47C666',
+      reviewCount: 120,
+      description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
+      isOpen: true,
+      discount: "",
+      features: {
+        giftCard: false,
+        shower: false,
+        sauna: false,
+        swish: false,
+        parking: false,
+        cashPayment: true,
+      },
+    },
+    {
+      id: Math.random(),
       image: salonCardImage,
       title: "Elite Thai Massage",
       rating: 4.5,
@@ -161,6 +255,7 @@ export default function Page() {
       },
     },
     {
+      id: Math.random(),
       image: salonCardImage,
       title: "Elite Thai Massage",
       rating: 4.5,
@@ -182,90 +277,7 @@ export default function Page() {
       },
     },
     {
-      image: salonCardImage,
-      title: "Elite Thai Massage",
-      rating: 4.5,
-      hasHeartTag: false,
-      isSponsored: true,
-      sponsoredColor: '#FD5950',
-      borderColor: '#47C666',
-      reviewCount: 120,
-      description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
-      isOpen: true,
-      discount: "20% off",
-      features: {
-        giftCard: false,
-        shower: false,
-        sauna: false,
-        swish: false,
-        parking: false,
-        cashPayment: true,
-      },
-    },
-    {
-      image: salonCardImage,
-      title: "Elite Thai Massage",
-      rating: 4.5,
-      hasHeartTag: false,
-      isSponsored: true,
-      sponsoredColor: '#FD5950',
-      borderColor: '#47C666',
-      reviewCount: 120,
-      description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
-      isOpen: true,
-      discount: "20% off",
-      features: {
-        giftCard: false,
-        shower: false,
-        sauna: false,
-        swish: false,
-        parking: false,
-        cashPayment: true,
-      },
-    },
-    {
-      image: salonCardImage,
-      title: "Elite Thai Massage",
-      rating: 4.5,
-      hasHeartTag: false,
-      isSponsored: true,
-      sponsoredColor: '#FD5950',
-      borderColor: '#47C666',
-      reviewCount: 120,
-      description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
-      isOpen: true,
-      discount: "20% off",
-      features: {
-        giftCard: false,
-        shower: false,
-        sauna: false,
-        swish: false,
-        parking: false,
-        cashPayment: true,
-      },
-    },
-    {
-      image: salonCardImage,
-      title: "Elite Thai Massage",
-      rating: 4.5,
-      hasHeartTag: false,
-      isSponsored: true,
-      sponsoredColor: '#FD5950',
-      borderColor: '#47C666',
-      reviewCount: 120,
-      description: "Best Thai massage salon in Tyresö. Welcome to Kanlaya Thai Massage salon. Call to make an appointment or...",
-      isOpen: true,
-      discount: "20% off",
-      features: {
-        giftCard: false,
-        shower: false,
-        sauna: false,
-        swish: false,
-        parking: false,
-        cashPayment: true,
-      },
-    },
-    {
+      id: Math.random(),
       image: salonCardImage,
       title: "Elite Thai Massage",
       rating: 4.5,
@@ -288,20 +300,7 @@ export default function Page() {
     },
   ]
 
-  const [activeFilters, setActiveFilters] = useState({
-    open: false,
-    offer: false,
-    rating4: false,
-    sauna: false,
-    shower: false,
-    twoMasseuses: false,
-  })
-
-  const handleFilterChange = (filter: string, value: boolean) => {
-    setActiveFilters(prev => {
-      return {...prev, filter: !value}
-    })
-  }
+  const [finalFilteredData, setFinalFilteredData] = useState<SalonCardsData[]>(salonCardsData)
 
   return (
     <div className="flex flex-col">
@@ -326,36 +325,43 @@ export default function Page() {
           <button className="p-3 text-[#F5F5F5] bg-primary text-2xl mt-7 rounded-lg">{t("mainBanner.button")}</button>
         </div>
       </div>
-      {/* cards filters */}
-      <div className="flex gap-2 p-14">
-        {Object.entries(activeFilters).map(([filter, value]) =>
-          <button onClick={() => handleFilterChange(filter, value)} className={`flex items-center gap-1 px-3 py-2 rounded-lg ${value ? 'bg-[#2C2C2C] text-whiteC-light' : 'bg-whiteC-light text-blackC-light'}`}>
-            {value && <span className='text-whiteC-light w-4 h-4'><CheckIcon /></span>}
-            {filter}
-          </button>
-        )}
-      </div>
 
-      {/* cards */}
-      <div className="flex flex-wrap justify-center max-w-[1200px] mx-auto p-14">
-        {salonCardsData.map(cardData =>
-          <SalonDataCard
-            image={cardData.image}
-            title={cardData.title}
-            discount={cardData.discount}
-            rating={cardData.rating}
-            hasHeartTag={cardData.hasHeartTag}
-            isSponsored={cardData.isSponsored}
-            sponsoredColor={cardData.sponsoredColor}
-            borderColor={cardData.borderColor}
-            reviewCount={cardData.reviewCount}
-            description={cardData.description}
-            isOpen={cardData.isOpen}
-            features={cardData.features}
-          />
+      <div className="max-w-[1600px] mx-auto p-14 flex flex-col gap-10 items-start w-full">
+        {/* cards filters */}
+        <Filters
+          setFinalFilteredData={setFinalFilteredData}
+          salonCardsData={salonCardsData}
+        />
 
-        )}
+        {/* cards */}
+        <h3 className="font-semibold text-2xl mt-20">massage parlors in Tyresö</h3>
+        <div className="flex flex-wrap w-full gap-10">
+          {finalFilteredData.length
+            ?
+            finalFilteredData?.map(cardData =>
+              <SalonDataCard
+                key={cardData.id}
+                image={cardData.image}
+                title={cardData.title}
+                discount={cardData.discount}
+                rating={cardData.rating}
+                hasHeartTag={cardData.hasHeartTag}
+                isSponsored={cardData.isSponsored}
+                sponsoredColor={cardData.sponsoredColor}
+                borderColor={cardData.borderColor}
+                reviewCount={cardData.reviewCount}
+                description={cardData.description}
+                isOpen={cardData.isOpen}
+                features={cardData.features}
+              />
+            )
+            :
+            <h3 className="w-full text-center text-blackC-light">No matches found. try adjusting your filters.</h3>
+          }
+        </div>
       </div>
     </div>
   );
 }
+
+

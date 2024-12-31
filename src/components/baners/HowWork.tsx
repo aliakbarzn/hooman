@@ -5,7 +5,7 @@ import Medal from "@/assets/icons/about/medal.svg";
 import Call from "@/assets/icons/about/call.svg";
 const HowWork = () => {
   return (
-    <div className="bg-[#FEFFF6] px-20 py-[60px] flex flex-col items-center w-screen">
+    <div className="bg-[#FEFFF6] px-32 py-[60px] flex flex-col items-center w-full">
       <h4 className="text-[#1E1E1E] text-3xl">
         How does <span className="text-[#D367BC]">thaimassage</span> massage
         work?
