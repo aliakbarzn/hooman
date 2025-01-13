@@ -76,6 +76,7 @@
       "discountLabel": "off"
     }
   },
+  "RegisterPage": {},
   "ForgetPage": {
     "leftContent": {
       "option1": "Try it completely free for 14 days",
@@ -304,7 +305,8 @@
         "placeholder1": "Write the name of the service",
         "placeholder2": "price",
         "placeholder3": "time",
-        "button": "add more services"
+        "button": "add more services",
+        "buttonADS": "campaign,  More customers"
       },
       "field3": {
         "title1": "Pictures",
@@ -370,7 +372,50 @@
         "Yes": "Yes",
         "No": "No"
       },
-      "buttonSave": "save and active my ads"
+      "buttonSave": "save and active my ads",
+      "imageUploadWarningModal": {
+        "title": "attention!",
+        "text": "Please only use photos of yourself and your massage parlor. If you see ready-made Google photos, your profile will not be approved."
+      },
+      "ADsSection": {
+        "title": "See better ads!",
+        "pinkADs": {
+          "name": "pink",
+          "title": "Join us and use pink ad easily!",
+          "descriptionTitle": "What are pink ads?",
+          "descriptionText": "These ads are based on your need to be seen and scheduled. Your ad will stand out for a while, and you can also buy in the following field."
+        },
+        "specialADs": {
+          "name": "special",
+          "title": " use Special ad easily!",
+          "descriptionTitle": "What are special ads?",
+          "descriptionText": "These ads are based on your need to be seen and scheduled. Your ad will stand out for a while, and you can also buy in the following field."
+        },
+        "campaignADs": {
+          "name": "campaign",
+          "title": "Here use Campaign ad easily!",
+          "descriptionTitle": "What are campaign ads?",
+          "descriptionText": "These ads are based on your need to be seen and scheduled. Your ad will stand out for a while, and you can also buy in the following field."
+        },
+        "month": "month",
+        "payFor": "Pay for",
+        "monthsAtOnce": "months at once",
+        "save": "Save"
+      },
+      "ADFormModal": {
+        "title": "\"Lift your ad to the top!\"",
+        "subtitle": "Your ad will be visible at the top of the list and reach more customers.",
+        "formCard": {
+          "title": "Fill in the discount, the treatment it applies to, and choose how long the campaign will be active – from 1 to 4 weeks",
+          "label1": "Write the % discount you want to offer",
+          "label2": "Choose the treatment it applies to",
+          "label3": "Select ad duration",
+          "value": "Value",
+          "cost": "Cost",
+          "week": "week",
+          "button": "done"
+        }
+      }
     }
   },
   "Single": {
@@ -538,6 +583,20 @@
     },
     "card": {
       "sponsored": "Sponsored"
+    }
+  },
+  "YupSchemas": {
+    "registerSchema": {
+      "emailNotValid": "Invalid email address",
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required",
+      "passwordMin": "Password must be at least 8 characters",
+      "passwordSmallLetter": "password must includes at least a small letter",
+      "passwordCapitalLetter": "password must includes at least a capital letter",
+      "passwordDigit": "password must includes at least a digit",
+      "confirmPasswordRequired": "confirm password is required",
+      "confirmPasswordMatch": "Passwords must match",
+      "consentRequired": "aaaaaaaaaaaa"
     }
   }
 }
