@@ -4,7 +4,7 @@ import bg from '@/assets/images/forget/forget-bg.png'
 import { TickIcon } from '@/assets/icons'
 import { useTranslations } from 'next-intl'
 
-export default function LeftSidePicture() {
+export default function LeftSideSection() {
 	const t = useTranslations('ForgetPage.leftContent')
 
 	return (

@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { ChevronDownIcon } from '@/assets/icons'; 
-import { SwedenIcon, GermanyIcon, BritainIcon, ThailandIcon } from '@/assets/icons'; 
+import { ChevronDownIcon } from '@/assets/icons';
+import { SwedenIcon, GermanyIcon, BritainIcon, ThailandIcon } from '@/assets/icons';
 
 interface Option {
   value: string;
@@ -30,24 +30,21 @@ const CustomDropDown: React.FC = () => {
   };
 
   return (
-    <div className="relative min-w-[260px] w-full bg-white md:min-w-48">
+    <div className="relative min-w-[200px] w-full bg-white">
       <div
         className="flex items-center justify-between h-[42px] rounded-lg border py-3 px-4 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="flex items-center gap-x-2">
-          {selectedOption.icon}
-          <span>{selectedOption.value}</span>
+        <div className="flex items-center gap-2">
+          <span className='w-6 h-6'>{selectedOption.icon}</span>
+          <h6>{selectedOption.value}</h6>
         </div>
         <ChevronDownIcon />
       </div>
 
       {isOpen && (
         <>
-          <div
-            className="fixed inset-0 w-screen h-screen z-10"
-            onClick={() => setIsOpen(false)}
-          ></div>
+          <div className="fixed inset-0 w-screen h-screen z-10" onClick={() => setIsOpen(false)}></div>
           <div className="absolute z-20 bg-white border rounded-lg shadow-lg w-full mt-1">
             {options.map((option) => (
               <div
@@ -55,8 +52,8 @@ const CustomDropDown: React.FC = () => {
                 className="pl-4 flex items-center gap-3 p-2 hover:bg-gray-100 cursor-pointer"
                 onClick={() => handleOptionClick(option)}
               >
-                {option.icon}
-                <span>{option.value}</span>
+                <span className='w-6 h-6'>{option.icon}</span>
+                <h6>{option.value}</h6>
               </div>
             ))}
           </div>

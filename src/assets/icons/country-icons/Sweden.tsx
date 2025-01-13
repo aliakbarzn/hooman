@@ -1,34 +1,21 @@
 
 export default function Sweden() {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            width="25"
-            height="26"
-            fill="none"
-            viewBox="0 0 25 26"
-        >
-            <circle cx="12.5" cy="13" r="12.5" fill="url(#pattern0_109_213)"></circle>
-            <defs>
-                <pattern
-                    id="pattern0_109_213"
-                    width="1"
-                    height="1"
-                    patternContentUnits="objectBoundingBox"
-                >
-                    <use
-                        xlinkHref="#image0_109_213"
-                        transform="matrix(.00617 0 0 .00617 -.302 0)"
-                    ></use>
-                </pattern>
-                <image
-                    xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAACiCAMAAACQ5EN/AAAALVBMVEUAaqf+zAAAYa7/0AAAZqqWlnknbaQAaajfuz4AXbGPkn4AZavcu0Dtwi0AYK9sATgHAAABbklEQVR4nO3auY0cQBAEwRq+95H+m0sgDeAKOwIPjHSgGiH3drkvL+fvvXy5PfnvBWEQCsIgFIRBKAiDUBAGoSAMQkEYhIIwCAVhEArCIBSEQSgIg1AQBqEgDEJBGISCMAgFYRAKwiAUhEEoCINQEAahIAxCQRiEgjAIBWEQCsIgFIRBKAiDUBAGoSAMQkHYJ0X4drnXRwgfr7cnn27fL/f26wHCr7fbk0+3r7d7YHDO9cWn28Ob/4MgHAgF4UAoCAdCQTgQCsKBUBAOhIJwIBSEA6EgHAgF4UAoCAdCQTgQCsKBUBAOhIJwINR+XO794bvO++3Jp9vPyz38Wfr4fXvy6a7/QH3Kx63bQRiEgjAIBWEQCsIgFIRBKAiDUBAGoSAMQkEYhIIwCAVhEArCIBSEQSgIg1AQBqEgDEJBGISCMAgFYRAKwiAUhEEoCINQEAahIAxCQRiEgjAIBWEQCsIgFIRBKAiDUBD2ORH+AP5fT9ETkVaSAAAAAElFTkSuQmCC"
-                    id="image0_109_213"
-                    width="260"
-                    height="162"
-                ></image>
-            </defs>
-        </svg>
-    )
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="100%"
+			height="100%"
+			aria-hidden="true"
+			className=""
+			viewBox="0 0 64 64"
+		>
+			<g fill="#428bc1">
+				<path d="M61.2 25C58 11.8 46.2 2 32 2h-1v23zM17 6C10 10.1 4.8 16.9 2.8 25H17zM2.8 39c2 8.1 7.2 14.9 14.2 19V39zM31 62h1c14.2 0 26-9.8 29.2-23H31z"></path>
+			</g>
+			<path
+				fill="#ffe62e"
+				d="M61.2 25H31V2c-5.1.2-9.9 1.6-14 4v19H2.8c-.5 2.2-.8 4.6-.8 7s.3 4.8.8 7H17v19c4.1 2.4 8.9 3.8 14 4V39h30.2c.5-2.2.8-4.6.8-7s-.3-4.8-.8-7"
+			></path>
+		</svg>
+	);
 }

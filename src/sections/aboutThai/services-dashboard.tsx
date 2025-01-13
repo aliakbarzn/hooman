@@ -72,7 +72,7 @@ export default function ServicesDashboard() {
 						onClick={() => handleItemClick(item.id)}>
 						<span>{item.title}</span>
 						{item.subItems.length > 0 ?
-							<span className={`transition-transform ${selectedItem === item.id ? 'rotate-90 text-red-500' : 'text-gray-500'}`}><CircledArrowIcon /></span>
+							<span className={`h-5 w-5 transition-transform ${selectedItem === item.id ? 'rotate-90 text-red-500' : 'text-gray-500'}`}><CircledArrowIcon /></span>
 							: null}
 					</Link>
 					{/* Sub-Items */}

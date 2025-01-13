@@ -1,14 +1,19 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useRef, useState } from 'react'
+import React, { use, useRef, useState } from 'react'
 import profPic from '@/assets/images/dashboard/notifications/user-profile.png'
-import { IconActiway, IconBath, IconCardPayment, IconCashPayment, IconGiftCard, IconIndividualRooms, IconMassageBench, IconMattress, IconMiniHealthCare, IconParking, IconPencil, IconSauna, IconShower, IconSwish, IconTwoMasseuses, IconWC, IconWellnessCheck, IconWellnet, PaperClipIcon, PlusIcon } from '@/assets/icons'
+import { IconActiway, IconBath, IconCardPayment, IconCashPayment, IconGiftCard, IconIndividualRooms, IconMassageBench, IconMattress, IconMiniHealthCare, IconParking, IconPencil, IconSauna, IconShower, IconSwish, IconTwoMasseuses, IconUptrend, IconWC, IconWellnessCheck, IconWellnet, PaperClipIcon, PlusIcon } from '@/assets/icons'
 import { useTranslations } from 'next-intl'
 import FieldWriteAbout from '@/sections/dashboard/profile/field-write-about'
 import FieldWorkingHours from '@/sections/dashboard/profile/field-working-hours'
 import FieldAddAddress from '@/sections/dashboard/profile/filed-add-address'
 import ConnectBooking from '@/sections/dashboard/profile/connect-booking'
+import ImageUploadWarningModal from '@/sections/dashboard/profile/image-upload-warning-modal/image-upload-warning-modal'
+import HowToContact from '@/sections/dashboard/profile/how-to-contact'
+import ADsSection from '@/sections/dashboard/profile/ads-section'
+import AdFormModal from '@/sections/dashboard/profile/ad-form-modal/ad-form-modal'
+
 
 interface SalonFeature {
   id: number;
@@ -22,6 +27,8 @@ export default function page() {
 
   const [fileError, setFileError] = useState<string | null>(null)
   const [uploadedImages, setUploadedImages] = useState<string[]>([])
+  const [isImageUploadWarningModalOpen, setIsImageUploadWarningModalOpen] = useState(false)
+  const [isADFormModalOpen, setIsADFormModalOpen] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const [salonFeatures, setSalonFeatures] = useState<SalonFeature[]>([
@@ -77,6 +84,9 @@ export default function page() {
   return (
     <div className='bg-[#F8F8F8]'>
       <div className="container-style max-w-[1000px]">
+
+
+
         {/* picture and email card */}
         <div className="p-5 flex gap-6 items-center rounded-lg bg-white">
           <Image src={profPic} alt='profile-image' width={83} height={107} className='rounded-xl' />
@@ -88,6 +98,9 @@ export default function page() {
             </div>
           </div>
         </div>
+
+
+
         {/* field salon/shop name ( field 1 ) */}
         <div className="relative bg-white rounded-lg px-5 flex flex-col gap-3 pt-14 pb-10">
           <div className='profile-page-number'>
@@ -96,6 +109,9 @@ export default function page() {
           <h4>{t('field1.inputTitle')}</h4>
           <input className='profile-page-input' type="text" placeholder={t('field1.placeholder')} />
         </div>
+
+
+
         {/* field add items ( field 2 ) */}
         <div className="relative bg-white rounded-lg px-5 flex flex-col gap-3 pt-14 pb-6">
           <div className='profile-page-number'>
@@ -111,7 +127,14 @@ export default function page() {
             <span className="text-secondary"><PlusIcon /></span>
             <h5 className="text-secondary font-semibold">{t('field2.button')}</h5>
           </button>
+          <button className='my-4 flex items-center justify-center gap-2 rounded-[26px] bg-gradient-to-l to-orangeC-dark from-orangeC-light py-4 text-white'>
+            <span className='h-4 w-7'><IconUptrend /></span>
+            <span className='text-xl font-medium'>{t('field2.buttonADS')}</span>
+          </button>
         </div>
+
+
+
         {/* field pictures ( field 3 ) */}
         <div className="relative bg-white rounded-lg px-5 flex flex-col gap-3 pt-14 pb-6">
           <div className='profile-page-number'>
@@ -147,7 +170,11 @@ export default function page() {
             <h6 className={`${fileError === 'Size' ? 'text-primary font-bold' : 'text-[#acacac]'}`}>{t('field3.size')}</h6>
             <h6 className={`${fileError === 'Format' ? 'text-primary font-bold' : 'text-[#acacac]'}`}>{t('field3.extensions')}</h6>
           </div>
+          {isImageUploadWarningModalOpen && <ImageUploadWarningModal setIsImageUploadWarningModalOpen={setIsImageUploadWarningModalOpen} />}
         </div>
+
+
+
         {/* field add features ( field 4 ) */}
         <div className="relative bg-white rounded-lg px-5 flex flex-col gap-3 pt-14 pb-6">
           <div className='profile-page-number'>
@@ -167,17 +194,45 @@ export default function page() {
             )}
           </div>
         </div>
+
+
+
         {/* field write about ( field 5 ) */}
         <FieldWriteAbout />
+
+
+
+        {/* how to contact */}
+        <HowToContact />
+
+
         {/* field working hours table ( field 6 ) */}
         <FieldWorkingHours />
+
+
+
         {/* field add address ( field 7 ) */}
         <FieldAddAddress />
+
+
+
         {/* connect booking */}
         <ConnectBooking />
+
+
+
         {/* save button */}
         <button className="rounded-full py-3 border border-primary text-primary bg-white">{t('buttonSave')}</button>
-        {/* ads */}
+
+
+
+        {/* ads section */}
+        <ADsSection />
+
+
+        {/* ads form modal */}
+        {isADFormModalOpen && <AdFormModal />}
+
 
       </div>
     </div>

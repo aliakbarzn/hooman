@@ -18,6 +18,7 @@ interface SalonDataCardProps {
   features: {
     [key: string]: boolean;
   };
+  showIsConnected: boolean
 }
 
 export default function SalonDataCard
@@ -33,7 +34,8 @@ export default function SalonDataCard
     reviewCount,
     description,
     isOpen,
-    features
+    features,
+    showIsConnected
   }: SalonDataCardProps) {
   const t = useTranslations('Ads.card')
 
@@ -77,7 +79,7 @@ export default function SalonDataCard
 
       </div>
 
-      <div className="bg-[#70E38C] rounded-lg text-white p-1 text-sm mt-4">This massage parlor is connected to the booking service</div>
+      {showIsConnected && <div className="bg-[#70E38C] rounded-lg text-white p-1 text-sm mt-4">This massage parlor is connected to the booking service</div>}
     </div>
   )
 }

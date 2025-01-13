@@ -21,7 +21,7 @@ export default function NotificationCard({ salonName, date, text }: Notification
       <p className="text-blackC-light p-4">{text}</p>
       {/* right bottom corner icon */}
       <div className="flex justify-end px-2">
-        <div className="text-blackC-light rotate-90"><CircledArrowIcon /></div>
+        <div className="h-4 w-4 text-blackC-light rotate-90"><CircledArrowIcon /></div>
       </div>
     </div>
   )

@@ -14,7 +14,11 @@
 
   --blackC: #1e1e1e; 
   --blackC-light: #757575; 
-  --blackC-dark: #5B5B5B; 
+  --blackC-dark: #5B5B5B;
+
+  --grayC: #D9D9D9;
+  --grayC-light: #D3D3D3;
+  --grayC-dark: #555555;
 
   --whiteC: #f3f3f3;
   --whiteC-light: #F5F5F5;
@@ -25,20 +29,29 @@
   --greenC-lightest: #F9FFFA;
   --greenC-light2: #ECFFF1;
   --greenC-lightPale: #DFFFE7;
+  --greenC-lightPale2: #DAFFE3;
   --greenC-darkPale: #31623D;
   --greenC-dark: #107629;
   --greenC-darker: #08601D;
 
-  --grayC: #D9D9D9;
-
   --pinkC: #FAD2CC;
   --pinkC-light: #FFF3F1;
+  --pinkC-lightVibrant: #FFF0F0;
 
   --purpleC: #DD9BCF;
 
   --blueC: #6EA0FE;
+  --blueC-light: #F1F4FF;
+  --blueC-vibrant: #1B69FD;
   --blueC-dark: #226EFF;
   --blueC-darkPale: #DADEE9;
+  --blueC-darkPale2: #F9FAFF;
+  --blueC-darkPale3: #697EE5;
+  --blueC-darkPale4: #DEE2F6;
+
+  --orangeC: #FF9B3E;
+  --orangeC-dark: #F39326;
+  --orangeC-light: #FFBC22;
 }
 
 /* Custom classes */

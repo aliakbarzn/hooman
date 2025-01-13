@@ -170,7 +170,7 @@ export default function Dashboard() {
                 <span className={`${selectedItem === item.href ? 'text-primary' : 'text-black'}`}>{item.title}</span>
               </div>
               {(item.hasChevron) ?
-                <span className={`transition-transform ${selectedItem === item.href ? 'rotate-90 text-primary' : 'text-gray-500'}`}><CircledArrowIcon /></span>
+                <span className={`h-5 w-5 transition-transform ${selectedItem === item.href ? 'rotate-90 text-primary' : 'text-gray-500'}`}><CircledArrowIcon /></span>
                 : null}
             </Link>
             {/* Sub-Items */}
