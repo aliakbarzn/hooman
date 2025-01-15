@@ -4,6 +4,7 @@ import { Controller, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { getRegisterSchema } from '@/schemas/register-schema'
 import { useTranslations } from 'next-intl'
+import CustomDropDown2 from '@/components/dropdown/custom-dropdown'
 
 type FormFields = {
 	email: string;
@@ -91,7 +92,7 @@ export default function Register() {
 				</div>
 
 				{/* Email */}
-				<div className='gap-y-3 flex flex-col'>
+				<div className='gap-3 flex flex-col'>
 					<p>Email Address</p>
 					<input
 						{...register('email')}
@@ -161,7 +162,7 @@ export default function Register() {
 				</div>
 
 				{/* Gender */}
-				<div className='gap-3 flex flex-col'>
+				{/* <div className='gap-3 flex flex-col'>
 					<p>Choose your gender</p>
 					<div className='relative'>
 						<select
@@ -176,6 +177,10 @@ export default function Register() {
 						</div>
 					</div>
 					{errors.gender && <p className='text-primary'>{errors.gender.message}</p>}
+				</div> */}
+				<div className="flex flex-col gap-3">
+					<h6>Choose your gender</h6>
+					<CustomDropDown2 options={['man', 'woman']} />
 				</div>
 
 				{/* Consent */}
