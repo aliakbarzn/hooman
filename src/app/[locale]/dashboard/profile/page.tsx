@@ -13,6 +13,7 @@ import ImageUploadWarningModal from '@/sections/dashboard/profile/image-upload-w
 import HowToContact from '@/sections/dashboard/profile/how-to-contact'
 import ADsSection from '@/sections/dashboard/profile/ads-section'
 import AdFormModal from '@/sections/dashboard/profile/ad-form-modal/ad-form-modal'
+import ConnectToBookingFormModal from '@/sections/dashboard/profile/connect-to-booking-form-modal/connect-to-booking-form-modal'
 
 
 interface SalonFeature {
@@ -29,6 +30,7 @@ export default function page() {
   const [uploadedImages, setUploadedImages] = useState<string[]>([])
   const [isImageUploadWarningModalOpen, setIsImageUploadWarningModalOpen] = useState(false)
   const [isADFormModalOpen, setIsADFormModalOpen] = useState(false)
+  const [isConnectToBookingFormModalOpen, setIsConnectToBookingFormModalOpen] = useState(true)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const [salonFeatures, setSalonFeatures] = useState<SalonFeature[]>([
@@ -232,6 +234,10 @@ export default function page() {
 
         {/* ads form modal */}
         {isADFormModalOpen && <AdFormModal />}
+
+
+        {/* connect to booking form modal */}
+        {isConnectToBookingFormModalOpen && <ConnectToBookingFormModal setIsConnectToBookingFormModalOpen={setIsConnectToBookingFormModalOpen} />}
 
 
       </div>

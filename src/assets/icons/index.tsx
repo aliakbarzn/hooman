@@ -114,6 +114,9 @@ export { default as IconCircledExclamationMark } from './dashboard/profile/image
 // Dashboard >>> profile >>> AD form modal
 export { default as LogoTrustly } from './dashboard/profile/AD-form-modal/logo-trustly'
 
+// Dashboard >>> profile >>> connect to booking form modal
+export { default as IconExclamationMark2 } from './dashboard/profile/connect-to-booking-form-modal/icon-exclamation-mark-2'
+
 // single
 export { default as IconMiniPicture } from './single/icon-mini-picture'
 export { default as IconFlag } from './single/icon-flag'

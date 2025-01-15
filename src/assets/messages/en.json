@@ -415,6 +415,27 @@
           "week": "week",
           "button": "done"
         }
+      },
+      "connectToBookingFormModal": {
+        "title": "Connecting to the booking system",
+        "subtitle": "Enter the following information to connect to booking",
+        "creditCardForm": {
+          "title": "Please enter your card information",
+          "label1": "Card number",
+          "label2": "expiration date",
+          "label3": "cvv2",
+          "placeholder": "Value",
+          "radioButton": "Save card"
+        },
+        "companyForm": {
+          "title": "Please enter your company information",
+          "label1": "company ID",
+          "label2": "phone  number",
+          "placeholder": "Value",
+          "note": "You will be notified of customer messages from this phone number"
+        },
+        "button1": "done",
+        "button2": "cancel"
       }
     }
   },
