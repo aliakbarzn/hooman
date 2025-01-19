@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect } from 'react'
-import { AdIcon, BellIcon, BookingIcon, CalenderIcon, CircledArrowIcon, CircledDollarIcon, CommentsIcon, EnvelopeIcon, ExitIcon, HeadphoneIcon, HomeIcon, InventoryIcon, QuoteDollarIcon, SettingsIcon, ShieldIcon, WrenchIcon } from '@/assets/icons'
+import { AdIcon, BellIcon, BookingIcon, CalenderIcon, CircledArrowIcon, CircledDollarIcon, CommentsIcon, EnvelopeIcon, ExitIcon, HeadphoneIcon, HomeIcon, IconBarChart, IconProfile, InventoryIcon, QuoteDollarIcon, SettingsIcon, ShieldIcon, WrenchIcon } from '@/assets/icons'
 import { Link, usePathname } from '@/navigation'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
@@ -26,9 +26,17 @@ export default function Dashboard() {
       subItems: [],
     },
     {
-      href: '/',
-      icon: <HomeIcon />,
-      title: t('Dashboard'),
+      href: '/my-profile',
+      icon: <IconProfile />,
+      title: t('MyProfile'),
+      hasChevron: false,
+      hasBorder: false,
+      subItems: [],
+    },
+    {
+      href: '/analysis',
+      icon: <IconBarChart />,
+      title: t('Analysis'),
       hasChevron: false,
       hasBorder: false,
       subItems: [],

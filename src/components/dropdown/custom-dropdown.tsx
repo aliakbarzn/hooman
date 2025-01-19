@@ -3,8 +3,12 @@
 import React, { useState } from 'react';
 import { ChevronDownIcon } from '@/assets/icons';
 
+type CustomDropDown2Props = {
+  options: string[];
+  borderColor: string;
+}
 
-const CustomDropDown2 = ({ options }: { options: string[] }) => {
+const CustomDropDown2 = ({ options, borderColor }: CustomDropDown2Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
@@ -16,7 +20,7 @@ const CustomDropDown2 = ({ options }: { options: string[] }) => {
   return (
     <div className="relative min-w-[200px] w-full bg-white">
       <div
-        className="flex items-center justify-between rounded-full border border-primary py-4 px-8 cursor-pointer"
+        className={`flex items-center justify-between rounded-full border py-4 px-8 cursor-pointer ${borderColor}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <h6 className="flex items-center gap-2 text-[15px] font-light">{selectedOption}</h6>
@@ -26,7 +30,7 @@ const CustomDropDown2 = ({ options }: { options: string[] }) => {
       {isOpen && (
         <>
           <div className="fixed inset-0 w-screen h-screen z-20 bg-black bg-opacity-30" onClick={() => setIsOpen(false)}></div>
-          <div className={`absolute z-20 bg-white border-2 border-primary rounded-3xl shadow-lg w-full mt-1 transition-all duration-500 ${isOpen ? 'h-auto' : 'h-0'}`}>
+          <div className={`absolute z-20 bg-white border-2  rounded-3xl shadow-lg w-full mt-1 ${borderColor}`}>
             {options.map((option) => (
               <div
                 key={option}

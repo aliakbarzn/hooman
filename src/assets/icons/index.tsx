@@ -34,6 +34,8 @@ export { default as HeadphoneIcon } from './dashboard/HeadphoneIcon'
 export { default as ExitIcon } from './dashboard/ExitIcon'
 export { default as IconTickBanner } from './dashboard/icon-tick-banner'
 export { default as IconTickClipBoard } from './dashboard/icon-tick-clipboard'
+export { default as IconBarChart } from './dashboard/icon-bar-chart'
+export { default as IconProfile } from './dashboard/icon-profile'
 
 // dashboard >>> messages
 export { default as PlusIcon } from './dashboard/messages/PlusIcon'

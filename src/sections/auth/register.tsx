@@ -1,4 +1,4 @@
-import { ChevronDownIcon, FacebookIcon, GoogleIcon, IconEye, IconHiddenEye } from '@/assets/icons'
+import { FacebookIcon, GoogleIcon, IconEye, IconHiddenEye } from '@/assets/icons'
 import React, { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -17,7 +17,7 @@ type FormFields = {
 
 export default function Register() {
 	const t = useTranslations()
-	const tSchema = useTranslations('YupSchemas.registerSchema') // to send the translations to the schema
+	const tSchema = useTranslations('YupSchemas.registerSchema') // To send the translations to the schema
 	const schema = getRegisterSchema(tSchema)
 
 	const [password, setPassword] = useState({ value: '', isVisible: false })
@@ -76,7 +76,7 @@ export default function Register() {
 				</div>
 
 				{/* Type of Use */}
-				<div className='gap-y-3 flex flex-col'>
+				{/* <div className='gap-y-3 flex flex-col'>
 					<p>Type of Use</p>
 					<div className='relative'>
 						<select {...register('typeOfUse')} className='appearance-none px-8 py-4 font-light text-[#ACACAC] w-[317.15px] sm:w-[435px] h-14 border border-primary rounded-full outline-none'>
@@ -89,6 +89,10 @@ export default function Register() {
 						</div>
 					</div>
 					{errors.typeOfUse && <p className='text-primary'>{errors.typeOfUse.message}</p>}
+				</div> */}
+				<div className="flex flex-col gap-3">
+					<h6>Type of Use</h6>
+					<CustomDropDown2 options={['visitor', 'salon owner', 'admin']} borderColor='border-primary' />
 				</div>
 
 				{/* Email */}
@@ -107,7 +111,15 @@ export default function Register() {
 				<div className='gap-3 flex flex-col'>
 					<p>Password</p>
 					<div className="flex justify-between items-center border border-primary rounded-full w-[317.15px] sm:w-[435px] h-14 px-8 py-4">
-						<Controller
+						<input
+							{...register('password')}
+							onChange={e => handlePasswordChange(e)}
+							type="text"
+							className="font-light outline-none w-[90%]"
+							placeholder='Enter your password'
+							value={password.isVisible ? password.value : '*'.repeat(password.value.length)} // Show original or masked value
+						/>
+						{/* <Controller
 							name="password"
 							control={control}
 							render={({ field }) => (
@@ -115,7 +127,6 @@ export default function Register() {
 									{...field}
 									className="font-light outline-none w-[90%]"
 									placeholder="Enter your Password"
-									// onKeyDown={handlePasswordKeyDown}
 									onChange={e => {
 										handlePasswordChange(e)
 										field.onChange(e)
@@ -124,7 +135,7 @@ export default function Register() {
 									type="text"
 								/>
 							)}
-						/>
+						/> */}
 						<span onClick={togglePasswordVisibility} className='w-[18px] h-[18px] text-black cursor-pointer'>
 							{password.isVisible ? <IconEye /> : <IconHiddenEye />}
 						</span>
@@ -137,23 +148,15 @@ export default function Register() {
 				<div className='gap-3 flex flex-col'>
 					<p>confirm password</p>
 					<div className="flex justify-between items-center border border-primary rounded-full w-[317.15px] sm:w-[435px] h-14 px-8 py-4">
-						<Controller
-							name="confirmPassword"
-							control={control}
-							render={({ field }) => (
-								<input
-									{...field}
-									className="font-light outline-none w-[90%]"
-									placeholder="Enter your Password to confirm"
-									onChange={e => {
-										handleConfirmPasswordChange(e)
-										field.onChange(e)
-									}}
-									value={confirmPassword.isVisible ? confirmPassword.value : '*'.repeat(confirmPassword.value.length)} // Show original or masked value
-									type="text"
-								/>
-							)}
-						/>
+						<input
+							{...register('confirmPassword')}
+							onChange={e => handleConfirmPasswordChange(e)}
+							type="text"
+							className="font-light outline-none w-[90%]"
+							placeholder='Enter your password again to confirm'
+							value={confirmPassword.isVisible ? confirmPassword.value : '*'.repeat(confirmPassword.value.length)} // Show original or masked value
+							/>
+						{/* 1 */}
 						<span onClick={toggleConfirmPasswordVisibility} className='w-[18px] h-[18px] text-black cursor-pointer'>
 							{confirmPassword.isVisible ? <IconEye /> : <IconHiddenEye />}
 						</span>
@@ -180,7 +183,7 @@ export default function Register() {
 				</div> */}
 				<div className="flex flex-col gap-3">
 					<h6>Choose your gender</h6>
-					<CustomDropDown2 options={['man', 'woman']} />
+					<CustomDropDown2 options={['man', 'woman']} borderColor='border-primary' />
 				</div>
 
 				{/* Consent */}

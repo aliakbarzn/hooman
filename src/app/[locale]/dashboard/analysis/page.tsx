@@ -26,6 +26,7 @@ export default function Page() {
 
   return (
     <div className='flex flex-col'>
+      
       <div className="p-10 relative ">
         {/* profile bg */}
         <Image src={bg} alt='background' width={853} height={289} className='mx-auto' />

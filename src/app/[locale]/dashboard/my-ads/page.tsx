@@ -1,6 +1,6 @@
 'use client'
 
-import { ClockIcon, PlusIcon } from '@/assets/icons'
+import { PlusIcon } from '@/assets/icons'
 import ClockWise2Icon from '@/assets/icons/dashboard/my-ads/ClockWise2Icon'
 import React, { useState } from 'react'
 import womanImage from '@/assets/images/dashboard/my-ads/female-masseur-pampering-ribs-young-slim-woman-towel-professional-massage-massaging-relaxation-body-skin-care-attractive-lady-spa-salon_266732-24173.png'
@@ -12,23 +12,27 @@ interface Ad {
   id: number;
   remainingTime: number;
   img: StaticImageData;
+  hasButtons: boolean;
 }
 
 const ads: Ad[] = [
   {
     id: 1,
     remainingTime: 0,
-    img: womanImage
+    img: womanImage,
+    hasButtons: true
   },
   {
     id: 2,
     remainingTime: 2,
-    img: womanImage
+    img: womanImage,
+    hasButtons: true
   },
   {
     id: 3,
     remainingTime: 5,
-    img: womanImage
+    img: womanImage,
+    hasButtons: true
   },
 ]
 
@@ -37,7 +41,7 @@ export default function page() {
   const [isButtonOpen, setIsButtonOpen] = useState(false)
 
   return (
-    <div className='p-20 w-full flex flex-col gap-10'>
+    <div className='p-20 w-full flex flex-col gap-10 max-w-[1100px] mx-auto'>
       {/* header --------------------------------------------------------------------------------------------------  */}
       <div className="flex items-center justify-between">
         <h1 className='text-3xl font-semibold'>My ads (3)</h1>
@@ -56,7 +60,9 @@ export default function page() {
       </div>
       {/* ads -------------------------------------------------------------------------------------------------- */}
       {ads?.map(ad => (
-        <AdCard key={ad.id} remainingTime={ad.remainingTime} img={ad.img} />
+        <div className='mb-10'>
+          <AdCard key={ad.id} id={ad.id} remainingTime={ad.remainingTime} img={ad.img} hasButtons={ad.hasButtons} />
+        </div>
       ))}
     </div>
   )

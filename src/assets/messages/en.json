@@ -76,7 +76,38 @@
       "discountLabel": "off"
     }
   },
+  "Auth": {
+    "text1": "Try it completely free for 14 days.",
+    "text2": "Digital booking calendar with online booking.",
+    "text3": "Visibility on Sweden's largest marketplace for beauty and health services.",
+    "text4": "Free support",
+    "welcomeText": "Welcome to thaimassagegruppen..!",
+    "register": "Register",
+    "login": "Login"
+  },
   "RegisterPage": {},
+  "SigninPage": {
+    "title1": "If you don’t have an account register",
+    "title2": "You can ",
+    "title3": " Register here !",
+    "form": {
+      "label1": "Email Address",
+      "placeholder1": "Enter your Email Address",
+      "label2": "Type of Use",
+      "typeOfUseOptions": {
+        "option1": "visitor",
+        "option2": "salon owner",
+        "option3": "admin"
+      },
+      "label3": "Password",
+      "placeholder2": "Enter your Password",
+      "remember": "Remember me",
+      "forgot": "Forgot Password ?",
+      "button": "Login"
+    },
+    "or": "OR",
+    "loginWithGoogle": "Login with Google"
+  },
   "ForgetPage": {
     "leftContent": {
       "option1": "Try it completely free for 14 days",
@@ -157,7 +188,8 @@
   "Dashboard": {
     "dashboard-items": {
       "Messages": "Messages",
-      "Dashboard": "Dashboard",
+      "MyProfile": "My Profile",
+      "Analysis": "Analysis",
       "Buy ads": "Buy ads",
       "My ads": "My ads",
       "Make an ad": "Make an ad",
@@ -206,6 +238,54 @@
         "days-left": "days left",
         "price": "price",
         "type-of-service": "Type of service"
+      }
+    },
+    "myProfile": {
+      "ADsSection": {
+        "title": "ads planing",
+        "subtitle": "Click on the desired ad for more information",
+        "pinkADs": {
+          "name": "pink",
+          "title": "Join us and use pink ad easily!",
+          "question1": "How do I buy a pink ad?",
+          "answer1": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question2": "How to see bookings?",
+          "answer2": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question3": "How are the ads scheduled? ",
+          "answer3": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question4": "How are the ads scheduled? ",
+          "answer4": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question5": "What are the communication methods with my customers?",
+          "answer5": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page."
+        },
+        "specialADs": {
+          "name": "special",
+          "title": " use Special ad easily!",
+          "question1": "How do I buy a pink ad?",
+          "answer1": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question2": "How to see bookings?",
+          "answer2": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question3": "How are the ads scheduled? ",
+          "answer3": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question4": "How are the ads scheduled? ",
+          "answer4": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question5": "What are the communication methods with my customers?",
+          "answer5": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page."
+        },
+        "campaignADs": {
+          "name": "campaign",
+          "title": "Here use Campaign ad easily!",
+          "question1": "How do I buy a pink ad?",
+          "answer1": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question2": "How to see bookings?",
+          "answer2": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question3": "How are the ads scheduled? ",
+          "answer3": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question4": "How are the ads scheduled? ",
+          "answer4": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page.",
+          "question5": "What are the communication methods with my customers?",
+          "answer5": "To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page. To view the bookings, you need to go to the bookings history page."
+        }
       }
     },
     "settings": {
@@ -618,6 +698,11 @@
       "confirmPasswordRequired": "confirm password is required",
       "confirmPasswordMatch": "Passwords must match",
       "consentRequired": "aaaaaaaaaaaa"
+    },
+    "signinSchema": {
+      "emailNotValid": "Invalid email address",
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required"
     }
   }
 }
