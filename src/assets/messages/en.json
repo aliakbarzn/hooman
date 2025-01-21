@@ -686,6 +686,34 @@
       "sponsored": "Sponsored"
     }
   },
+  "WellnessPage": {
+    "title": "Friskvård: Smart and Convenient Treatment",
+    "subtitle1": "With Friskvård, pay for your treatment using pre-purchased credits,",
+    "subtitle2": " even if the salon does not support online booking.",
+    "creditPlans": {
+      "title": "Choose the credit you want",
+      "use": "use"
+    },
+    "form": {
+      "title": "Submit Payment Receipt",
+      "subtitle": "If your selected salon does not support online booking, simply upload a photo of your receipt.",
+      "label1": "Upload Receipt:",
+      "label2": "Optional Message:",
+      "value": "value",
+      "to": "to",
+      "word": "word",
+      "button": "Submit"
+    },
+    "table": {
+      "title": "Transaction History",
+      "date": "Date",
+      "amount": "Amount",
+      "status": "Status",
+      "units": "units",
+      "approve": "Approve",
+      "pending": "Pending"
+    }
+  },
   "YupSchemas": {
     "registerSchema": {
       "emailNotValid": "Invalid email address",

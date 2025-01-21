@@ -49,6 +49,7 @@ const colors = {
     darkPale2: "var(--blueC-darkPale2)", // Dark pale 2 blue
     vibrant: "var(--blueC-vibrant)", // Vibrant blue
     light: "var(--blueC-light)", // Light blue
+    green: "var(--blueC-green)", // Green blue
   },
   orangeC: {
     DEFAULT: "var(--orangeC)", // Main orange
