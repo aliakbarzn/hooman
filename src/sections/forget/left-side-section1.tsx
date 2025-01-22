@@ -1,10 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
 import bg from '@/assets/images/forget/forget-bg.png'
+import bg2 from '@/assets/images/forget/forget-bg2.png'
 import { TickIcon } from '@/assets/icons'
 import { useTranslations } from 'next-intl'
 
-export default function LeftSideSection() {
+type LeftSideSectionProps = {
+	secondImage: boolean;
+}
+
+export default function LeftSideSection({ secondImage }: LeftSideSectionProps) {
 	const t = useTranslations('ForgetPage.leftContent')
 
 	return (
@@ -30,7 +35,7 @@ export default function LeftSideSection() {
 			</div>
 			{/* bg */}
 			<div className='max-w-96 max-h-80'>
-				<Image src={bg} alt='forget-password-image' className='object-fill w-full h-full' />
+				<Image src={secondImage ? bg2 : bg} alt='forget-password-image' className='object-fill w-full h-full' />
 			</div>
 		</div>
 	)

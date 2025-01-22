@@ -42,7 +42,7 @@ export default function CodeInput({ length = 5, onComplete, onIncomplete }: { le
 			{values.map((value, index) => (
 				<input
 					key={index}
-					ref={(el) => (inputsRef.current[index] = el)} // sets the input element, to its index position in the inputsRef array
+					ref={(el) => { inputsRef.current[index] = el }} // sets the input element, to its index position in the inputsRef array
 					type="text"
 					maxLength={1}
 					value={value}

@@ -28,6 +28,7 @@ interface SalonCardsData {
   features: {
     [key: string]: boolean;
   };
+  showIsConnected?: boolean;
 }
 
 export default function Page() {
@@ -55,6 +56,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -77,6 +79,7 @@ export default function Page() {
         parking: true,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -99,6 +102,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -121,6 +125,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -143,6 +148,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -165,6 +171,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -187,6 +194,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -209,6 +217,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -231,6 +240,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -253,6 +263,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -275,6 +286,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
     {
       id: Math.random(),
@@ -297,6 +309,7 @@ export default function Page() {
         parking: false,
         cashPayment: true,
       },
+      showIsConnected: true
     },
   ]
 
@@ -353,6 +366,7 @@ export default function Page() {
                 description={cardData.description}
                 isOpen={cardData.isOpen}
                 features={cardData.features}
+                showIsConnected={true}
               />
             )
             :

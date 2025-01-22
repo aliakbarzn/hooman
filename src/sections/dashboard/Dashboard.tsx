@@ -164,36 +164,39 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="w-[315px] p-2 bg-white border-y border-r border-grayC">
-      {dashboardItems.map((item) => (
-        <div key={item.href} >
-          {item.hasBorder && <div className='h-[1px] w-[282px] bg-grayC ml-3 mb-3'></div>}
-          <div className="mb-2">
-            {/* Main Menu Item */}
-            <Link href={`/dashboard${item.href}`}
-              className={`flex items-center justify-between h-12 p-4 rounded-lg cursor-pointer transition-all ${selectedItem === item.href ? 'border-l-2 border-primary bg-[#FFF9F8]' : 'text-blackC'}`}
-              onClick={() => handleItemClick(item.href)}>
-              <div className="flex items-center gap-x-3">
-                <span className={`w-4 h-4 ${selectedItem === item.href ? 'text-primary' : 'text-black'}`}>{item.icon}</span>
-                <span className={`${selectedItem === item.href ? 'text-primary' : 'text-black'}`}>{item.title}</span>
-              </div>
-              {(item.hasChevron) ?
-                <span className={`h-5 w-5 transition-transform ${selectedItem === item.href ? 'rotate-90 text-primary' : 'text-gray-500'}`}><CircledArrowIcon /></span>
-                : null}
-            </Link>
-            {/* Sub-Items */}
-            {selectedItem === item.href && item.subItems.length > 0 && (
-              <div className=" mt-3">
-                {item.subItems.map((subItem, index) => (
-                  <p key={index} className="text-sm font-normal text-[#757575] mb-3 ml-4 hover:text-primary cursor-pointer">
-                    {subItem}
-                  </p>
-                ))}
-              </div>
-            )}
+    <div className="w-[315px]">
+
+      <div className="w-[315px] p-2 bg-white border-y border-r border-grayC border-collapse fixed top-28 overflow-hidden h-full overflow-y-auto">
+        {dashboardItems.map((item) => (
+          <div key={item.href} >
+            {item.hasBorder && <div className='h-[1px] w-[282px] bg-grayC ml-3 mb-3'></div>}
+            <div className="mb-2">
+              {/* Main Menu Item */}
+              <Link href={`/dashboard${item.href}`}
+                className={`flex items-center justify-between h-12 p-4 rounded-lg cursor-pointer transition-all ${selectedItem === item.href ? 'border-l-2 border-primary bg-[#FFF9F8]' : 'text-blackC'}`}
+                onClick={() => handleItemClick(item.href)}>
+                <div className="flex items-center gap-x-3">
+                  <span className={`w-4 h-4 ${selectedItem === item.href ? 'text-primary' : 'text-black'}`}>{item.icon}</span>
+                  <span className={`${selectedItem === item.href ? 'text-primary' : 'text-black'}`}>{item.title}</span>
+                </div>
+                {(item.hasChevron) ?
+                  <span className={`h-5 w-5 transition-transform ${selectedItem === item.href ? 'rotate-90 text-primary' : 'text-gray-500'}`}><CircledArrowIcon /></span>
+                  : null}
+              </Link>
+              {/* Sub-Items */}
+              {selectedItem === item.href && item.subItems.length > 0 && (
+                <div className=" mt-3">
+                  {item.subItems.map((subItem, index) => (
+                    <p key={index} className="text-sm font-normal text-[#757575] mb-3 ml-4 hover:text-primary cursor-pointer">
+                      {subItem}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

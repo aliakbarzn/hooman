@@ -1,13 +1,11 @@
 import ServicesDashboard from '@/sections/aboutThai/services-dashboard'
-import CardsContainer from '@/sections/aboutThai/cards-container'
-import ContentContainer from '@/sections/aboutThai/content-container'
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-type RootLayoutPropTypes = {
-  children: React.ReactNode
-}
+type LayoutProps = {
+  children: ReactNode;
+};
 
-export default function RootLayout({ children }): RootLayoutPropTypes {
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <div className='flex'>
       <ServicesDashboard />

@@ -32,7 +32,7 @@ const Footer = () => {
 	]
 
 	return (
-		<div className="border-t border-grayC">
+		<div className="border-t border-grayC z-10 bg-white absolute inset-x-0">
 
 			<div className='md:hidden max-w-[1200px] mx-auto w-full flex flex-col gap-y-10 md:gap-y-20 pt-10 pb-8 px-5 md:pt-16 md:pb-14 md:px-8'>
 				{/* footer-top--------------------------------------------------------------------------------------------------- */}
