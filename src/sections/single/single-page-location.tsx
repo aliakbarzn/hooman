@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import locationBg from '@/assets/images/single-page/image.png'

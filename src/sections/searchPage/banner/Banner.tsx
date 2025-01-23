@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import baner from "@/assets/images/search-page/baner.png";
 import Image from "next/image";

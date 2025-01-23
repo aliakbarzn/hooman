@@ -1,3 +1,5 @@
+'use client';
+
 import { IconExclamationMark2 } from '@/assets/icons'
 import { useTranslations } from 'next-intl'
 import React, { useState } from 'react'

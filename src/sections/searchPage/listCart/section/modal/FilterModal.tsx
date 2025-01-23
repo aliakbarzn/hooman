@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from "react";
 import { Filters } from "@/@types/searchPage/type";
 import IcClose from "@/assets/icons/search-page/ic-close";

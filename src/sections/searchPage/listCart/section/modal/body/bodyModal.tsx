@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import SidebarModal from "./section/SidebarModal";
 import ContentModal from "./section/ContentModal";

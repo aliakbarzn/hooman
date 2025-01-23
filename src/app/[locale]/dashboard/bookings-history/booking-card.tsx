@@ -1,3 +1,5 @@
+'use client'
+
 import { useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
 import React from 'react'

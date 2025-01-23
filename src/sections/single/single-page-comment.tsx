@@ -1,3 +1,5 @@
+'use client';
+
 import { IconSharpStar, IconLike2 } from '@/assets/icons'
 import { useTranslations } from 'next-intl'
 import React from 'react'

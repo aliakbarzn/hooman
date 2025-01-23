@@ -1,3 +1,5 @@
+'use client';
+
 import { PaperClipIcon } from '@/assets/icons';
 import { useTranslations } from 'next-intl';
 import React, { useRef, useState } from 'react';

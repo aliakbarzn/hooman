@@ -1,3 +1,4 @@
+'use client'
 
 import MyBookingsCardsContainer from '@/sections/dashboard/my-bookings/my-bookings-cards-container'
 import { useTranslations } from 'next-intl'

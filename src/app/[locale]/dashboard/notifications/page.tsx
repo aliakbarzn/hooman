@@ -1,3 +1,4 @@
+'use client'
 import NotificationCard from '@/sections/dashboard/notifications/notification-card';
 import { useTranslations } from 'next-intl';
 import React from 'react'

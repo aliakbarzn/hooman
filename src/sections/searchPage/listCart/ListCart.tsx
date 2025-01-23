@@ -1,3 +1,5 @@
+'use client';
+
 "use client";
 import ImageCard from "@/assets/images/search-page/i-card.png";
 import CardSearch from "@/components/cards/cardSearch";

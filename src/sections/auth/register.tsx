@@ -1,3 +1,5 @@
+'use client';
+
 import { FacebookIcon, GoogleIcon, IconEye, IconHiddenEye } from '@/assets/icons'
 import React, { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'

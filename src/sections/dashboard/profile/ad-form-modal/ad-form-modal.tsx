@@ -1,3 +1,5 @@
+'use client';
+
 import SalonDataCard from '@/components/cards/card-salon-data'
 import { useTranslations } from 'next-intl'
 import React from 'react'

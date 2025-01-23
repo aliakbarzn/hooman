@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react'
 import { YoutubeIcon } from '@/assets/icons'
 import { InstagramIcon } from '@/assets/icons'

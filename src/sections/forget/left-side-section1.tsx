@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image'
 import React from 'react'
 import bg from '@/assets/images/forget/forget-bg.png'

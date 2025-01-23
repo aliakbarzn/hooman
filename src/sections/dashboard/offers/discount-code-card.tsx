@@ -1,3 +1,5 @@
+'use client';
+
 import { IconCopy } from '@/assets/icons';
 import { useTranslations } from 'next-intl'
 import React, { useState } from 'react'

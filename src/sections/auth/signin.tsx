@@ -1,3 +1,5 @@
+'use client';
+
 import { FacebookIcon, GoogleIcon, IconEye, IconHiddenEye } from '@/assets/icons'
 import CustomDropDown2 from '@/components/dropdown/custom-dropdown'
 import { Link } from '@/navigation'

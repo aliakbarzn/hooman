@@ -1,3 +1,5 @@
+'use client';
+
 import { CommentsIcon, IconBluntStar, IconCashPayment, IconGiftCard, IconMiniMessage, IconParking, IconSauna, IconShower, IconSwish } from '@/assets/icons'
 import { useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image'

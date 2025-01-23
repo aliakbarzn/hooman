@@ -1,3 +1,5 @@
+'use client';
+
 import CardBanerOff from "@/components/cards/cardBanerOff";
 import ImageOff from "@/assets/images/search-page/ImageOff.png";
 import ImageBannerOff from "@/assets/images/search-page/ImageBannerOff.png";

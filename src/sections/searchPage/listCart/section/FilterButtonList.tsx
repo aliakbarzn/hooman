@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from "react";
 import CheckIcon from "@/assets/icons/search-page/checkIcon";
 import { Filters } from "@/@types/searchPage/type";

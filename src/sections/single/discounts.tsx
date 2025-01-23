@@ -1,3 +1,5 @@
+'use client';
+
 import CardBanerOff from '@/components/cards/cardBanerOff';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';

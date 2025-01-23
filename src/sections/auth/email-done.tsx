@@ -1,3 +1,5 @@
+'use client';
+
 import { Link } from '@/navigation'
 import { useTranslations } from 'next-intl'
 import React from 'react'

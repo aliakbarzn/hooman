@@ -1,3 +1,5 @@
+'use client';
+
 import { IconVisa } from '@/assets/icons'
 import { useTranslations } from 'next-intl'
 import React from 'react'
