@@ -692,12 +692,24 @@
     "subtitle2": " even if the salon does not support online booking.",
     "creditPlans": {
       "title": "Choose the credit you want",
-      "use": "use"
+      "use": "use",
+      "inUse": "in use"
+    },
+    "creditManagement": {
+      "title": "Credit Management",
+      "key1": "Total Credit:",
+      "key2": "Used Credit:",
+      "key3": "Remaining Credit:",
+      "units": "units"
     },
     "form": {
       "title": "Submit Payment Receipt",
       "subtitle": "If your selected salon does not support online booking, simply upload a photo of your receipt.",
       "label1": "Upload Receipt:",
+      "imagePlaceholder1": "choose file",
+      "imagePlaceholder2": "image uploaded",
+      "fileErrorExtension": "Allowed extensions to upload: JPG, PNG",
+      "fileErrorSize": "Maximum file size: 25MB",
       "label2": "Optional Message:",
       "value": "value",
       "to": "to",

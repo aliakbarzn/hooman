@@ -30,9 +30,11 @@
   --greenC-light2: #ECFFF1;
   --greenC-lightPale: #DFFFE7;
   --greenC-lightPale2: #DAFFE3;
+  --greenC-lightPale3: #D6FFE0;
   --greenC-darkPale: #31623D;
   --greenC-dark: #107629;
   --greenC-darker: #08601D;
+
 
   --pinkC: #FAD2CC;
   --pinkC-light: #FFF3F1;
@@ -49,10 +51,15 @@
   --blueC-darkPale3: #697EE5;
   --blueC-darkPale4: #DEE2F6;
   --blueC-green: #3B8C88;
+  --blueC-greenDark: #1E4745;
+  --blueC-greenDarker: #102625;
+  --blueC-gray: #F4F6FF;
 
   --orangeC: #FF9B3E;
   --orangeC-dark: #F39326;
   --orangeC-light: #FFBC22;
+
+  --yellowC: #F6DE67;
 }
 
 /* Custom classes */

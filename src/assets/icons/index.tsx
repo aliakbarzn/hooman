@@ -154,3 +154,6 @@ export { default as IconMiniMessage } from './components/card-salon-data/icon-mi
 // auth >>> register
 export { default as IconEye } from './auth/register/icon-eye'
 export { default as IconHiddenEye } from './auth/register/icon-hidden-eye'
+
+// wellness
+export { default as IconTriangle } from './wellness/icon-triangle'

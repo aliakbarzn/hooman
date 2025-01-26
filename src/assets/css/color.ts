@@ -23,6 +23,7 @@ const colors = {
     lightest: "var(--greenC-lightest)", // Lightest green
     lightPale: "var(--greenC-lightPale)", // Light pale green
     lightPale2: "var(--greenC-lightPale2)", // Light pale 2 green
+    lightPale3: "var(--greenC-lightPale3)", // Light pale 3 green
     dark: "var(--greenC-dark)", // Dark green
     darker: "var(--greenC-darker)", // Darker green
     darkPale: "var(--greenC-darkPale)", // Dark pale green
@@ -50,12 +51,18 @@ const colors = {
     vibrant: "var(--blueC-vibrant)", // Vibrant blue
     light: "var(--blueC-light)", // Light blue
     green: "var(--blueC-green)", // Green blue
+    greenDark: "var(--blueC-greenDark)", // Green dark blue
+    greenDarker: "var(--blueC-greenDarker)", // Green darker blue
+    gray: "var(--blueC-gray)", // Gray blue
   },
   orangeC: {
     DEFAULT: "var(--orangeC)", // Main orange
     dark: "var(--orangeC-dark)", // Dark orange
     light: "var(--orangeC-light)", // Light orange
   },
+  yellowC: {
+    DEFAULT: "var(--yellowC)", // Main yellow
+  }
 };
 
 
