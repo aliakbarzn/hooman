@@ -1,6 +1,8 @@
-import CardsContainer from '@/sections/aboutThai/cards-container'
+
 import ContentContainer from '@/sections/aboutThai/content-container'
 import React from 'react'
+import image from '@/assets/images/dashboard/my-ads/female-masseur.png'
+
 
 const contentData = [
   {
@@ -12,8 +14,7 @@ const contentData = [
       second: "Incorporates various techniques to target specific areas.",
       third: "Tailored experience to meet individual needs"
     }],
-    src: 'https://s3-alpha-sig.figma.com/img/bf1f/f119/fdc45e5d1cbec076d9bcb8b0ae26f777?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IIQBx3mKplA~hhLcza~xG~OEd13K8kdOLqYu7nEY~e4877KPDI8VnxF3G91BuCKQzVpzhevYjK4iDkgf8O13jGVuaLgj8qf85l~CVvmiYVDhsTsd7~y6fzS5o0uLLR0Cpt2eg2pzmkQZxdISRbfDD8MsU7WIDtquZ~fVRLpmdagM0E59Fh6UOmNTozsRFi2KbyiTaxwdSWlz4Mvnprq1pblLhB-MNmJTbpWjkMi2XcS6PglDCXZChGMuh4cl0SfDdxvIRiFQGqQ07Yg8ytfeif8rGQ2Xf38i7qlUpzNwp4AIQHA21aBCS8GX5nS5LwEdZIAihloIdnMb5Vbe4TTXgw__'
-  }
+    src: image}
 ]
 
 const cardsData = [

@@ -1,6 +1,6 @@
-import CardsContainer from '@/sections/aboutThai/cards-container'
 import ContentContainer from '@/sections/aboutThai/content-container'
 import React from 'react'
+import image from '@/assets/images/dashboard/my-ads/female-masseur.png'
 
 const contentData = [
   {
@@ -12,7 +12,7 @@ const contentData = [
       second: "Oil reduces friction, allowing for smoother movements.",
       third: "Eases muscle tension while providing relaxation."
     }],
-    src: 'https://s3-alpha-sig.figma.com/img/6ed4/deed/4f74024fe6892f5734fc788c20c84886?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WT~YSf9qgnALWtKUSip~ZvU4r4UxnYD-hT8z85LXhZWehnElzKxqEC9wn9CXQWRqZ8i~CuUw03SRdxBxnkNIDCTmNdr7ppTSgz~Av7z5-P8KC6yKkemNMswDDKemyk0sZoWMPCZjb0gbzc4Im5UyYHxf7Cluar9DKN11p-kKik-yma9vutwa4-NwgD~M6cRO5Vom8hfaqQV1LUKWgJCXeZDVvnpCvhZdYikU4GHZBNLQ3kE2yfCVbcDOqVax4hImhwS-73lKbf9T86rcUatAhUnMzC36MrX9Ht40zgfbUSQV9DdXmTIZjZ502QvER02elA4Dh3RLwaSfXSVrozbOXg__'
+    src: image
   }
 ]
 

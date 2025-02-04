@@ -11,7 +11,7 @@ export default function SinglePageAddComment() {
   const [selectedEmoji, setSelectedEmoji] = useState('5')
 
   return (
-    <div className="flex flex-col gap-8 p-14">
+    <div className="flex flex-col gap-8 p-14 max-w-[1300px] mx-auto w-full">
       {/* title */}
       <h4 className="text-2xl font-semibold">{t('title')}</h4>
       {/* body */}

@@ -242,23 +242,23 @@ const ListCart: React.FC = () => {
       },
     },
   ];
-  
+
   const applyFilters = (newFilters: Filters) => {
     const filledFilters = Object.fromEntries(
       Object.entries(newFilters.filterModal || {}).filter(([_, value]) => value !== undefined && value !== "")
     );
-  
+
     if (Object.keys(filledFilters).length === 0) {
       alert("Please select at least one filter before applying.");
       return;
     }
-  
+
     setFilters((prev) => ({
       ...prev,
       filterModal: { ...prev.filterModal, ...filledFilters },
     }));
   };
-  
+
   const filteredData = useMemo(() => FilterConditions(cardData, filters), [cardData, filters]);
 
   const itemsPerPage = 6;

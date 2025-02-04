@@ -164,9 +164,9 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="w-[315px]">
+    <div className="w-[315px] ">
 
-      <div className="w-[315px] p-2 bg-white border-y border-r border-grayC border-collapse fixed top-28 overflow-hidden h-full overflow-y-auto">
+      <div className="w-[315px] p-2 bg-white border-y border-r border-grayC border-collapse fixed top-28 overflow-hidden h-full overflow-y-auto pb-60">
         {dashboardItems.map((item) => (
           <div key={item.href} >
             {item.hasBorder && <div className='h-[1px] w-[282px] bg-grayC ml-3 mb-3'></div>}

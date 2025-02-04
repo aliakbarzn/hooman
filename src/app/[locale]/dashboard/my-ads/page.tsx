@@ -3,7 +3,7 @@
 import { PlusIcon } from '@/assets/icons'
 import ClockWise2Icon from '@/assets/icons/dashboard/my-ads/ClockWise2Icon'
 import React, { useState } from 'react'
-import womanImage from '@/assets/images/dashboard/my-ads/female-masseur-pampering-ribs-young-slim-woman-towel-professional-massage-massaging-relaxation-body-skin-care-attractive-lady-spa-salon_266732-24173.png'
+import womanImage from '@/assets/images/dashboard/my-ads/female-masseur.png'
 import { Link } from '@/navigation'
 import AdCard from '@/sections/dashboard/my-ads/ad-card'
 import { StaticImageData } from 'next/image'

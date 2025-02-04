@@ -3,12 +3,11 @@
 import Image from 'next/image'
 import React from 'react'
 import banner from '@/assets/images/search-page/baner.png'
-import { CalenderIcon, ChevronDownIcon, CommentsIcon, EnvelopeIcon, HomeIcon, IconArrow, IconColoredPayment, IconFlag, IconHeart, IconLike2, IconMiniPicture, IconRingingBell, IconShare, IconSharpStar, IconVisa, InventoryIcon } from '@/assets/icons'
+import { CalenderIcon, CommentsIcon, EnvelopeIcon, HomeIcon, IconArrow, IconColoredPayment, IconFlag, IconHeart, IconMiniPicture, IconRingingBell, IconShare, IconVisa, InventoryIcon } from '@/assets/icons'
 import { useTranslations } from 'next-intl'
 import IcStar from '@/assets/icons/search-page/ic-star'
 import IconPaypal from '@/assets/icons/single/payment-methods/icon-paypal'
 import SinglePageComment from '@/sections/single/single-page-comment'
-import ChevronDown from '@/assets/icons/ChevronDown'
 import SinglePageAddComment from '@/sections/single/single-page-add-comment'
 import SinglePageWorkingHours from '@/sections/single/single-page-working-hours'
 import SinglePageLocation from '@/sections/single/single-page-location'
@@ -95,7 +94,7 @@ export default function page() {
             <button className="rounded-full w-20 h-20 shadow-xl flex items-center justify-center bg-white"><IconShare /></button>
             <button className="rounded-full w-20 h-20 shadow-xl flex items-center justify-center bg-white"><IconHeart /></button>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
             <h2 className="text-3xl font-semibold">{t("header.title")}</h2>
             <div className="flex items-center justify-between">
               <div className="flex gap-4 items-center">
@@ -117,7 +116,7 @@ export default function page() {
         </div>
       </div>
       {/* facilities -------------------------------------------------------------------------------------------------------- */}
-      <div className=" p-14 flex flex-col gap-14">
+      <div className=" p-14 flex flex-col w-full gap-14 max-w-[1300px] mx-auto">
         <h2 className="font-semibold text-3xl">{t("facilities.title")}</h2>
         <div className="flex gap-10 justify-between">
           {/* column */}
@@ -144,18 +143,22 @@ export default function page() {
         </div>
       </div>
       {/* booking -------------------------------------------------------------------------------------------------------- */}
-      <div className="flex items-center justify-between px-14 py-8 bg-[#EFF5FF]">
-        <span><IconRingingBell /></span>
-        <h2 className="font-semibold text-[40px] text-[#06286A]">{t("booking")}</h2>
-        <button className='w-12 h-12 rotate-180 flex justify-center items-center rounded-full bg-[#06286A]'><IconArrow /></button>
+      <div className="w-full bg-[#EFF5FF]">
+        <div className='flex items-center justify-between px-14 py-8 max-w-[1300px] mx-auto'>
+          <span><IconRingingBell /></span>
+          <h2 className="font-semibold text-[40px] text-[#06286A]">{t("booking")}</h2>
+          <button className='w-12 h-12 rotate-180 flex justify-center items-center rounded-full bg-[#06286A]'><IconArrow /></button>
+        </div>
       </div>
       {/* about salon -------------------------------------------------------------------------------------------------------- */}
-      <div className="p-14 flex flex-col gap-14 border-b border-grayC">
-        <h3 className="text-3xl font-semibold">{t("about.title")}</h3>
-        <p className="text-blackC-light text-xl">{t("about.text")}</p>
+      <div className="border-b border-grayC ">
+        <div className="max-w-[1300px] mx-auto p-14 flex flex-col gap-14 ">
+          <h3 className="text-3xl font-semibold">{t("about.title")}</h3>
+          <p className="text-blackC-light text-xl">{t("about.text")}</p>
+        </div>
       </div>
       {/* prices table -------------------------------------------------------------------------------------------------------- */}
-      <div className="flex flex-col p-14 gap-14">
+      <div className="flex flex-col p-14 gap-14 w-full max-w-[1300px] mx-auto">
         <h3 className="font-semibold text-3xl">{t("prices.title")}</h3>
 
         <table className="min-w-full rounded-lg mb-14">
@@ -178,17 +181,21 @@ export default function page() {
         </table>
       </div>
       {/* payment methods -------------------------------------------------------------------------------------------------------- */}
-      <div className="bg-[#FFF0F0] flex items-center justify-between px-14 py-8">
-        <h2 className="text-[40px] font-semibold text-[#762925]">{t("payment-methods")}</h2>
-        <div className="flex items-center gap-8">
-          <span className='h-12 w-26'><IconVisa /></span>
-          <IconPaypal />
-          <IconColoredPayment />
+      <div className="bg-[#FFF0F0] ">
+        <div className="flex items-center justify-between px-14 py-8 max-w-[1300px] mx-auto">
+          <h2 className="text-[40px] font-semibold text-[#762925]">{t("payment-methods")}</h2>
+          <div className="flex items-center gap-8">
+            <span className='h-12 w-26'><IconVisa /></span>
+            <span className='w-12 h-14'><IconPaypal /></span>
+            <span className='h-[62px] w-[62px]'><IconColoredPayment /></span>
+          </div>
         </div>
       </div>
       {/* comments -------------------------------------------------------------------------------------------------------- */}
       <div className="px-2 flex flex-col">
-        <h3 className="px-12 py-14 text-3xl font-semibold border-b border-grayC">{t('comments.title')}</h3>
+        <div className="px-12 py-14 text-3xl font-semibold border-b border-grayC">
+          <h3 className='max-w-[1300px] mx-auto w-full px-14'>{t('comments.title')}</h3>
+        </div>
         {comments.map(c => (
           <SinglePageComment id={c.id} sender={c.sender} stars={c.stars} time={c.time} text={c.text} likes={c.likes} />
         ))}

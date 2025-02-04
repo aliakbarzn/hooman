@@ -22,7 +22,7 @@ const FilterButtonList: React.FC<FilterButtonListProps> = ({
     { label: t("openNow"), key: "openNow" },
     { label: t("offer"), key: "offer" },
     { label: t("rating4Plus"), key: "rating4Plus" },
-    { label: t("Sona"), key: "Sona" },
+    { label: t("sauna"), key: "sauna" },
     { label: t("Shower"), key: "Shower" },
     { label: t("Parking"), key: "Parking" },
   ];
@@ -55,7 +55,7 @@ const FilterButtonList: React.FC<FilterButtonListProps> = ({
               : "bg-gray-200 text-gray-600"
           }`}
         >
-          {selectedFilters.includes(key) && <CheckIcon />}
+          {selectedFilters.includes(key) && <span className="w-4 h-4"><CheckIcon /></span>}
           <span>{label}</span>
         </button>
       ))}

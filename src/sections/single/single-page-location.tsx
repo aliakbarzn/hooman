@@ -11,7 +11,7 @@ export default function SinglePageLocation() {
   const t = useTranslations('Single.location')
 
   return (
-    <div className='flex gap-24 justify-center p-14'>
+    <div className='flex gap-24 justify-center p-14 max-w-[1300px] mx-auto w-full'>
       {/* left content */}
       <div className="flex flex-col gap-7 max-w-[550px]">
         <h3 className="text-3xl font-semibold">{t('title')}</h3>

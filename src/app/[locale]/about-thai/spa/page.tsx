@@ -1,6 +1,9 @@
-import CardsContainer from '@/sections/aboutThai/cards-container'
+
 import ContentContainer from '@/sections/aboutThai/content-container'
 import React from 'react'
+import image from '@/assets/images/dashboard/my-ads/female-masseur.png'
+
+
 
 const contentData = [
   {
@@ -12,7 +15,7 @@ const contentData = [
       second: "Can include additional spa amenities for a more holistic experience.",
       third: "Focus on relaxation in a serene environment."
     }],
-    src: 'https://s3-alpha-sig.figma.com/img/3277/5486/daaceeb372e90f0877b76d9be3cec8ad?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=i0PL4k5XL5IgvKnSo01vl8Fo9aRfFsx1uMu4ip9yqO6qg2PbBEeeNUXAHcxveNLjuPYhO1UxKHp60pvnG-bCK-WVXQyS3nEQGARiZgIuWefq68yToE9FMMrIhnyJJgyZotoghpwuM5DZ74dSt7trOqV5WnjZNUdFkJlgWh5ouD0SEXI38A1JcnBkCj0sqyeKNysI5Uoo0KSF5DlTF-6XoeNIGtwV4bwZGnMyCHUcIs~aIFocTRQM3XNxcWe8oVQrZm303CsngGZwJclGuDlcsb~VVMX425y6WBCvcotLwvQvTCkohCSebx2OPEj-IA9br9nBlpOMuh2-gJChSQsJXA__'
+    src: image
   }
 ]
 

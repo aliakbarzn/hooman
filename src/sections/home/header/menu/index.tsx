@@ -9,11 +9,11 @@ type IsLogin = {
   isLogin: boolean;
 };
 export default function Menu() {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   return (
-    <div className="h-28">
+    <div className="h-28 bg-white">
 
-      <div className="w-full flex justify-between items-center h-28 px-8 shadow border-b border-grayC fixed z-10 bg-white">
+      <div className="w-full flex justify-between items-center h-28 px-8 shadow border-b border-grayC fixed z-20 bg-white">
         <div>
           <Link href={"/"}><Image alt="logo" src={logo} width={150} height={160} /></Link>
         </div>

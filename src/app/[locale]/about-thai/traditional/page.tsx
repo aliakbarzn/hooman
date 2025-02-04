@@ -1,6 +1,8 @@
-import CardsContainer from '@/sections/aboutThai/cards-container'
+
 import ContentContainer from '@/sections/aboutThai/content-container'
 import React from 'react'
+import image from '@/assets/images/dashboard/my-ads/female-masseur.png'
+
 
 const contentData = [
   {
@@ -12,8 +14,7 @@ const contentData = [
       second: "Promotes relaxation and pain relief.",
       third: "Enhances flexibility due to stretching."
     }],
-    src: 'https://s3-alpha-sig.figma.com/img/df5e/51f5/e6f5b1eaa86c9725e0eda92e1a52443f?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=It-rEHGI~oDIpAy0DJWO8hfbEjiFbB7nx5U0NnuI45hOIxDSgfzIt-lxe9GV0RMMgQWdjKoyXjX-BGboxHUnybD3N28OQ3AO0u0hNHC-jUBi0SSauNmEZLQGto1~a6f-Yab6B1xx~wf2x1RgJQYqWgpw1Rt6oJ5GDyjgjuUA2LDT6wlF5ImkPV3pI8sZfL0o~bGYvh5lNy4jasJZ4V0IFMvuL9qfBDF0c5c8tpFXslzDUGivK7L3ZsErMoS9a~KgGe459GZ~Seo6wL8QjAgJMeqvcji31JxUuXqrbXQijO4d3-f21q-ETPwcZg7S2PoK-H3U-xVSnZhMPLm3nI34fw__'
-  }
+    src: image}
 ]
 
 const cardsData = [
